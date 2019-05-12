@@ -1,0 +1,33 @@
+(antra savaite ket)Tarpinis testas 10% (html, css)  
+(antra savaite penk) Tarpinis atsiskaitymas 10% (js scopes: local ir global variable skirtumai) 
+(antra savaite penk) Tarpinis atsiskaitymas 10% (loops FOR, FOR FOR ciklai) 
+Galutinis testas 30%  (php, OOP- objektinis programavimas)
+Baigiamasis projektas 40%
+
+Baigiamasis:
+//------------Idejos -Front End  (css, js, libs)-------------
+Idejos Front-END  
+ responsive visas puslapis  
+ MDL (bootstrap konkurento panaudojimas)
+ scss / sass / less - (panaudojimas) 
+ js efektai (  paralax, istrizi elementai, isvaziuojantys elementai, overlay, ... ...)
+  su js formos tikrinimas ( js form validator)  (ar uzilde, ar gerai uzpilde, ka blogai uzpilde, kas konkreciai negerai)
+ Ajax (gauti duomenis is serverio) naudojant jQuery  
+ Ajax (siusti duomenis i serveri) naudojant jQuery 
+
+
+//-----------Idejos--Back End  (PHP)-------------
+PRIVALOMA: panaudoti bent 4x kartus: include("...")
+
+ Email siuntimas(  po email issiuntimo - isvesti zinute "Jusu zinute sekmingai issiusta" - ne baltam ekrane!!!)
+ duomenu isvedimas is duomenu bazes (bent 2- 3 skirtingos lenteles)
+ is HTML formos duomenu ivedimas i duomenu baze  (bent 2- 3 skirtingos lenteles) (Users, Registracija nesiskaito!!!)
+ Registracija + Login + PHP session (PRIVALOMA: panaudoti, bent viena session kintamaji)
+ MYGTUKAI DELETE (google CRUD)
+ MYGTUKAS EDIT   
+ Search laukas 
+ Search laukas - su autocomplete
+
+... jusu idejos :)
+
+ 
