@@ -1,3 +1,22 @@
+body h1 {
+  background-color: grey;
+}
 h1 {
-  color: red;
+  background-color: orange;
+}
+
+.fonas-z {
+  background-color: green;
+}
+
+.fonas-r {
+  background-color: red;
+}
+
+.fonas-m {
+  background-color: blue;
+}
+
+#fonas-g {
+  background-color: yellow;
 }
