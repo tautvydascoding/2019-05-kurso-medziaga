@@ -1,0 +1,72 @@
+/* Viskam */
+
+*{
+  font-family: 'PT Sans Narrow', sans-serif;
+}
+
+body{
+  background-color: grey;
+  margin-left: 10%;
+}
+
+h1{
+  text-align: center;
+}
+
+/* Navigacijos eilutė */
+
+nav li{
+  float: left;
+  margin: 2% 5%;
+  list-style-type: none;
+}
+
+.topbar{
+  width: 90%;
+  height: 50px;
+  background-color: pink;
+}
+
+button{
+  color: white;
+  background-color: black;
+  width: 5%;
+}
+
+/* Content ir sidebar */
+
+section{
+  float: left;
+}
+
+.content{
+  width: 59%;
+  background-color: white;
+  margin: 0% 1% 1% 0%;
+}
+
+.sidebar{
+  width: 30%;
+  background-color: pink;
+  margin: 0% 1% 1% 0%;
+}
+
+.sidebar li{
+  margin-bottom: 3%;
+}
+
+h2{
+  text-align: center;
+}
+
+p, h3{
+  margin-left: 2%;
+}
+
+/* Footer */
+
+.footer{
+  width: 90%;
+  background-color: white;
+  margin: 0% 1% 1% 0%;
+}
