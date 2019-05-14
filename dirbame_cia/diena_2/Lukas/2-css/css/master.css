@@ -19,3 +19,20 @@ p {
 footer p {
   color: green;
 }
+
+.fonas-r {
+  background-color: red;
+}
+
+.fonas-z {
+  background-color: green;
+}
+
+.tekstas-paverstas {
+  font-style: italic;
+}
+
+#apacia {
+  width: 60%;
+  background-color: grey;
+}
