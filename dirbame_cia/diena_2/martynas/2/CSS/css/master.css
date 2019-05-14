@@ -1,0 +1,42 @@
+
+body{
+      font-size: 16px;
+      color: #002;
+      
+
+    }
+
+
+/* ------------ */
+
+h1{
+  color: pink;
+}
+
+
+p {
+    color: orange;
+}
+
+
+ footer p {
+    color:green;
+ }
+
+.fonas-r {
+  background-color: red;
+  }
+
+  .fonas-z {
+    background-color: green;
+  }
+
+  .tekstas-paverstas {
+    font-style: italic;
+  }
+
+  #apacia {
+    width: 60%;
+    background-color: grey;
+
+  }
