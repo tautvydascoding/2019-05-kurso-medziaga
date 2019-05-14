@@ -1,0 +1,38 @@
+body {
+  font-size: 16px;
+  color: rgb(12, 14, 12);
+}
+
+/* ----------- */
+/*  */
+
+h1 {
+  color: red;
+  font-size: 24px;
+  text-align: center;
+}
+
+p {
+  color: orange;
+}
+
+footer p {
+  color: green;
+}
+
+.fonas-r {
+  background-color: red;
+}
+
+.fonas-z {
+  background-color: green;
+}
+
+.tekstas-paverstas {
+  font-style: italic;
+}
+
+#apacia {
+  width: 60%;
+  background-color: grey;
+}
