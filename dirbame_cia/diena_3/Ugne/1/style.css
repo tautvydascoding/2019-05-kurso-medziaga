@@ -1,0 +1,58 @@
+/* Bloku spalvos */
+
+.red{
+  background-color: red;
+}
+
+.blue{
+  background-color: blue;
+}
+
+.yellow{
+  background-color: yellow;
+}
+
+.green{
+  background-color: green;
+}
+
+/* Bloku isdestymas */
+
+.block{
+  float: left;
+  width: 20%;
+}
+
+.clearfix{
+  overflow: auto;
+}
+
+/* Sekcijos aprasymas */
+
+.second-section {
+position: relative;
+  width: 100%;
+  height: 80px;
+  background-color: pink;
+}
+
+.button1{
+  position: absolute;
+  float: left;
+  top: 0;
+}
+
+.button2{
+  float: right;
+  top: 0;
+}
+
+.button3{
+  float: left;
+  bottom: 0;
+}
+
+.button4{
+  float: right;
+  bottom: 0;
+}
