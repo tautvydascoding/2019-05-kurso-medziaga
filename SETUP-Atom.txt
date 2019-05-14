@@ -1,4 +1,4 @@
-Parsisiusti: GoogleChrome
+﻿Parsisiusti: GoogleChrome
 
 Parsisiusti: Atom
 Isirasyti iskiepius: Atom -> FIle ->settings ->install
