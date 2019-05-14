@@ -30,7 +30,26 @@ nav li{
 button{
   color: white;
   background-color: black;
-  width: 5%;
+  width: 15%;
+}
+
+input{
+  width: 50%;
+}
+
+nav{
+  float: left;
+  width: 60%;
+}
+
+.search{
+  float: left;
+  width: 40%;
+  margin-top: 1.5%;
+}
+
+ul{
+  margin-top: 1%;
 }
 
 /* Content ir sidebar */
@@ -39,16 +58,25 @@ section{
   float: left;
 }
 
+main{
+  overflow: hidden;
+  position: relative;
+  width:90%;
+}
+
 .content{
-  width: 59%;
+  width: 69%;
   background-color: white;
-  margin: 0% 1% 1% 0%;
+  margin: 1% 1% 1% 0%;
 }
 
 .sidebar{
   width: 30%;
   background-color: pink;
-  margin: 0% 1% 1% 0%;
+  margin: 1% 0% 1% 0%;
+  position: absolute;
+  right: 0;
+  height: 96%;
 }
 
 .sidebar li{
