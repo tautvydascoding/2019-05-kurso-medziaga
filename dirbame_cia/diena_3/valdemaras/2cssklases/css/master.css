@@ -1,0 +1,24 @@
+.aukstis-200 {
+  height: 200px;
+}
+.fonas-p {
+  background-color: grey;
+}
+.plotis-50 {
+  width: 50%;
+}
+.text-r {
+  color: red;
+}
+.text-m {
+  color: blue;
+}
+.text-z {
+  color: green;
+}
+.text-size {
+  font-size: 12px
+}
+.text-a {
+  text-align: center;
+}
