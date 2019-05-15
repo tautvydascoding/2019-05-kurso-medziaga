@@ -1,0 +1,19 @@
+p {
+  color: orange;
+}
+footer p {
+  color: green;
+}
+.fonas-r {
+  background: red;
+}
+.fonas-z {
+  background: green;
+}
+.tekstas-paverstas {
+  font-style: italic;
+}
+#apacia {
+  width: 60%;
+  background-color: grey;
+}
