@@ -1,0 +1,24 @@
+h1 {
+  color: green;
+}
+article {
+  border: solid 2px #333
+}
+.fonas_geltonas {
+  background-color: yellow;
+}
+.fonas_rudas {
+  background-color: brown;
+}
+.fonas_melynas {
+  background-color:cadetblue;
+}
+.colorblue {
+  color: blue;
+}
+.colorred {
+  color: red;
+}
+.colorwhite {
+  color: white;
+}

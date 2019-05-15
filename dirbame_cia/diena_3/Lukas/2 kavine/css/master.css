@@ -1,0 +1,63 @@
+* {
+  box-sizing: border-box;
+}
+
+h1 {
+    text-align: center;
+    z-index: 9999;
+}
+
+article {
+    /* elementu sudejimas i viena eilute
+    1) plotis
+    2) ant VISU elementu kurie norime, kad butu vienoje eiluteje uzdeti float
+    3) Isjungti float, kad kiti neliptu be floato. */
+    width: 30.666%;
+    float: left;
+    border: solid 2px #000;
+    margin-left: 2%;
+    background-color: #f2f2f2;
+}
+/* isjungiame float, kad jis nebeveiktu toliau nuo tos vietos */
+.clearfix {
+    clear: both;
+    content: "";
+}
+
+p {
+    padding: 15px;
+    text-align: justify;
+}
+.fonas-r {
+    background-color: red;
+}
+.fonas-p {
+    background-color: pink
+}
+.fonas-g {
+    background-color: yellow
+}
+.plotis-160 {
+    width: 160px;
+}
+
+h2 {
+    margin-top: 0;
+    text-align: center;
+    border-left: solid 2px #000;
+    border-bottom: solid 2px #000;
+}
+
+/* Elemento perkelimas ekrane naudojant position metoda */
+
+.pozicija-des-virsuje {
+    position: absolute;
+    /* top, right,left, bottom veikia tik su absolute */
+    top: 0px;
+    right: 0;
+}
+
+article {
+    /* uzdejus cia relative, absolute pozicija persikelia cia. Tiksliau elementas su absolute pozicija */
+    position: relative;
+}
