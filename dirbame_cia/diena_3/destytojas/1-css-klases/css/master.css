@@ -1,0 +1,24 @@
+h1 {
+    color: green;
+}
+.tekas-r {
+    color: red;
+}
+.tekas-m {
+    color: blue;
+}
+.remelis {
+    border: solid 1px orange;
+}
+.fonas-r {
+    background-color: red;
+}
+.fonas-z {
+    background-color: green;
+}
+.fonas-p {
+    background-color: pink;
+}
+.fonas-g {
+    background-color: #f2f2f2;
+}
