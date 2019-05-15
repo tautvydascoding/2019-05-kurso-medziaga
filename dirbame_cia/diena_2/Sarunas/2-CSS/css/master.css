@@ -1,41 +1,38 @@
-/* defaultinis dydziai spalvos,
-pagrindiniai 3 4 dydziai ir kelios
- spalvos */
-body{
+body {
   font-size: 16px;
-  color: #002
+  color: rgb(12, 14, 12);
 }
 
+/* ----------- */
 /*  */
 
-/*  */
+h1 {
+  color: red;
+  font-size: 24px;
+  text-align: center;
+}
 
-  h1{
-      color: pink;
-  }
-  p {
-    color: orange;
-  }
+p {
+  color: orange;
+}
 
-  footer p {
-      color: green;
-  }
+footer p {
+  color: green;
+}
 
 .fonas-r {
   background-color: red;
 }
+
 .fonas-z {
   background-color: green;
 }
-.tekstas-paverstas{
-  font-style:italic;
+
+.tekstas-paverstas {
+  font-style: italic;
 }
 
 #apacia {
-    width: 60%;
-    background-color: grey;
-}
-
-
-
+  width: 60%;
+  background-color: grey;
 }
