@@ -4,6 +4,17 @@ h1 {
 .aukstis-100 {
     height: 100px;
 }
+main {
+  width: 80%
+}
+
+aside {
+  width: 20%
+}
+
+.float-left {
+  float: left;
+}
 .aukstis-200 {
     height: 200px;
 }
@@ -17,3 +28,5 @@ h1 {
 
 .fonas-g { background-color: green;}
 .fonas-w {backgrouund-color: white;}
+.fonas-p {backgrouund-color: pink;}
+.fonas-grey {backgrouund-color: #f2f2f2;}
