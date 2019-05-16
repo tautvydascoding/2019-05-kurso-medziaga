@@ -1,0 +1,41 @@
+*{
+    box-sizing: border-box;
+}
+h2 {
+    margin: 2px;
+    padding-bottom: 45px;
+}
+.plotis-30 {
+
+    float: left;
+    width: 33%;
+}
+
+.plotis-100 {
+    width: 100%;
+}
+.plotis-45 {
+    float: left;
+    width: 49.5%;
+}
+
+.fonas-r {
+    background-color: red;
+}
+.fonas-b {
+    background-color: blue;
+}
+.fonas-p {
+    background-color: pink;
+}
+
+.remelis {
+border: solid 5px #000;
+}
+article {
+    margin: 10px;
+}
+.clearfloat {
+    clear: both;
+    content: "";
+}
