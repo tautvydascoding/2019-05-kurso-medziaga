@@ -1,68 +1,49 @@
-body{
-  width:1200px;
-  margin-left: auto;
-  margin-right: auto;
+* {
+    /*  remelius iskaiciujai ploti*/
+    box-sizing: border-box;
 }
 h1 {
     color: red;
-    text-align: center;
-}
-main {
-    width: 79%;
-    margin-right: 1%;
-    }
-aside {
-    width: 20%;
 }
 
-/* mneniu */
-nav {
-  height: 70px
-  background-color: yellow;
-  width: 70%;
-  padding-top: 20px;
-}
-li{
-  /* background-color: orange; */
-  /* border: solid 1px; #000; */
-  float: left;
-  width: 25%;
-  list-style: none;
-}
-ul{padding: 0;}
-
-/*end meniu  */
-.wrapper {
-    margin-top: 1%;
-    margin-bottom: 1%;
-}
-.float-left {
-    float: left;
-}
-.isjungiu-float{
-    clear: both;
-    content: "";
-}
-
-.aukstis-100 {
+div {
+    border: solid 1px #333;
+    background-color: #a1a1a1;
     height: 100px;
 }
-.aukstis-200 {
-    height: 200px;
+.blokas1,
+.blokas2,
+.blokas4,
+.blokas5 {
+    width: 50%;
+
+    float: left;
 }
-.aukstis-300 {
-    height: 300px;
+ /*  isjungiu float */
+.fix-float {
+    clear: both;
 }
-.aukstis-500 {
-    height: 500px;
+
+/* ----tablet----- */
+@media (max-width: 768px) {
+    .blokas1,
+    .blokas2 {
+        width: 100%;
+    }
+}
+/* ----mobile----- */
+@media (max-width: 425px) {
+    .blokas4,
+    .blokas5 {
+        width: 100%;
+    }
+    .blokas2,
+    .blokas3 {
+        display: none;
+    }
 }
 
 
-.fonas-g {  background-color: green; }
-.fonas-w {  background-color: white; }
-.fonas-p {  background-color: pink;  }
-.fonas-grey {  background-color: #f2f2f2;  }
 
-.margin {
-  margin-top: 1%;
-}
+
+/*  */
