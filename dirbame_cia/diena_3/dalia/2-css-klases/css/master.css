@@ -1,0 +1,44 @@
+h1 {
+    color: red;
+    text-align: center;
+}
+.aukstis-100 {
+    height: 100px;
+}
+.aukstis-200 {
+    height: 200px;
+}
+.aukstis-300 {
+    height: 300px;
+}
+.aukstis-500 {
+    height: 500px;
+}
+.fonas-pilkas {
+  background-color: grey;
+}
+.plotis-50 {
+  width: 50%
+}
+.antraste-g {
+  color: yellow;
+}
+.antraste-z {
+  color: green;
+}
+.antraste-m {
+  color: blue;
+}
+p {
+  font-size: 12px;
+  text-align: center;
+}
+h2 {
+  text-align: center;
+}
+article {
+  border: solid 5px green;
+  margin: auto;
+  padding: 20px;
+  outline-color: black;
+}
