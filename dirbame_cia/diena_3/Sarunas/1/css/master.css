@@ -1,0 +1,34 @@
+h1 {
+    color: red;
+}
+.aukstis-100 {
+    height: 100px;
+}
+.aukstis-200 {
+    height: 200px;
+}
+.aukstis-300 {
+    height: 300px;
+}
+.aukstis-500 {
+    height: 500px;
+}
+.fonas-pilkas {
+  background-color: grey;
+}
+.plotis-50 {
+  width: 50%
+}
+.raudona {
+  background-color: red;
+}
+.melyna {
+  background-color: blue;
+}
+.geltona {
+  background-color: yellow;
+}
+section p {
+  font-size: 12px;
+  text-align: center;
+}
