@@ -12,7 +12,10 @@ aside {
 .float-left {
     float: left;
 }
-
+.isjungiu-float{
+    clear: both;
+    content: "";
+}
 
 .aukstis-100 {
     height: 100px;
