@@ -39,8 +39,15 @@ print();
 // kuri  atspausdina i konsole suma 12 atlyginimu (vienas atlyginimas yra lygus "uzduotis 1" kintamajam - "atlyginimas")
 
 function printMetinisPajamuDydis( ) {
+<<<<<<< HEAD
+    let x = 900;
+    let y = 12;
+    let z = x * y;
+    console.log(z);
+=======
     let pajamos = 12 * atlyginimas;
     console.log(pajamos);
+>>>>>>> 5f849330bbb4ebec2b2758611382cfdd0f2d9da3
 
 }
 
