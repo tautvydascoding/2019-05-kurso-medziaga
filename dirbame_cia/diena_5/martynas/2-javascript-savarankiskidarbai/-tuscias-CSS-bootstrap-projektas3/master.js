@@ -41,9 +41,12 @@ print();
 function printMetinisPajamuDydis( ) {
     let x = 900;
     let y = 12;
-    let printMetinisPajamuDydis = x * y;
+    let z = x * y;
+    console.log(z);
 
 }
+
+printMetinisPajamuDydis();
 
 //  4 UZDUOTIS
 // A) sukurti kintamuosius:  salis, miestas, adresas, pastoKodas
