@@ -1,0 +1,58 @@
+body {
+    margin-left: 0;
+}
+
+.plotis-30 {
+    width: 30%;
+}
+
+.plotis-45 {
+    width: 45%;
+}
+
+.plotis-100 {
+    width: 100%
+}
+.float-plotis-30 {
+    width: 30%;
+    float: left;;
+}
+.float-50 {
+    width: 45.5%;
+    float: left;
+}
+.clearfix {
+    clear: both;
+    content: "";
+}
+
+.karsta {
+    background-color: rgb(38, 122, 144);
+    border: solid 2px rgb(171, 58, 146);
+}
+.sninga {
+    background-color: rgb(171, 58, 146);
+    border: solid 2px rgb(35, 15, 92);
+    margin-left: 10px;
+}
+.lyja {
+    background-color: rgb(53, 193, 97);
+    border: solid 2px rgb(5, 62, 18);
+    margin-left: 10px;
+}
+.lorem {
+    background-color: rgb(218, 251, 57);
+    width: 92%;
+    height: 300px;
+    border: solid 2px rgb(96, 56, 209);
+    margin-top: 20px;
+}
+.vasara {
+    background-color: rgb(171, 58, 146);
+    border: solid 2px rgb(106, 58, 245);
+}
+.ziema {
+    background-color: rgb(38, 122, 144);
+    border: solid 2px rgb(218, 46, 180);
+    margin-left: 10px;
+}

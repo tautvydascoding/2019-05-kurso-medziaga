@@ -1,0 +1,77 @@
+h1 {
+    color: red;
+}
+
+p {
+    text-align: center;
+
+
+}
+
+h2 {
+    text-align: center;
+}
+.aukstis-100 {
+    height: 100px;
+}
+.aukstis-200 {
+    height: 200px;
+}
+.aukstis-300 {
+    height: 300px;
+}
+.aukstis-500 {
+    height: 500px;
+}
+
+.plotis-30 {
+    width: 30%;
+    margin-left: 2%;
+}
+
+.remelis {
+    border: solid;
+
+}
+
+.remelis-spalvotas {
+    border-color: pink;
+}
+
+.float {
+    float: left;
+}
+
+.fonas-blue {
+    background-color: blue;
+}
+.fonas-green {
+    background-color: green;
+}
+.fonas-pink {
+    background-color: pink;
+}
+
+.fonas-yellow {
+    background-color: yellow;
+}
+
+.plotis-100 {
+
+    width: 90%;
+    margin-top: 50px;
+    margin-left: 4%;
+
+}
+
+.plotis-45 {
+    width: 45%;
+    margin-left: 2%;
+    margin-top: 50px;
+
+}
+
+.isjungiuFloat {
+    clear: both;
+    content: "";
+}

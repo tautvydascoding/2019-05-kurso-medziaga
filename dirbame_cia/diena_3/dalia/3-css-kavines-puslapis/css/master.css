@@ -1,0 +1,86 @@
+/*---------*/
+* {
+  box-sizing: border-box;
+}
+h1,
+h2 {text-align: center;
+
+}
+h1 {
+    color: black;
+    z-index: 9999;
+}
+
+.aukstis-100 {
+    height: 100px;
+}
+.aukstis-200 {
+    height: 200px;
+}
+.aukstis-300 {
+    height: 300px;
+}
+.aukstis-500 {
+    height: 500px;
+
+
+}
+
+
+article {
+  width: 33.3%;
+  float: left;
+  border: solid 2px black;
+  background-color: #f5f5f5;
+  position: relative;
+
+}
+
+.isjungiuFloat {
+  clear: both;
+  content: "";
+}
+p {
+  margin-left: 15px;
+  margin-top: 30px;
+  margin-bottom: 15px;
+  margin-right: 15px;
+  padding: 15px;
+
+
+}
+
+}
+h1 {
+  text-align: center;
+}
+p  {
+  text-align: justify;
+}
+.fonas-roz {
+  background-color: pink;
+}
+.fonas-r {
+  background-color:red;
+}
+.fonas-g {
+  background-color: yellow;
+}
+.plotis-160 {
+  width: 160px;
+ }
+/*elemento perkelimas ekrane*/
+
+.pozicija-des-virs {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+
+
+  z-index: 1;
+}
+.remelis-kair-ap {
+    border-left: solid 2px black;
+    border-bottom: solid 2px black;
+
+}

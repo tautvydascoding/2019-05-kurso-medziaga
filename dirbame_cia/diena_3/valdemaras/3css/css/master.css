@@ -1,0 +1,75 @@
+* {
+    box-sizing: border-box;
+}
+/* -------------- */
+h1 {
+  color: red;
+}
+h1,
+h2,
+h3 {
+    text-align: center;
+}
+.aukstis-100 {
+    height: 100px;
+}
+.aukstis-200 {
+    height: 200px;
+}
+.aukstis-300 {
+    height: 300px;
+}
+.aukstis-500 {
+    height: 500px;
+}
+.text-center {
+  text-align: center;
+}
+.text-right {
+  text-align: right;
+}
+.fonas-p {
+  background-color: pink;
+}
+.fonas-r {
+  background-color: red;
+}
+.fonas-g {
+  background-color: yellow;
+}
+.fonas-pilk {
+  background-color: #f2f2f2;
+}
+.remelis {
+border: solid 2px #333
+}
+.remelis-b-l {
+  border-left: solid 2px #003;
+  border-bottom: solid 2px #003;
+}
+article {
+    width: 30.66%;
+    float: left;
+    border: solid 2px #003;
+    margin-left: 2%;
+    background-color: #f2f2f2;
+    position: relative;
+}
+p {
+    padding: 15px;
+    text-align: justify;
+    margin-top: 20px;
+}
+.isjungiuFloat {
+    clear: both;
+    content: "";
+}
+.plotis-160 {
+    width: 160px;
+}
+/* elemento perkelimas ekrane */
+.pozicija-des-virsuje {
+    position: absolute;
+    top: 0;
+    right: 0;
+}

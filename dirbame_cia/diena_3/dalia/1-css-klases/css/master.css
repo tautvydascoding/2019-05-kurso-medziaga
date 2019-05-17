@@ -1,0 +1,29 @@
+h1 {
+    color: green;
+}
+
+
+  .antraste-z {
+    color: green;
+  }
+  .antraste-r {
+    color: red;
+  }
+  .tekstas-m {
+    color: blue;
+  }
+  .antraste-m {
+    color: blue;
+  }
+  .fonas-g {
+    background-color: yellow;
+  }
+  .remelis {
+    border: solid 1px black;
+  }
+  .fonas-p {
+    background-color: grey;
+  }
+  .fonas-roz {
+    background-color: pink;
+  }

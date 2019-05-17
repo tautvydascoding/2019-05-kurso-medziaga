@@ -1,0 +1,70 @@
+h1 {
+    color: red;
+}
+
+
+nav {height: 70px;
+    /* background-color: yellow; */
+    width: 70%;
+    padding-top: 23px;
+}
+
+.container {
+  flex-direction: row | row-reverse | column | column-reverse;
+}
+
+nav li {
+    float: left;
+    width: 25%;
+    list-style: none;
+    text-align: center;
+}
+
+main {
+    flex-grow: 3;
+}
+
+aside {
+    flex-grow: 1;
+}
+.aukstis-100 {
+    height: 100px;
+}
+.aukstis-200 {
+    height: 200px;
+}
+.aukstis-300 {
+    height: 300px;
+}
+.aukstis-500 {
+    height: 500px;
+}
+
+.boxas-100 {
+    width: 100%;
+}
+
+.boxas {
+    width: 80%;
+
+}
+
+.boxas-20 {
+    width: 20%;
+}
+
+.spalva-p {
+    background-color: pink;
+}
+.spalva-g {
+    background-color: green;
+}
+
+.float {
+    float: left;
+}
+
+.float-off {
+clear: both;
+content: "";
+}

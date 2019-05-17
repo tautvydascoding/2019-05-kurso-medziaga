@@ -1,0 +1,65 @@
+h1, h2, h3 {
+    color: black;
+    text-align: center;
+}
+.aukstis-100 {
+    height: 100px;
+}
+.aukstis-200 {
+    height: 200px;
+}
+.aukstis-300 {
+    height: 300px;
+}
+.aukstis-500 {
+    height: 500px;
+}
+
+.remelis {
+    width: 30.6%;
+    border: solid 2px #000;
+    background-color: grey;
+    margin-left: 2%;
+    text-align: justify;
+}
+
+p {
+    padding-top: 40px;
+    margin-left: 6px;
+    margin-right: 6px;
+
+
+}
+
+.remelis2 {
+    border-left: solid 2px #000;
+    border-bottom: solid 2px #000;
+    text-align: center;
+    font-size: 30px;
+
+}
+
+
+.flotas {
+    float: left;
+}
+
+.flotas2 {
+
+    float: right;
+}
+
+.floto-isjungimas {
+    float: none;
+    content: "";
+}
+
+.spalva-p {
+    background-color: pink;
+}
+.spalva-r {
+    background-color: red;
+}
+.spalva-y {
+    background-color: yellow;
+}

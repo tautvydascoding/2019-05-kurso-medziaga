@@ -1,0 +1,45 @@
+h1 {
+    color: red;
+}
+.aukstis-100 {
+    height: 100px;
+}
+.aukstis-200 {
+    height: 200px;
+}
+.aukstis-300 {
+    height: 300px;
+}
+.aukstis-500 {
+    height: 500px;
+}
+.plotis-30 {
+    width: 30%;
+}
+.plotis-45 {
+    width: 45%;
+}
+.plotis-100 {
+    width: 95%;
+}
+.fonas-g {
+    background-color: yellow;
+}
+.fonas-p {
+    background-color: pink;
+}
+.fonas-m {
+    background-color: blue;
+}
+.remelis {
+border: solid 2px #333
+}
+
+p {
+    float: left;
+    margin-left: 2%;
+    margin-top: 15px;
+}
+.isjungiuFloat {
+    clear: both;
+    content: "";

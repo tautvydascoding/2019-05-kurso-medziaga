@@ -1,0 +1,34 @@
+h1 {
+    color: red;
+}
+.aukstis-100 {
+    height: 100px;
+}
+.aukstis-200 {
+    height: 200px;
+}
+.aukstis-300 {
+    height: 300px;
+}
+.aukstis-500 {
+    height: 500px;
+}
+.fonas-geltonas {
+  background-color:yellow;
+}
+.plotis-50 {
+  width: 50%;
+}
+p {
+  font-size: 10px;
+  text-align: center;
+}
+.antrasteblue{
+  color: blue;
+}
+.antrastewhite{
+  color: white;
+}
+.antrastegrey{
+  color: grey;
+}

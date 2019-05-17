@@ -1,0 +1,41 @@
+h1 {
+    color: red;
+}
+.aukstis-100 {
+    height: 100px;
+}
+.aukstis-200 {
+    height: 200px;
+}
+.aukstis-300 {
+    height: 300px;
+}
+.aukstis-500 {
+    height: 500px;
+}
+
+.plotis-28 {
+  width: 28%;
+  float: left;
+  border: solid 2px black;
+  margin:2%;
+}
+
+  .isjungiuFloat {
+    clear: both;
+    content: "";
+  }
+
+.plotis-46 {
+  width: 46%;
+  float: left;
+  border: solid 2px black;
+  margin: 2%;
+}
+.plotis-100 {
+  width: 100%;
+  border: solid 2px black;
+}
+p{
+  text-align: center;
+}

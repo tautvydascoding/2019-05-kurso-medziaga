@@ -1,0 +1,37 @@
+h1 {
+  color: green;
+  }
+  .spalva-r {
+    color: red;
+  }
+  .spalva-z {
+    color: green;
+  }
+  .spalva-m {
+    color: blue;
+  }
+  .spalva-g {
+    color: yellow;
+  }
+  .spalva-p {
+    color: grey;
+  }
+
+  .fonas-r {
+    background-color: red;
+  }
+  .fonas-z {
+    background-color: green;
+  }
+  .fonas-m {
+    background-color: blue;
+  }
+  .fonas-g {
+    background-color: yellow;
+  }
+  .fonas-p {
+    background-color: grey;
+  }
+  .remelis {
+    border: solid 2px #333;
+  }
