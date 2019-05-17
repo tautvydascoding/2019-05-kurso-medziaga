@@ -39,15 +39,34 @@ print();
 // kuri  atspausdina i konsole suma 12 atlyginimu (vienas atlyginimas yra lygus "uzduotis 1" kintamajam - "atlyginimas")
 
 function printMetinisPajamuDydis( ) {
-    let x = 900;
-    let y = 12;
-    let printMetinisPajamuDydis = x * y;
+    let pajamos = 12 * atlyginimas;
+    console.log(pajamos);
 
 }
+
+printMetinisPajamuDydis();
 
 //  4 UZDUOTIS
 // A) sukurti kintamuosius:  salis, miestas, adresas, pastoKodas
 // B) sukurti f-ja "printAddressData()",  kuri atspausdina i konsole visus siuos kintamuosius
+
+let salis = "lietuva";
+let miestas = "kaunas";
+let adresas = "Vytauto pr.20";
+let pastoKodas = 3000;
+
+function printAddressData() {
+    console.log("Salis:" + salis);
+    console.log("Miestas:" + miestas);
+    console.log("Adresas:" + adresas);
+    console.log("Kodas:" + pastoKodas);
+    console.log(salis, miestas, adresas, pastoKodas);
+
+}
+
+printAddressData();
+
+
 
 // ---- advance-----
 //  5 UZDUOTIS
@@ -55,11 +74,38 @@ function printMetinisPajamuDydis( ) {
 //  kuri atspausdina i konsole "x" reiksmes
 // iskviesti f-ja ir vietoj x irasyti koki nors teksta pvz: printTekstas( "Jokubo istorijos");
 
+function printTekstas(x) {
+    console.log(x);
+
+}
+
+printTekstas("Jokubo istorijos");
+printTekstas("Antano istorija");
 
 
 // 7 UZDUOTIS
 // F-ja kuri paskaiciuoja trikampio ilgaja krastine (Pitagoro teorema)
 // pitagoroTeorema(x, y)      x*x + y*y ir is visko istraukti sakti (js Math.sqrt())
+let a = 10;
+let b = 12;
+let c =  a*a + b*b;
+let d = Math.sqrt(c);
+
+function Pitagoroteorema() {
+    console.log(d);
+
+}
+
+Pitagoroteorema();
 
 //==========================KOMANDINE (3-4h) Bootstrap && GIT=================
 // ant lentos
+
+function suma(z,k) {
+    let atsakymas = z + k;
+    console.log(atsakymas);
+
+}
+
+suma(10,20);
+suma(11,205);
