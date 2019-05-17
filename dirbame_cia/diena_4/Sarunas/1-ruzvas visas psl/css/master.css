@@ -5,8 +5,8 @@ body {
 }
 h1,
 h2,
-h3{
-font-family: 'Aladin', cursive;
+h3 {
+    font-family: 'Akronim', cursive;
 }
 h1 {
     color: red;
@@ -21,15 +21,18 @@ main {
     padding-right: 15px;
     padding-top: 25px;
     padding-bottom: 20px;
-    /* arba laikrodzio kryptimi nuo virsaus*/
-    padding: 25px 15px 20px 15px;
-    /* arba virs apc. ir sonai */
-    padding: 20px 15px;
+     /* arba  laikrodzio kryptimi nuo virsaus*/
+     padding: 25px 15px 20px 15px;
+     /* arba  virsus apc. ir sonai*/
+     padding: 20px 15px;
 }
 aside {
     width: 20%;
+    /* automatinis aside aukstis */
     margin-bottom: -99999px;
     padding-bottom: 99999px;
+    /*  nepamirskite ant tecio uzdeti */
+    /*  overflow: hidden; */
 }
 header {
     height: 70px;
@@ -37,42 +40,36 @@ header {
 /* ----------meniu------- */
 nav {
     height: 70px;
-
-    width: 70%;
+     width: 70%;
     padding-top: 20px;
 }
-nav li {
-
+nav  li {
     float: left;
     width: 25%;
     list-style:  none;
     text-align: center;
 }
-header ul { padding: 0}
-a{
-color: #999;
-text-transform: uppercase;
-text-decoration: none;
+header  ul { padding: 0; }
+a {
+    color: #111;
+    text-transform: uppercase;
+    text-decoration: none;
 }
-a:hover{
-  color: red;
-  text-decoration: none;
+a:hover {
+    color: red;
+    text-decoration: none;
 }
-
-ul { padding: 0; }
 /* ------end meniu--------- */
 .paieska {
-
-    width: 30%;
+     width: 30%;
     padding-top: 20px;
-
 }
 .wrapper {
     margin-top: 1%;
     margin-bottom: 1%;
     overflow: hidden;
-    /* aside auksciui overflow: hidden */
 }
+
 .float-left {
     float: left;
 }
