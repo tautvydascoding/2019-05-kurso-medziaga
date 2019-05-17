@@ -40,3 +40,12 @@ div {
     background-color: pink;
 
 }
+
+input {
+    float: left;
+    text-align: center;
+}
+
+button {
+    float: left;
+}
