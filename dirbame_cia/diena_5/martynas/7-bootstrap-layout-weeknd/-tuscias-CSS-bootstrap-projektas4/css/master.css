@@ -1,0 +1,34 @@
+h1 {
+    color: red;
+}
+.aukstis-100 {
+    height: 100px;
+}
+.aukstis-200 {
+    height: 200px;
+}
+.aukstis-300 {
+    height: 300px;
+}
+.aukstis-500 {
+    height: 500px;
+}
+
+
+.remelis {
+    border:1px solid red;
+}
+
+.remelis-2 {
+    border:3px dotted black;
+}
+
+.tarpas{
+    padding-top: 2px;
+    padding-bottom: 2px;
+}
+
+.tarpas-2 {
+    padding-left: 2px;
+    padding-right: 2px;
+}
