@@ -29,8 +29,3 @@ console.log("Klasiokų kiekis: ", klase.length);
 klase.forEach(function(obj) {
 console.log(obj.vardas);
 });
-
-
-//for (let i = 0; i < arr.length; i++) {
-  //alert( arr[i] );
-//}

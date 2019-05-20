@@ -35,7 +35,7 @@ setVardas2("antanas"); // sugalvoti vis kita zodi
 function getVardas2() {
     return vardas + "2";
 }
-x =  getVardas2();     
+x =  getVardas2();
 console.log(  x );  // isveda: antanas22
 
 // 3---------------------
