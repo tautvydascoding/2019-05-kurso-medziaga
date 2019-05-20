@@ -4,8 +4,22 @@ console.log(" Labas   ");
 // "reiksme" - tekstas/ reiksme/ value
 // reiksme() - f-jos paleidimas
 // =============================
+//UZDUOTIS
+//vartotojas turi ivesti gerimu kieki
+//ivesti gerimu kieki
+//apskaiciuoti, kiek gerimu reikes
 
+//let gerimai = prompt("Iveskite gerimu kieki vienam zmogui");
 
+//let dalyviai = prompt("Iveskite dalyviu skaiciu");
+//console.log(typeof(dalyviai)); // komanda pasiziureti koks kintamojo tipas
+
+//let atsakymas = parseInt(gerimai) + parseInt(dalyviai);
+//console.log(atsakymas);
+document.querySelector('h1').innerHTML = " <b>pirmo lygio atraste</b>";
+document.querySelector('h2').innerHTML = " <b>pakeiciau</b>";
+document.querySelectorAll('h3')[1].innerHTML = " <b>trecia pakeiciu</b>";
+//komanda gerule, net dvi komandos viename, sutaupys daug laiko
 
 //==============TEKSTO ISVEDIMAS (tik susipazinti)=========
 // UZDUOTIS
@@ -19,11 +33,11 @@ console.log(" Labas   ");
 
 //----Elemento duomenys--------
 // auksto paemimas:
-// var aukstis = document.querySelector('h1').clientHeight;   // clientHeight includes the height and vertical padding.
-// var aukstis = document.querySelector('h1').offsetHeight;  //  offsetHeight includes the height, vertical padding, and vertical borders.
+//var aukstis = document.querySelector('h1').clientHeight;   // clientHeight includes the height and vertical padding.
+//var aukstis = document.querySelector('h1').offsetHeight;  //  offsetHeight includes the height, vertical padding, and vertical borders.
 // aukscio nustatymas:
-// document.querySelector("h1").style.height = "500px"; 		// change the height of a <div> element:
-
+document.querySelector("h1").style.height = "500px"; 		// change the height of a <div> element:
+document.querySelector("h2").style.backgroundColor = "blue"; 
 //=====================PASIKARTOJIMAS==================
 
 //  1.1 UZDUOTIS
