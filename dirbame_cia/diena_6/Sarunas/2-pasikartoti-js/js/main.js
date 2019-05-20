@@ -133,12 +133,34 @@ console.log(getGrynas());
 // parasyti f-ja, kuri turi "return" zodeli.
 // "getPazymiuVidurkis2(x1, x2, x3, x4, x5)"  f-ja apskaiciuoja vidurki is paduotu 5 menesiu pazymiu (ir grazina atsakyma i iskvietimo vieta! "return atskymas;")
 
-// 4.2 UZDUOTIS
-// parasyti f-ja, kuri  skaiciuoja 6-iu mokiniu pazymiu vidurkis
 
-let y1 = getPazymiuVidurkis2(6, 6, 7, 7, 5);
-let y2 = getPazymiuVidurkis2(3, 9, 9, 8, 9);
-getKlasesPazymiuVidurkis(y1, y2, y3, y4, y5, y6);
+//4.1
+function getPazymiuVidurkis(x1, x2, x3, x4, x5) {
+    let ats = (x1 + x2 + x3 + x4 + x5) / 5
+    return ats;
+}
+let y1 = getPazymiuVidurkis(6, 6, 7, 7, 5); //y1 mokinys
+let y2 = getPazymiuVidurkis(3, 9, 9, 8, 9);
+let y3 = getPazymiuVidurkis(9, 9, 9, 7, 5);
+let y4 = getPazymiuVidurkis(3, 9, 9, 8, 9);
+let y5 = getPazymiuVidurkis(6, 6, 7, 7, 5);
+let y6 = getPazymiuVidurkis(3, 9, 9, 8, 9);
+console.log( y1, y2, y3, y4, y5, y6 );
+// 4.2 UZDUOTIS
+// parasyti f-ja, kuri skaiciuoja 6-kiu mokiniu pazymiu vidurki
+// "getKlasesPazymiuVidurkis(y1, y2, y3, y4, y5, y6)"
+// f-ja apskaiciuoja vidurki is paduotu 5 menesiu pazymiu
+// (ir grazina atsakyma i iskvietimo vieta! "return atskymas;")
+// turi "return" zodeli.
+
+function getKlasesPazymiuVidurkis( y1, y2, y3, y4, y5, y6 ){
+    let klasesVidurkis =
+}
+
+// let y1 = getPazymiuVidurkis2(6, 6, 7, 7, 5);
+// let y2 = getPazymiuVidurkis2(3, 9, 9, 8, 9);
+// getKlasesPazymiuVidurkis(y1, y2, y3, y4, y5, y6);
+
 
 // parasyti f-ja, kuri skaiciuoja vieno mokinio pazymiu vi
 
