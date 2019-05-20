@@ -114,6 +114,17 @@ console.log(     getVardasPavarde()   );
 // parasyti f-ja, kuri skaiciuoja vieno mokinio pazymiu vidurki
 // "getPazymiuVidurkis2(x1, x2, x3, x4, x5)"  f-ja apskaiciuoja vidurki is paduotu 5 menesiu pazymiu (ir grazina atsakyma i iskvietimo vieta! "return atskymas;")
 //  turi "return" zodeli.
+function getPazymiuVidurkis(x1, x2, x3, x4, x5) {
+    let ats = (x1 + x2  + x3 + x4 + x5) / 5;
+    return ats;
+}
+let mokinys1 = getPazymiuVidurkis(6, 6, 7, 7, 5);
+let mokinys2 = getPazymiuVidurkis(3, 9, 9, 8, 9);
+let mokinys3 = getPazymiuVidurkis(9, 9, 9, 7, 5);
+let mokinys4 = getPazymiuVidurkis(2, 9, 9, 8, 9);
+let mokinys5 = getPazymiuVidurkis(2, 2, 2, 2, 2);
+let mokinys6 = getPazymiuVidurkis(3, 9, 9, 8, 9);
+console.log( mokinys1, mokinys2, mokinys3, mokinys4, mokinys5, mokinys6  );
 
 // 4.2 UZDUOTIS
 // parasyti f-ja, kuri skaiciuoja 6-kiu mokiniu pazymiu vidurki
@@ -121,6 +132,12 @@ console.log(     getVardasPavarde()   );
 // f-ja apskaiciuoja vidurki is paduotu 5 menesiu pazymiu
 // (ir grazina atsakyma i iskvietimo vieta! "return atskymas;")
 // turi "return" zodeli.
+
+ function getKlasesPazymiuVidurkis( y1, y2, y3, y4, y5, y6){
+     let klasesVidurkis = (y1 + y2 + y3 + y4 + y5 + y6) / 6;
+     console.log( "klases vidurkis yra:" + klasesVidurkis);
+ }
+getKlasesPazymiuVidurkis( mokinys1, mokinys2, mokinys3, mokinys4, mokinys5, mokinys6 );
 
 // 5 UZDUOTIS
 // A) sukurti h1 su tekstu viduje  (HTML faile)
