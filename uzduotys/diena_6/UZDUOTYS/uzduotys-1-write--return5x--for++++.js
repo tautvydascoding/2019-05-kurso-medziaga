@@ -48,8 +48,8 @@
 //=====================RETURN==================
 
 // 1 UZDUOTIS
-// A) sukurti kintamaji "vardas" Tomas
-// B) parasyti f-ja "getVardas()", kuri turi "return" zodeli ir grazina varda i iskveitimo vieta.
+// A) parasyti f-ja "getVardas()", kuri turi "return" zodeli ir grazina varda i iskveitimo vieta.
+// B)   f-joje  sukurti kintamaji "vardas" Tomas
 // C) patikrinti ar veikia f-ja
 
 // 2 UZDUOTIS
@@ -70,10 +70,17 @@
 // C) patikrinti ar veikia f-ja
 
 
-// 4 UZDUOTIS
-// parasyti f-ja, kuri turi "return" zodeli.
+// 4.1 UZDUOTIS
+// parasyti f-ja, kuri skaiciuoja vieno mokinio pazymiu vidurki
 // "getPazymiuVidurkis2(x1, x2, x3, x4, x5)"  f-ja apskaiciuoja vidurki is paduotu 5 menesiu pazymiu (ir grazina atsakyma i iskvietimo vieta! "return atskymas;")
+//  turi "return" zodeli.
 
+// 4.2 UZDUOTIS
+// parasyti f-ja, kuri skaiciuoja 6-kiu mokiniu pazymiu vidurki
+// "getKlasesPazymiuVidurkis(y1, y2, y3, y4, y5, y6)"
+// f-ja apskaiciuoja vidurki is paduotu 5 menesiu pazymiu
+// (ir grazina atsakyma i iskvietimo vieta! "return atskymas;")
+// turi "return" zodeli.
 
 
 // 5 UZDUOTIS

@@ -69,39 +69,58 @@ console.log(   suma(10, 2)     );
 
 
 //=====================RETURN==================
-function suma(   ) {
-    let ats =  10 + 20;
-}
-console.log( "suma yra:" +  ats );
+// function suma(   ) {
+//     let ats =  10 + 20;
+// }
+// console.log( "suma yra:" +  ats ); // klaida nes uzrakintos reikemes (is f-jos) negalime paimti
 
+let x = 10;
 // 1 UZDUOTIS
-// A) sukurti kintamaji "vardas" Tomas
-// B) parasyti f-ja "getVardas()", kuri turi "return" zodeli ir grazina varda i iskveitimo vieta.
+// A) parasyti f-ja "getVardas()", kuri turi "return" zodeli ir grazina varda i iskveitimo vieta.
+// B)   f-joje  sukurti kintamaji "vardas" Tomas
 // C) patikrinti ar veikia f-ja
+function getVardas() {
+    let vardas = "Tomas";
+    return vardas;
+}
+console.log( getVardas()  );
 
 // 2 UZDUOTIS
 // parasyti f-ja "getVardasPavarde()", kuri turi "return" zodeli ir grazina varda ir pavarde i iskveitimo vieta.
 //  f-joje sukurti kintamaji   "pavarde" Tomauskas, "vardas" - Antanas
 // patikrinti ar veikia f-ja
+function getVardasPavarde() {
+    let pavarde = "Tomauskis";
+    let vardas = "Jonas";
+    let vardasPavarde= vardas + " " + pavarde;
+    return vardasPavarde;
+}
+console.log(     getVardasPavarde()   );
+
 
 // 3 UZDUOTIS
-// A) parasyti f-ja "getPelnas()", kuri turi "return" zodeli ir grazina apskaiciuota pelna
+// A) parasyti f-ja "getPelnas()" ne galutinis, kuri turi "return" zodeli ir grazina apskaiciuota pelna
 // B) f-joje sukurti kintamaji "pajamos" 12500
 // B) f-joje sukurti kintamaji "islaidos" 7500
 // B) f-joje apskaiciuoti pelna  ( pvz: pelnas = pajamos - islaidos)
 // C) patikrinti ar veikia f-ja
 
-// 3.2 UZDUOTIS
-// A) parasyti f-ja "getPelnas(pajamos, nuostoliai)", kuri turi "return" zodeli ir grazina apskaiciuota pelna
-// B) f-joje apskaiciuoti pelna  ( pvz: pelnas = pajamos - nuostoliai)
-// C) patikrinti ar veikia f-ja
+// 3.1) parasyti f-ja "getGrynasPelnas()",
+//  kuri turi kintamaji "pelnoMokestis" = 10%
+//  apskaiciuoti gryna pelna (is pelno atemus pelnoMokesti)
 
 
-// 4 UZDUOTIS
-// parasyti f-ja, kuri turi "return" zodeli.
+// 4.1 UZDUOTIS
+// parasyti f-ja, kuri skaiciuoja vieno mokinio pazymiu vidurki
 // "getPazymiuVidurkis2(x1, x2, x3, x4, x5)"  f-ja apskaiciuoja vidurki is paduotu 5 menesiu pazymiu (ir grazina atsakyma i iskvietimo vieta! "return atskymas;")
+//  turi "return" zodeli.
 
-
+// 4.2 UZDUOTIS
+// parasyti f-ja, kuri skaiciuoja 6-kiu mokiniu pazymiu vidurki
+// "getKlasesPazymiuVidurkis(y1, y2, y3, y4, y5, y6)"
+// f-ja apskaiciuoja vidurki is paduotu 5 menesiu pazymiu
+// (ir grazina atsakyma i iskvietimo vieta! "return atskymas;")
+// turi "return" zodeli.
 
 // 5 UZDUOTIS
 // A) sukurti h1 su tekstu viduje  (HTML faile)
