@@ -27,9 +27,10 @@ document.write( " <b class='bg-info'> Mano tekstas </b> ");
 // A)
 let zmoniuSK = prompt("Ivestkite dalyviu skaiciu");
 let gerimuSKzmogui = prompt('Ivestkite  gerimu "Vytautas" kieki zmogui ');
-let visoKiekis = zmoniuSK * gerimuSKzmogui;
-console.log(   "Gerimu kiekis", visoKiekis  );
+// let visoKiekis = zmoniuSK * gerimuSKzmogui;
+// console.log(   "Gerimu kiekis", visoKiekis  );
 
+//=================================
 console.log(  typeof(zmoniuSK )  );  // pasiziureti koks tipas
 // tekstus paverciama i sveikuosius skaicius
 let visoKiekis = parseInt(zmoniuSK) + parseInt(gerimuSKzmogui);
