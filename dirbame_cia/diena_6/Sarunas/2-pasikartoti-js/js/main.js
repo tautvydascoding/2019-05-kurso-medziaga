@@ -133,7 +133,14 @@ console.log(getGrynas());
 // parasyti f-ja, kuri turi "return" zodeli.
 // "getPazymiuVidurkis2(x1, x2, x3, x4, x5)"  f-ja apskaiciuoja vidurki is paduotu 5 menesiu pazymiu (ir grazina atsakyma i iskvietimo vieta! "return atskymas;")
 
-// parasyti f-ja, kuri skaiciuoja vieno mokinio pazymiu vidurki
+// 4.2 UZDUOTIS
+// parasyti f-ja, kuri  skaiciuoja 6-iu mokiniu pazymiu vidurkis
+
+let y1 = getPazymiuVidurkis2(6, 6, 7, 7, 5);
+let y2 = getPazymiuVidurkis2(3, 9, 9, 8, 9);
+getKlasesPazymiuVidurkis(y1, y2, y3, y4, y5, y6);
+
+// parasyti f-ja, kuri skaiciuoja vieno mokinio pazymiu vi
 
 // 5 UZDUOTIS
 // A) sukurti h1 su tekstu viduje  (HTML faile)
