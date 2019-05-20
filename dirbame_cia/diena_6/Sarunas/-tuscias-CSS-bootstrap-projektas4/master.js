@@ -27,7 +27,7 @@
 //A)
 let zmoniuSK = prompt("Iveskite dalyviu skaiciu");
 let gerimuSKzmogui = prompt('Iveskite gerimu "Vytautas" kieki zmogui');
-let visoKiekis = zmoniuSK + gerimuSKzmogui;
+let visoKiekis = zmoniuSK * gerimuSKzmogui;
 console.log( "Gerimu kiekis", visoKiekis );
 
 console.log( typeof(zmoniuSK) );  //pasiziureti koks tipas
@@ -35,7 +35,7 @@ console.log( typeof(zmoniuSK) );  //pasiziureti koks tipas
 let visoKiekis = parseInt(zmoniuSK) + parseInt(gerimuSKzmogui);
 console.log("Gerimu kiekis", visoKiekis);
 
-console.log( typeof(zmoniuSK)); //pasiziureti koks tipas
+//console.log( typeof(zmoniuSK)); //pasiziureti koks tipas
 
 
 
