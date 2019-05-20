@@ -38,11 +38,22 @@ console.log(   "Gerimu kiekis", visoKiekis  );
 
 
 
-// document.querySelector('h1').innerHTML = " <b>Antraste</b>";
+document.querySelector('h1').innerHTML = " <b>Antraste</b>";
+document.querySelector('h2').innerHTML = " Pakeistas 2";
+document.querySelector('h3').innerHTML = " Pakeisti 3";
+
+document.querySelectorAll('h2')[1].innerHTML = " Pakeisti 2 su all komanda";
+document.querySelectorAll('h2')[2].innerHTML = " Pakeisti 2 su all komanda";
+
+
 
 //----Elemento duomenys--------
 // auksto paemimas:
-// var aukstis = document.querySelector('h1').clientHeight;   // clientHeight includes the height and vertical padding.
-// var aukstis = document.querySelector('h1').offsetHeight;  //  offsetHeight includes the height, vertical padding, and vertical borders.
+var aukstis = document.querySelector('h1').clientHeight;   // clientHeight includes the height and vertical padding.
+var aukstis = document.querySelector('h1').offsetHeight;  //  offsetHeight includes the height, vertical padding, and vertical borders.
 // aukscio nustatymas:
-// document.querySelector("h1").style.height = "500px"; 		// change the height of a <div> element:
+document.querySelector("h1").style.height = "500px"; 		// change the height of a <div> element:
+document.querySelector("h1").style.width = "50%"; 		// change the height of a <div> element:
+document.querySelector("h1").style.color = "blue"; 		// change the height of a <div> element:
+
+document.querySelector("h2").style.backgroundColor = "yellow"; 		// change the height of a <div> element:
