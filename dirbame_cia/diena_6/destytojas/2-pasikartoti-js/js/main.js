@@ -99,7 +99,7 @@ console.log(     getVardasPavarde()   );
 
 
 // 3 UZDUOTIS
-// A) parasyti f-ja "getPelnas()", kuri turi "return" zodeli ir grazina apskaiciuota pelna
+// A) parasyti f-ja "getPelnas()" ne galutinis, kuri turi "return" zodeli ir grazina apskaiciuota pelna
 // B) f-joje sukurti kintamaji "pajamos" 12500
 // B) f-joje sukurti kintamaji "islaidos" 7500
 // B) f-joje apskaiciuoti pelna  ( pvz: pelnas = pajamos - islaidos)
