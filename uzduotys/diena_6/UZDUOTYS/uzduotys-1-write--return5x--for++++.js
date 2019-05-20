@@ -48,8 +48,8 @@
 //=====================RETURN==================
 
 // 1 UZDUOTIS
-// A) sukurti kintamaji "vardas" Tomas
-// B) parasyti f-ja "getVardas()", kuri turi "return" zodeli ir grazina varda i iskveitimo vieta.
+// A) parasyti f-ja "getVardas()", kuri turi "return" zodeli ir grazina varda i iskveitimo vieta.
+// B)   f-joje  sukurti kintamaji "vardas" Tomas
 // C) patikrinti ar veikia f-ja
 
 // 2 UZDUOTIS
