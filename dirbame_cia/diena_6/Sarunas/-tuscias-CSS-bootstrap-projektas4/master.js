@@ -54,4 +54,4 @@ var aukstis = document.querySelector('h1').offsetHeight;  //  offsetHeight inclu
 // aukscio nustatymas:
 document.querySelector("h1").style.height = "500px"; 		// change the height of a <div> element:
 document.querySelector("h1").style.width = "50%"; 		// change the height of a <div> element:
-document.querySelector("h1").style.color = "blue"; 		// change the height of a <div> element:
+document.querySelector("h2").style.backgroundColor = "yellow"; 		// change the height of a <div> element:
