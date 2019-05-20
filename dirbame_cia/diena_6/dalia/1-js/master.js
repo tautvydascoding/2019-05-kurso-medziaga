@@ -4,40 +4,60 @@ console.log(" Labas   ");
 // "reiksme" - tekstas/ reiksme/ value
 // reiksme() - f-jos paleidimas
 // =============================
-//UZDUOTIS
-//vartotojas turi ivesti gerimu kieki
-//ivesti gerimu kieki
-//apskaiciuoti, kiek gerimu reikes
 
-//let gerimai = prompt("Iveskite gerimu kieki vienam zmogui");
 
-//let dalyviai = prompt("Iveskite dalyviu skaiciu");
-//console.log(typeof(dalyviai)); // komanda pasiziureti koks kintamojo tipas
-
-//let atsakymas = parseInt(gerimai) + parseInt(dalyviai);
-//console.log(atsakymas);
-document.querySelector('h1').innerHTML = " <b>pirmo lygio atraste</b>";
-document.querySelector('h2').innerHTML = " <b>pakeiciau</b>";
-document.querySelectorAll('h3')[1].innerHTML = " <b>trecia pakeiciu</b>";
-//komanda gerule, net dvi komandos viename, sutaupys daug laiko
 
 //==============TEKSTO ISVEDIMAS (tik susipazinti)=========
 // UZDUOTIS
 // Issimeginti komandas:
 
-//document.write(" <b class='bg-info'> Mano tekstas </b> "); //f-ja skirta testavimui, nes atsiranda tik failo apacioje
-//alert("Viso"); issoka pranesimas, isnyksta tik paspaudus, o svetaine uzluzta
-// var ivestasTekstas = prompt("Ivestkite savo varda");
-// console.log(ivestasTekstas);
+//document.write(" <b class='bg-info'> Mano tekstas </b> ");
+//window.alert("labas");//ilgesnis budas, zemiau trumpesnis. nauditi tik sau pasitikrinimui ar veikia kodas
+////alert("Viso");
+//alert ( pavarde )// - pasitikrinimas ar yra sukurtas kintamasis
+//let ivestasTekstas = prompt("Ivestkite savo varda");
+//console.log(ivestasTekstas);
 // document.querySelector('h1').innerHTML = " <b>Antraste</b>";
+
+//Uzduotis:
+//a)vartotojas turi ivesti: zmoniu skaiciu
+//b)vartotojas turi ivesti: gerimu kieki zmogui
+//c)apskaiciuoti kiek reikia nupirkti gerimu
+
+//let zmoniuSkaicius = prompt( "Iveskite zmoniu skaiciu");
+//let gerimuNorma = prompt( "Iveskite gerimu kieki 1 zmogui");
+//let perkamasKiekis = zmoniuSkaicius * gerimuNorma;
+
+//console.log( typeoff (zmoniuSk));//pasiziureti koks kintamojo tipas
+
+
+//console.log(perkamasKiekis);
+
+//ir kitas sprendimo budas:
+
+//let perkamasKiekis = parseInt(gerimuNorma) + parseInt(gerimuNorma);
+//console.log( "perkamasKiekis", gerimuNorma); - padaryti namuose
+
+
+
 
 //----Elemento duomenys--------
 // auksto paemimas:
-//var aukstis = document.querySelector('h1').clientHeight;   // clientHeight includes the height and vertical padding.
-//var aukstis = document.querySelector('h1').offsetHeight;  //  offsetHeight includes the height, vertical padding, and vertical borders.
+// var aukstis = document.querySelector('h1').clientHeight;   // clientHeight includes the height and vertical padding.
+// var aukstis = document.querySelector('h1').offsetHeight;  //  offsetHeight includes the height, vertical padding, and vertical borders.
 // aukscio nustatymas:
+
+
+//document.querySelectorAll("h2")[1].innerHTML = "Pagaliau antradienis"; 		// change the height of a <div> element:
+//document.querySelectorAll("h2")[2].innerHTML = "Pagaliau treciadienis"; 		// change the height of a <div> element:
+//document.querySelectorAll("h2")[3].innerHTML = "Pagaliau treciadienis";
+
 document.querySelector("h1").style.height = "500px"; 		// change the height of a <div> element:
-document.querySelector("h2").style.backgroundColor = "blue"; 
+document.querySelector("h1").style.width = "50%"; 		// change the height of a <div> element:
+document.querySelector("h1").style.color = "yellow"; 		// change the height of a <div> element:
+document.querySelector("h2").style.background = "yellow"; 		// change the height of a <div> element:
+
+
 //=====================PASIKARTOJIMAS==================
 
 //  1.1 UZDUOTIS
