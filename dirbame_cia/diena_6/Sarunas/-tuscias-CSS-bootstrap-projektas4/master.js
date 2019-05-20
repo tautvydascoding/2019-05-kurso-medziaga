@@ -1,18 +1,13 @@
 // console.log(" Labas   ");
-
  let vardas = "Tomas"
  console.log( vardas );
-
 // let pavarde = Tomauskis;
 // console.log( pavarde );
-
 // ==============patarimai==========
 // reiksme  - kintamasis  / variable
 // "reiksme" - tekstas/ reiksme/ value
 // reiksme() - f-jos paleidimas
 // =============================
-
-
 
 //==============TEKSTO ISVEDIMAS (tik susipazinti)=========
 // UZDUOTIS
@@ -33,9 +28,16 @@
 let zmoniuSK = prompt("Iveskite dalyviu skaiciu");
 let gerimuSKzmogui = prompt('Iveskite gerimu "Vytautas" kieki zmogui');
 let visoKiekis = zmoniuSK + gerimuSKzmogui;
-console.log( "Gerimu kiekis", visoKiekis);
+console.log( "Gerimu kiekis", visoKiekis );
 
-console.log( typeof(zmoniuSK), visoKiekis) ); //pasiziu
+console.log( typeof(zmoniuSK) );  //pasiziureti koks tipas
+// tekstus paverciam i sveikuosiu skaicius
+let visoKiekis = parseInt(zmoniuSK) + parseInt(gerimuSKzmogui);
+console.log("Gerimu kiekis", visoKiekis);
+
+console.log( typeof(zmoniuSK)); //pasiziureti koks tipas
+
+
 
 //let ivestasTekstas = prompt("Iveskite savo varda");
 //console.log(ivestasTekstas)
