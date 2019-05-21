@@ -1,3 +1,4 @@
+console.log(" Labas ");
 
 //==============TEORIJA ++ / -- ==========
     var x = 10;
@@ -5,12 +6,15 @@
     x += 3;     // tas pats kad x = x + 3;
     x++;       //  tas pats kas x = x + 1;
 
+let i = 0;
+let tekstas = "";
 //=============FOR   LOOP====================
 // teo:  https://www.w3schools.com/js/js_loop_for.asp
 //  https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Loops_and_iteration
 
 // 1 UZDUOTIS
-// isvesti 30 kartu zodi "Azuolas" i konsole  (! bandant tai padaryti, atsiras skaicius 30)
+// isvesti 30 kartu zodi "Azuolas" i konsole
+// (! bandant tai padaryti, atsiras skaicius 30)
 
 // 1.1 UZDUOTIS
 // isvesti i ekrana "<h3> Azuolas </h3>" su document.write arba innerHTML
@@ -18,21 +22,35 @@
 // 1.2 UZDUOTIS
 // (HTML faile susikurti <article> elementa)
 // isvesti 40 kartu zodi "<h2> Azuolas</h2> " i <article> elementa su  innerHTML pagalba
-
+for ( i = 0; i < 5; i++) {
+    // "querySelector("article")" - mano HTML faile suranda 'article' elementa
+    // .innerHTML  - i elemento vidu idedame kazkokia reiksme
+    document.querySelector("article").innerHTML += "<h2> Azuolas</h2>";
+}
 // 1.3 UZDUOTIS
 // (HTML faile susikurti <ul> elementa)
-// su FOR isvesti 6 kartu zodi "<li> elementas 1 </li> " i <ul> elementa su  innerHTML pagalba
-
+// isvesti 6 kartu zodi "<li> elementas 1 </li> " i <ul> elementa su  innerHTML pagalba
+for (  i = 0; i < 6; i++) {
+    document.querySelector("ul").innerHTML += "<li> Azuolas</li>";
+}
 // 1.4 UZDUOTIS
 // (HTML faile susikurti <header> elementa)
 // isvesti 10 kartu zodi "<p> Aprasymas x </p> " i <header> elementa su  innerHTML pagalba (kur x - yra skaicius "i" nuo 0 iki 9 atsisrandantis automatiskai)
-
+for ( i = 0; i < 10; i++) {
+    tekstas = "<p> Aprasymas " + i + "</p>";
+    document.querySelector("header").innerHTML += tekstas;
+}
 // 1.5 UZDUOTIS
 // (HTML faile susikurti <div> elementa)
 // isvesti 6 kartu zodi "<li> elementas X </li> " i <div> elementa su  innerHTML pagalba (kur x - yra skaicius "i" nuo 1 iki 6 atsisrandasntis automatiskai)
-
+for (  i = 1; i < 7; i++) {
+    tekstas = "<li> elementas " + i + "</li>";
+    document.querySelector("div").innerHTML += tekstas;
+}
 // 2.0 UZDUOTIS
-// sukurti f-ja "print()", kuri  i browser langa atspausdins  teksta "atspausdintas su f-ja" (panaudojanti document.write arba innerHTML)
+// sukurti f-ja "print()", kuri  i browser langa atspausdins
+//  teksta "atspausdintas su f-ja" (panaudojanti document.write arba innerHTML)
+ 
 
 // 2.1 UZDUOTIS
 // sukurti f-ja "printX(xx)", kuri  i browser langa atspausdins paduota "xx" teksta (panaudojanti document.write arba innerHTML)
