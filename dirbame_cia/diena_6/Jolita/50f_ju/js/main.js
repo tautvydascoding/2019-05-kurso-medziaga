@@ -57,5 +57,12 @@ document.querySelector('h2').innerHTML = " <b>uz lango sninga</b>";
 var el = document.querySelector('div'); // select the first returned <div> element
 el.parentNode.removeChild(el);
 
+function insertBefore(el, referenceNode) {
+    referenceNode.parentNode.insertBefore(el, referenceNode);
+}
 var newEl = document.createElement('p');
 newEl.innerHTML = '<b>Hello World!</b>';
+
+var ref = document.querySelector('h2.before');
+
+insertBefore(newEl, ref);
