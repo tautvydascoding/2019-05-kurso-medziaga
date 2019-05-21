@@ -72,16 +72,16 @@ console.log(   suma(10, 2)     );
 // function suma(   ) {
 //     let ats =  10 + 20;
 // }
-// console.log( "suma yra:" +  ats );
-// let x = 10;
+// console.log( "suma yra:" +  ats ); // klaida nes uzrakintos reikemes (is f-jos) negalime paimti
 
+let x = 10;
 // 1 UZDUOTIS
-// A) sukurti kintamaji "vardas" Tomas
-// B) parasyti f-ja "getVardas()", kuri turi "return" zodeli ir grazina varda i iskveitimo vieta.
+// A) parasyti f-ja "getVardas()", kuri turi "return" zodeli ir grazina varda i iskveitimo vieta.
+// B)   f-joje  sukurti kintamaji "vardas" Tomas
 // C) patikrinti ar veikia f-ja
 function getVardas() {
     let vardas = "Tomas";
-    return vardas
+    return vardas;
 }
 console.log( getVardas()  );
 
@@ -89,51 +89,55 @@ console.log( getVardas()  );
 // parasyti f-ja "getVardasPavarde()", kuri turi "return" zodeli ir grazina varda ir pavarde i iskveitimo vieta.
 //  f-joje sukurti kintamaji   "pavarde" Tomauskas, "vardas" - Antanas
 // patikrinti ar veikia f-ja
-// function getVardasPavarde() {
-//     let pavarde = "Tomauskis";
-//     let vardas = "Jonas";
-//     let getVardasPavarde= vardas + " " + pavarde;
-//     return getVardasPavarde
-// }
-// console.log( getVardasPavarde();
-// console.log(  );
+function getVardasPavarde() {
+    let pavarde = "Tomauskis";
+    let vardas = "Jonas";
+    let vardasPavarde= vardas + " " + pavarde;
+    return vardasPavarde;
+}
+console.log(     getVardasPavarde()   );
+
 
 // 3 UZDUOTIS
-// A) parasyti f-ja "getPelnas()", kuri turi "return" zodeli ir grazina apskaiciuota pelna
+// A) parasyti f-ja "getPelnas()" ne galutinis, kuri turi "return" zodeli ir grazina apskaiciuota pelna
 // B) f-joje sukurti kintamaji "pajamos" 12500
 // B) f-joje sukurti kintamaji "islaidos" 7500
 // B) f-joje apskaiciuoti pelna  ( pvz: pelnas = pajamos - islaidos)
 // C) patikrinti ar veikia f-ja
 
-// 3.1) parasyti f-ja "grynasPelnas()",
-// kuri turi kintamaji pelno "moketis" = 10%
-// apskaiciuoti gryna pelna (is pelno atemus pelno mokesti)
-
-function getPelnas() {
-    let pajamos = 12500;
-    let islaidos = 7500;
-    return apmokestpelnas = pajamos - islaidos;
-}
-console.log(getPelnas());
-
-function getGrynas() {
-    let mokestis = 0.1;
-    return getPelnas() - (getPelnas()*mokestis);
-}
-console.log(getGrynas());
+// 3.1) parasyti f-ja "getGrynasPelnas()",
+//  kuri turi kintamaji "pelnoMokestis" = 10%
+//  apskaiciuoti gryna pelna (is pelno atemus pelnoMokesti)
 
 
-// 3.2 UZDUOTIS
-// A) parasyti f-ja "getPelnas(pajamos, nuostoliai)", kuri turi "return" zodeli ir grazina apskaiciuota pelna
-// B) f-joje apskaiciuoti pelna  ( pvz: pelnas = pajamos - nuostoliai)
-// C) patikrinti ar veikia f-ja
-
-
-// 4 UZDUOTIS
-// parasyti f-ja, kuri turi "return" zodeli.
-// "getPazymiuVidurkis2(x1, x2, x3, x4, x5)"  f-ja apskaiciuoja vidurki is paduotu 5 menesiu pazymiu (ir grazina atsakyma i iskvietimo vieta! "return atskymas;")
-
+// 4.1 UZDUOTIS
 // parasyti f-ja, kuri skaiciuoja vieno mokinio pazymiu vidurki
+// "getPazymiuVidurkis2(x1, x2, x3, x4, x5)"  f-ja apskaiciuoja vidurki is paduotu 5 menesiu pazymiu (ir grazina atsakyma i iskvietimo vieta! "return atskymas;")
+//  turi "return" zodeli.
+function getPazymiuVidurkis(x1, x2, x3, x4, x5) {
+    let ats = (x1 + x2  + x3 + x4 + x5) / 5;
+    return ats;
+}
+let mokinys1 = getPazymiuVidurkis(6, 6, 7, 7, 5);
+let mokinys2 = getPazymiuVidurkis(3, 9, 9, 8, 9);
+let mokinys3 = getPazymiuVidurkis(9, 9, 9, 7, 5);
+let mokinys4 = getPazymiuVidurkis(2, 9, 9, 8, 9);
+let mokinys5 = getPazymiuVidurkis(2, 2, 2, 2, 2);
+let mokinys6 = getPazymiuVidurkis(3, 9, 9, 8, 9);
+console.log( mokinys1, mokinys2, mokinys3, mokinys4, mokinys5, mokinys6  );
+
+// 4.2 UZDUOTIS
+// parasyti f-ja, kuri skaiciuoja 6-kiu mokiniu pazymiu vidurki
+// "getKlasesPazymiuVidurkis(y1, y2, y3, y4, y5, y6)"
+// f-ja apskaiciuoja vidurki is paduotu 5 menesiu pazymiu
+// (ir grazina atsakyma i iskvietimo vieta! "return atskymas;")
+// turi "return" zodeli.
+
+ function getKlasesPazymiuVidurkis( y1, y2, y3, y4, y5, y6){
+     let klasesVidurkis = (y1 + y2 + y3 + y4 + y5 + y6) / 6;
+     console.log( "klases vidurkis yra:" + klasesVidurkis);
+ }
+getKlasesPazymiuVidurkis( mokinys1, mokinys2, mokinys3, mokinys4, mokinys5, mokinys6 );
 
 // 5 UZDUOTIS
 // A) sukurti h1 su tekstu viduje  (HTML faile)

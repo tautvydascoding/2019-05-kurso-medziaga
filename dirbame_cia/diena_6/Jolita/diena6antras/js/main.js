@@ -70,14 +70,14 @@ pazymiuVidurkis();
 // suskaiciuoti pazymiu vidurki, 5, 10 , 8 , 6 , 8  (ir atspausdintu vidurki)
 
 
-function pazymiuVidurkis1(vardas, x1, zzz, x3, x4, x5) {
-    let ats = (x1 + zzz + x3 + x4 + x5) / 5;
+//function pazymiuVidurkis1(vardas, x1, zzz, x3, x4, x5) {
+    //let ats = (x1 + zzz + x3 + x4 + x5) / 5;
 
-    console.log(vardas +" " + "Vidurkis" + " "+ ats);
-}
-pazymiuVidurkis1("Ieva", 10, 9, 10, 5, 5);
-pazymiuVidurkis1("Povilas", 4, 2, 4, 5, 6);
-pazymiuVidurkis1("Marius", 7, 8, 2, 3, 3);
+    //console.log(vardas +" " + "Vidurkis" + " "+ ats);
+//}
+//pazymiuVidurkis1("Ieva", 10, 9, 10, 5, 5);
+//pazymiuVidurkis1("Povilas", 4, 2, 4, 5, 6);
+//pazymiuVidurkis1("Marius", 7, 8, 2, 3, 3);
 
 
 //=====================RETURN==================
@@ -156,15 +156,37 @@ console.log(getGrynas());
 
 
 // 4.1 UZDUOTIS
-//
-// parasyti f-ja, kuri vieno mokinio vidurki
-//turi "return" zodeli.
+// parasyti f-ja, kuri skaiciuoja vieno mokinio pazymiu vidurki
 // "getPazymiuVidurkis2(x1, x2, x3, x4, x5)"  f-ja apskaiciuoja vidurki is paduotu 5 menesiu pazymiu (ir grazina atsakyma i iskvietimo vieta! "return atskymas;")
+//  turi "return" zodeli.
+
 // 4.2 UZDUOTIS
-//
-// parasyti f-ja, kuri klases vidurki
+// parasyti f-ja, kuri skaiciuoja 6-kiu mokiniu pazymiu vidurki
+// "getKlasesPazymiuVidurkis(y1, y2, y3, y4, y5, y6)"
+// f-ja apskaiciuoja vidurki is paduotu 5 menesiu pazymiu
+// (ir grazina atsakyma i iskvietimo vieta! "return atskymas;")
+// turi "return" zodeli.
+
+function pazymiuVidurkis1(x1, x2, x3, x4, x5) {
+    let ats = (x1 + x2 + x3 + x4 + x5) / 5;
+    return ats;
+}
+
+let y1 = getKlasesPazymiuVidurkis(1, 2, 3, 4, 5, 6);
+let y2 = getKlasesPazymiuVidurkis(10, 2, 3, 4, 5, 6);
+let y3 = getKlasesPazymiuVidurkis(1, 2, 9, 4, 5, 6);
+let y4 = getKlasesPazymiuVidurkis(1, 7, 3, 4, 5, 6);
+let y5 = getKlasesPazymiuVidurkis(1, 2, 3, 9, 5, 6);
+let y6 = getKlasesPazymiuVidurkis(1, 6, 3, 4, 5, 6);
+console.log(y1, y2, y3, y4, y5, y6);
 
 
+
+function getKlasesPazymiuVidurkis(y1, y2, y3, y4, y5, y6) {
+    let klasesVidurkis = (y1 + y2 + y3 + y4 + y5 + y6)/6;
+    return klasesVidurkis;
+}
+console.log(getKlasesPazymiuVidurkis(y1, y2, y3, y4, y5, y6));
 
 
 // 5 UZDUOTIS
