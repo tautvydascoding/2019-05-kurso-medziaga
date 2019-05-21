@@ -73,7 +73,7 @@ function setVardas5(name){
 setVardas5("Jolka");
 
 function getVardas5() {
-    return vardas + "5"
+    return vardas + "5";
 }
 console.log(getVardas5());
 //
@@ -172,11 +172,14 @@ function setVardas15(name) {
     vardas = name + "15";
 }
 function getVardas14() {
-    console.log(vardas);
+    return vardas + "14";
 }
+console.log(vardas);
+
 function getVardas15() {
-    console.log(vardas);
+    return vardas + "15";
 }
+console.log(vardas);
 
 setVardas14("Giulija");
 setVardas15("Jolka");
