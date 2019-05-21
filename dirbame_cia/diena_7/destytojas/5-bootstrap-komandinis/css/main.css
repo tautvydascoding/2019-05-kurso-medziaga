@@ -1,0 +1,31 @@
+/*
+main colors:
+light: #f9f9f9;
+dark: #b212b2;
+
+main background colors:
+fonas: #f2f2f2;
+tamsus fonas: #d3d3d3;
+
+tekstas didelis: 22px
+tekstas: 16px;
+ */
+
+
+/* ============== */
+h1 {
+    color: red;
+}
+.aukstis-100 {
+    height: 100px;
+}
+.aukstis-200 {
+    height: 200px;
+}
+.aukstis-300 {
+    height: 300px;
+}
+.aukstis-500 {
+    height: 500px;
+}
+ 
