@@ -4,6 +4,15 @@
     x += 3;     // tas pats kad x = x + 3;
     x++;       //  tas pats kas x = x + 1;
 
+
+//Laikini nesvarbus kintamieji
+    let text = "";
+    let tekstas = "";
+    let t = "";
+    let tmp = ""; //temporary
+    let str = ""; //String
+    let s = ""; //string
+
 //=============FOR   LOOP====================
 // teo:  https://www.w3schools.com/js/js_loop_for.asp
 //  https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Loops_and_iteration
@@ -76,7 +85,7 @@ for (i=0; i<5; i++) {
 // PATARIMAS:
 // pabandyti  isideti nuotrauka i HTML faila, jie pavyks tada nusikopijuoti ir ideti i js faila
 let nuotrauka = '<img src="img/melynassuo.jpg" width="30%" alt="suo">';
-document.querySelector("body").innerHTML += nuotrauka;
+// document.querySelector("body").innerHTML += nuotrauka;
 
 for (i=0; i<12; i++) {
     printX(nuotrauka + "<br>");
@@ -85,6 +94,29 @@ for (i=0; i<12; i++) {
 // A) sukurti f-jas piestiEilute(x); spausdintiStulpeli(x);
 // B) nupiesti tuscia lentele paleidiznat f-jas (  antrastine eilute "vardas |  pavarde | amzius" - teks isvesti be f-jos)
 
+function piestiEilute(ilgis) {
+    tekstas = "";
+    for ( i = 0; i < ilgis; i++) {
+        tekstas = tekstas + "-";
+         //spausdinti eilute
+    }
+console.log( tekstas);
+
+}
+
+function piestiStulpeli(plotis) {
+    for ( i = 0; i < plotis; i++) {
+        tekstas = tekstas + "/";
+         //spausdinti eilute
+    }
+console.log( tekstas);
+
+}
+
+piestiEilute(25);
+console.log("vardas |  pavarde | amzius");
+piestiEilute(30);
+piestiStulpeli(1);
 
 
 
@@ -104,6 +136,25 @@ for (i=0; i<12; i++) {
 // var kiekMenesiu = 10 * 12;
 // var menAtlyginimas = 680;
 // var algosPokytis = 1;  // 1%
+
+
+function algosDidejimas() {
+    let kiekMenesiu = 10 * 12;
+    let menAtlyginimas = 680;
+    let algosPokytis = 0.01;
+    let suma = menAtlyginimas * algosPokytis;
+
+    for ( i = 0; i < 12; i++) {
+        suma += "";
+    }
+
+}
+
+algosDidejimas();
+
+
+
+
 
 // ==============SCSS============================
 
