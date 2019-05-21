@@ -7,8 +7,10 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
 }
-h1 {
-    color: red;
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
 }
 .aukstis-100 {
     height: 100px;
@@ -18,6 +20,9 @@ h1 {
 }
 .aukstis-300 {
     height: 300px;
+}
+.aukstis-320 {
+    height: 320px;
 }
 .aukstis-500 {
     height: 500px;
@@ -29,4 +34,19 @@ h1 {
     opacity: 0.95;
     border: 0.5px solid;
     border-radius: 50px 20px;
+}
+.articleBackground {
+    background: white;
+    opacity: 0.5;
+}
+.paddingCenter {
+    padding-top: 25px;
+}
+
+.marginTop {
+    margin-top: 325px;
+}
+
+.pilka {
+    background-color: grey;
 }
