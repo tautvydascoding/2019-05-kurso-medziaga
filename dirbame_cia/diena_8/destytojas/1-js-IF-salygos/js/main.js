@@ -1,43 +1,30 @@
-// =================if  teorija====================
-// if ( true ) {
-//     console.log("labas");
-// }
-if(true){
-	console.log("labas")
-}
-
-// if (salyga) {
-//     // jei true
-//     //
-//     //
-// } else {
-//     // jei false
-// }
+console.log(" Labas ");
 
 
-// if ( salyga ) {
-//     // jei salyga tenkinama
-// }
-//
-// if ( salyga ) {
-//     // jei salyga tenkinama
-// } else {
-//     // jei salyga netenkinama  / priesingu atveju
-// }
-//
-// if (salyga) {
-//
-// } else if (salyga) {
-//
-// } else {
-//     // ?
-// }
 
 //=============IF====================
 // UZDUOTIS
 // sukurti kintamuosius: arVedes ir arDuotiPaskola = false
-// patikrinti ar zmogus vedes. Jeigu "vedes" - duoti paskola, jeigu "nevedes" - neduoti paskolos
+// patikrinti ar zmogus vedes. Jeigu "vedes" - duoti paskola,
+// jeigu "nevedes" - neduoti paskolos
 // su console.log pranesti ar paskola zmogui bus duodama
+
+let arVedes = 1;   // vedes
+let arDuotiPaskola = false;  // neduoti
+
+// tikriname ar vedes - jei vedes - duosim paskola
+//  Ar cia tiesa?
+if ( arVedes == true ) {
+    arDuotiPaskola = true;
+} else {
+    arDuotiPaskola = false;
+}
+// --- prasnesimas
+if ( arDuotiPaskola == true ){
+    console.log( "Sveikinu");
+} else {
+    console.log( "Deja. Patarimas: Pabandytkite vel kai susituoksite");
+}
 
 // 0 UZDUOTIS
 // A)
@@ -45,21 +32,42 @@ if(true){
 // patikrinti:
 // jeigu vardai sutampa, i konsole pranesti apie tai
 // jeigu vardai nesutampa - parasysi "vardai yra skirtingi"
-
+let vardas1 = "Marytnas";
+let vardas2 = "Antanas";
+if (vardas1 == vardas2) {
+    console.log(" abu vardai sutampa");
+} else {
+    console.log("vardai nesutampa");
+}
 // B)
 // Jeigu vardas1 yra "Tomas" - pasisveikinti su juo
-
+if (vardas1 == "Tomas") {
+    console.log("Labas Tomai");
+}
 // C)
 // Patikrinti ar varda1 yra "Tomas", IR butinai vardas2  yra "Karolis"
 // pranesti kad vardai: "Tomas ir Karolis"
 // arba pranesti, kad : "vardai NE Tomas ir Karolis"
 // pakeitineti vardus ir paziureti ar veikia
-
+vardas1 = "Tomas";
+vardas2 = "Karolis";
+if (vardas1 == "Tomas" && vardas2 == "Karolis") {
+    console.log( "vardai yra: Tomas ir Karolis");
+} else {
+    console.log( "vardai NE  Tomas ir Karolis");
+}
 // D)
 // Patikrinti ar bent vienas is vardu "Tomas"
 // || - arba
 // pranesti: "kazkuris is vardu yra Tomas"
 // pakeitineti vardus ir paziureti ar veikia
+// vardas1 = "Martynas";
+// vardas2 = "Tomas";
+// if (vardas1 == "Tomas" || vardas2 == "Tomas") {
+//     console.log( "kazkuris is vardu yra tomas");
+// } else {
+//     console.log( "nei vienas NERA Tomas");
+// }
 
 // 1 UZDUOTIS
 // turesime vartotojo amziu
@@ -84,7 +92,10 @@ if(true){
 // sunkesne:
 //      (i 'if' vidu ideti papildoma 'if')
 //      iki 7 metu ir nuo 65 metu papildomai isvesti "Sokoladiniai zuikuciai 20% nuolaida"
+let age = 5;
+if ( age < 7) {
 
+}
 
 // 2 UZDUOTIS
 // susikurti kintamaji 'klietoVardas' - (ja ivesime betkokia) kurio reiksme lyginsime
