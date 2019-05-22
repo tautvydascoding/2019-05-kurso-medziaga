@@ -7,7 +7,7 @@
         <!-- !!! mano CSS failas vissada zemiau, nie kiti css failai -->
         <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"> -->
         <link rel="stylesheet" href="./libs/bootstrap/css/bootstrap.css">
-
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
         <!-- !!idedame CSS faila, nes kitaip neveiks -->
         <link rel="stylesheet" href="css/main.css">
         <!-- NOTE: jeigu neveikia:
@@ -18,17 +18,113 @@
          -->
     </head>
     <body>
+            <header>
+                <section class="container ">
+                <nav class="navbar navbar-expand-sm bg-dark navbar-dark mb-3 ">
+  <!-- Brand/logo -->
+  <a class="navbar-brand" href="#">
+    <img width="170px" height="70px"src="img/logo1.jpg" alt="logo">
+  </a>
 
-        <h1>Isijunk konsole</h1>
+  <!-- Links -->
+  <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" href="index.html">Home</a>
+      </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#">About</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="gallery.html">Galery</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#">Contacts</a>
+    </li>
+  </ul>
+</nav>
+</section>
+
+            </header>
+            <!-- IDEA: talpinu straipsnius 1dalis -->
+            <section class="container">
+                <div class="row justify-content-start mt-3">
+                    <div class="col-4 bg-info">
+                        <h2>antraste</h2>
+                        <p>lerem</p>
+                    </div>
+                </div>
+                <div class="row justify-content-center">
+                    <div class="col-4 bg-info">
+                        <h2>antraste2</h2>
+                        <p>lerem</p>
+                    </div>
+                </div>
+                <div class="row justify-content-end">
+                    <div class="col-4 bg-info">
+                        <h2>antraste3</h2>
+                        <p>lerem</p>
+                    </div>
+                </div>
+            </section>
 
 
+            <!-- IDEA: mygtukas sritis uzimanti visa ekrana -->
+            <section class="container-fluid">
+            <div class="row mt-3  ">
+                <div class="col-12 aukstis-100 bg-info d-flex justify-content-center align-items-center ">
+            <button type="button" class="btn btn-primary">Susisiekite</button>
+                </div>
+            </div>
+            </section>
 
+            <!-- IDEA: antra dalis straipsniu -->
 
+            <section class="container">
+                <div class="row justify-content-start mt-3">
+                    <div class="col-6 articleBackground  text-justify">
+                        <h1>Article 1</h1>
+                        <p>
+                            <strong>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</strong>
+                        </p>
+                    </div>
+
+                    </div>
+
+                    <div class="row justify-content-end">
+                    <div class="col-6 articleBackground text-justify">
+                        <h1>Article 1</h1>
+                        <p>
+                            <strong>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</strong>
+                        </p>
+                    </div>
+
+                </div>
+            </section>
+
+<!-- IDEA: Luko sukurtas footeris -->
+<section class="container">
+    <footer class="row">
+        <div class="col-6 bg-dark mt-3">
+            <ul class="pt-3">
+                <li class="mb-1"><a href="index.html"><button type="button" class="btn btn-primary">Home</button></a></li>
+                <li class="mb-1"><a href="#"><button type="button" class="btn btn-primary">About</button></a></li>
+                <li><a href="#"><button type="button" class="btn btn-primary">Contacts</button></a></li>
+            </ul>
+            <img width="100px" height="50px"src="img/logo.png" alt="logo">
+        </div>
+        <div class="col-6 pilka mt-3 text-right p-0">
+            <img width="170px" height="70px"src="img/logo1.jpg" alt="logo">
+        </div>
+    </footer>
+</section>
 
         <!-- js puslapio apacioje -->
-        <script src="http://code.jquery.com/jquery-3.3.1.min.js"  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
-         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+            <script src="http://code.jquery.com/jquery-3.3.1.min.js"  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
         <!-- !!! mano js failas - VISADA pats zemiausias -->
         <script type="text/javascript" src="js/main.js">     </script>
     </body>

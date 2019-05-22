@@ -10,7 +10,7 @@
 //  https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Loops_and_iteration
 
 // 1 UZDUOTIS
-// isvesti 30 kartu zodi "Azuolas" i konsole  (! bandant tai padaryti, atsiras skaicius 50)
+// isvesti 30 kartu zodi "Azuolas" i konsole  (! bandant tai padaryti, atsiras skaicius 30)
 
 // 1.1 UZDUOTIS
 // isvesti i ekrana "<h3> Azuolas </h3>" su document.write arba innerHTML
@@ -21,7 +21,7 @@
 
 // 1.3 UZDUOTIS
 // (HTML faile susikurti <ul> elementa)
-// isvesti 6 kartu zodi "<li> elementas 1 </li> " i <ul> elementa su  innerHTML pagalba
+// su FOR isvesti 6 kartu zodi "<li> elementas 1 </li> " i <ul> elementa su  innerHTML pagalba
 
 // 1.4 UZDUOTIS
 // (HTML faile susikurti <header> elementa)
