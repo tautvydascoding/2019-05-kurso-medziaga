@@ -54,3 +54,11 @@ ul {
     margin: 0;
     padding: 0;
 }
+.float-r{
+    float: right;
+}
+.clearfix: {
+  content: "";
+  clear: both;
+
+}

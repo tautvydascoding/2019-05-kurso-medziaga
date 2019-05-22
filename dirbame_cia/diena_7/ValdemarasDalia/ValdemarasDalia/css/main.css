@@ -13,3 +13,21 @@ h1 {
 .aukstis-500 {
     height: 500px;
 }
+.divabsolute {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 200px;
+  height: 100px;
+}
+.logoabsolute {
+    position: relative;
+  right: : 30px;
+}
+.backround-foto {
+  background-image: url("../gallery/darzoves.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 250px;
+  background-position: center;
+}
