@@ -24,3 +24,10 @@ h1 {
     position: relative;
   right: : 30px;
 }
+.backround-foto {
+  background-image: url("../gallery/darzoves.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 250px;
+  background-position: center;
+}
