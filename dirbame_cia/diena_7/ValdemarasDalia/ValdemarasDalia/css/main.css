@@ -1,5 +1,5 @@
 h1 {
-    color: red;
+    color: blue;
 }
 .aukstis-100 {
     height: 100px;
@@ -13,3 +13,35 @@ h1 {
 .aukstis-500 {
     height: 500px;
 }
+<<<<<<< HEAD
+.plotis-70 {
+  width: 70%
+}
+.fonas-nuotrauka {
+    background-image:url("../img/citrinos.jpg"); /* The image used */
+    background-color: #cccccc; /* Used if the image is unavailable */
+    height: 300px; /* You must set a specified height */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: cover; /* Resize the background image to cover the entire container */
+  }
+=======
+.divabsolute {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 200px;
+  height: 100px;
+}
+.logoabsolute {
+    position: relative;
+  right: : 30px;
+}
+.backround-foto {
+  background-image: url("../gallery/darzoves.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 250px;
+  background-position: center;
+}
+>>>>>>> 247e89482dae48deb5ad5ee31e78d0febc71b48f
