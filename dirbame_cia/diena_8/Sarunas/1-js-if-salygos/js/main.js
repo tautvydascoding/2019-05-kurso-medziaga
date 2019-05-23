@@ -12,6 +12,7 @@ console.log(" Labas ");
 let arVedes = 1;   // vedes
 let arDuotiPaskola = false;  // neduoti
 
+
 // tikriname ar vedes - jei vedes - duosim paskola
 //  Ar cia tiesa?
 if ( arVedes == true ) {
@@ -32,13 +33,19 @@ if ( arDuotiPaskola == true ){
 // patikrinti:
 // jeigu vardai sutampa, i konsole pranesti apie tai
 // jeigu vardai nesutampa - parasysi "vardai yra skirtingi"
-let vardas1 = "Marytnas";
+let vardas1 = "Tomas";
 let vardas2 = "Antanas";
 if (vardas1 == vardas2) {
     console.log(" abu vardai sutampa");
 } else {
     console.log("vardai nesutampa");
 }
+// =====================================
+if (vardas1 == "Tomas") {
+    console.log("Sveikas Tomai");
+}
+
+
 // B)
 // Jeigu vardas1 yra "Tomas" - pasisveikinti su juo
 if (vardas1 == "Tomas") {
@@ -49,7 +56,7 @@ if (vardas1 == "Tomas") {
 // pranesti kad vardai: "Tomas ir Karolis"
 // arba pranesti, kad : "vardai NE Tomas ir Karolis"
 // pakeitineti vardus ir paziureti ar veikia
-vardas1 = "Tomas";
+vardas1 = "Martynas";
 vardas2 = "Karolis";
 if (vardas1 == "Tomas" && vardas2 == "Karolis") {
     console.log( "vardai yra: Tomas ir Karolis");
@@ -92,17 +99,9 @@ if (vardas1 == "Tomas" && vardas2 == "Karolis") {
 // sunkesne:
 //      (i 'if' vidu ideti papildoma 'if')
 //      iki 7 metu ir nuo 65 metu papildomai isvesti "Sokoladiniai zuikuciai 20% nuolaida"
-let age = 26;
+let age = 5;
 if ( age < 7) {
-    console.log( "Pliusines varles");
-} else if (age <= 14) {
-    console.log( "Mini telefonai" );
-} else if (age <= 18 ) {
-    console.log( "new Music App" );
-} else if (age <= 24) {
-    console.log( "Stok i siauliu sajunga" );
-} else if (age <= 65) {
-    console.log( "Pensijos kaupimas - zusiregistruok");
+
 }
 
 // 2 UZDUOTIS
@@ -112,16 +111,6 @@ if ( age < 7) {
 // kai "if"-ui padauodame klietoVardas ir vardas1 - isvesti "Masinoms 10% nuolaida"
 // kai "if"-ui padauodame klietoVardas ir vardas2 - isvesti "Buitinei technikai  30% nuolaida"
 // kai "if"-ui padauodame bet ka kita - isvesti "5% nuolaida kelionems"
-
-let klietoVardas="Jonas";
-let vardas1 = "Tomas";
-let vardas2 = "Paulius";
-let vardas3 = "Airidas";
-
-// ar mano brolis?
-if (klietoVardas == vardas1)
-
-
 
 // 3 UZDUOTIS
 // sukurti 3 kintamuosius (klientu tipus) "bronze", "silver", "gold"
