@@ -5,14 +5,19 @@
 names = ["Tomas", "Pietkus", 25, "VDU - inzinerija"];
 
 console.log(names);
-// UZDUOTIS; panaudoti masyvu Methods:
+// UZDUOTIS
+// pa'googlinti "javascript array Methods":  https://www.w3schools.com/js/js_array_methods.asp
+// ismeginti visas komandas/ metodus
+// metodas - jau esama js f-ja, kuria suprogramavo js kalbos kurejai
 
+// metodai:
+// .shift()
 // .length
 // .join()
-// .shift()
 // .pop()
+// .slice()
 // ...
-// pvz    names.shift();
+// pvz    names.shift("Tomas");
 
 // =========================================================
 // SAVARANKISKA UZDUOTIS  Array
