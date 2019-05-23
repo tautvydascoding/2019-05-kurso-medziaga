@@ -15,14 +15,11 @@ console.log(" Labas ");
 		prekiautojai[3] = "Varle.lt";
 		console.log(prekiautojai);
 
-		for (var i = 0; i < 4; i++){
-			console.log(prekiautojai[i]);
-		}
 
 	// 2 pervadinti pirma stalciu pvz + "ir KO"
 
 	prekiautojai[1] += " ir Ko";
-	console.log(prekiautojai);
+	console.log(prekiautojai[1]);
 
  	// 3 sukeisti antro ir trecio stalciu reiksmes vietomis.
 let trecias = prekiautojai[2];
@@ -35,14 +32,18 @@ console.log(prekiautojai);
 	// 3.1  padaryti 3) uzdaviniui f-ja sukeistiMasyvo2elementus(x, y)
 
 	function sukeistiMasyvo2elementus (x, y){
-		var save = prekiautojai[x];
+		var temp = prekiautojai[x];
 		prekiautojai[x] = prekiautojai[y];
-		prekiautojai[y] = save;
-		return prekiautojai;
+		prekiautojai[y] = temp;
+		for (var i=0; i<4; i++){
+		console.log(prekiautojai[i]);
+	}
 	}
 
-	console.log(sukeistiMasyvo2elementus(0, 3));
 
-	document.querySelector("h1").innerHTML = "pakeistas";
 
-	 // empty array
+	sukeistiMasyvo2elementus(0, 3);
+
+	document.querySelector("h1").innerHTML = "pakeista";
+	document.querySelector("body").innerHTML += prekiautojai[0] + "<br>";
+	document.querySelector("body").innerHTML += prekiautojai[1];
