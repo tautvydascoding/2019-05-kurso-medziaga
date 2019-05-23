@@ -38,10 +38,13 @@ console.log( auto[0], auto[1],  auto[2],  auto[3],  auto[4]   );
 document.querySelector('body').innerHTML += "<article> aaa </article>";
 let pav = "<h2> " +  auto[0] +  " </h2>";
 document.querySelector('article').innerHTML += pav;
+
 let savininkas = "<div> savininko vardas:" +  auto[3] +  " </div>";
 document.querySelector('article').innerHTML += savininkas;
+
 let mr = "<span> metai:" + auto[4] + " rida " + auto[1] + " </span>";
 document.querySelector('article').innerHTML += mr;
+
 let kaina = "<a class='btn btn-info'> " +auto[2]+ " </a>";
 document.querySelector('article').innerHTML += kaina;
 
