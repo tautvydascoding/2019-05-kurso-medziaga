@@ -4,5 +4,6 @@
 
 //==========idomesni isvedimai==============
 
+console.log("paprastas pranesimas");
 console.warn("ispejimas");
 console.error("raudonas tekstas");
