@@ -92,19 +92,40 @@ if (vardas1 == "Tomas" && vardas2 == "Karolis") {
 // sunkesne:
 //      (i 'if' vidu ideti papildoma 'if')
 //      iki 7 metu ir nuo 65 metu papildomai isvesti "Sokoladiniai zuikuciai 20% nuolaida"
-let age = 5;
-if ( age < 7) {
-
+let age = 19;
+if ( age <= 7) {
+    console.log(  "Pliusines varles" );
+} else if (age <= 14) {
+    console.log( "Mini telefonai" );
+} else if (age <= 18) {
+    console.log(  "new Music App" );
+} else if (age <= 24) {
+    console.log( "Stok i sauliu sajunga" );
+} else if (age <= 65) {
+    console.log( "Pensijos kaupimas - zusiregistruok" );
 }
 
 // 2 UZDUOTIS
 // susikurti kintamaji 'klietoVardas' - (ja ivesime betkokia) kurio reiksme lyginsime
 // sukurti 3  vardas1= "Tomas", vardas2 ="Paulius", vardas3 ="Airidas" (gimianiciu vardai , jie tures akcijas))
 
-// kai "if"-ui padauodame klietoVardas ir vardas1 - isvesti "Masinoms 10% nuolaida"
-// kai "if"-ui padauodame klietoVardas ir vardas2 - isvesti "Buitinei technikai  30% nuolaida"
-// kai "if"-ui padauodame bet ka kita - isvesti "5% nuolaida kelionems"
+// kai "if"-ui   klietoVardas yra lygus vardas1 - isvesti "Masinoms 10% nuolaida"
+// kai "if"-ui   klietoVardas yra lygus vardas2 - isvesti "Buitinei technikai  30% nuolaida"
+// kai "if"-ui   visiems kitiems - isvesti: "5% nuolaida kelionems"
+  klietoVardas = "Tomas";
+  vardas1= "Tomas";
+  vardas2 ="Paulius";
+  vardas3 ="Airidas";
 
+// ar mano brolis?
+if (klietoVardas == vardas1 ) {
+	console.log("Masinoms 10% nuolaida");
+} else if(klietoVardas == vardas2 ) { // ar mano sese
+	console.log("Buitinei technikai  30% nuolaida");
+} else {
+     console.log("Jums 5% nuolaida");
+}
+console.log("============");
 // 3 UZDUOTIS
 // sukurti 3 kintamuosius (klientu tipus) "bronze", "silver", "gold"
 // susikurti kintamaji 'klietoTipas' - kurio reiksme lyginsime

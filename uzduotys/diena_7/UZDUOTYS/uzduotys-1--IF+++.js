@@ -87,12 +87,12 @@ if(true){
 
 
 // 2 UZDUOTIS
-// susikurti kintamaji 'klietoVardas' - (ja ivesime betkokia) kurio reiksme lyginsime
+// susikurti kintamaji:  klietoVardas = "Jonas"     kurio reiksme lyginsime
 // sukurti 3  vardas1= "Tomas", vardas2 ="Paulius", vardas3 ="Airidas" (gimianiciu vardai , jie tures akcijas))
 
-// kai "if"-ui padauodame klietoVardas ir vardas1 - isvesti "Masinoms 10% nuolaida"
-// kai "if"-ui padauodame klietoVardas ir vardas2 - isvesti "Buitinei technikai  30% nuolaida"
-// kai "if"-ui padauodame bet ka kita - isvesti "5% nuolaida kelionems"
+// kai "if"-ui   klietoVardas yra lygus vardas1 - isvesti "Masinoms 10% nuolaida"
+// kai "if"-ui   klietoVardas yra lygus vardas2 - isvesti "Buitinei technikai  30% nuolaida"
+// kai "if"-ui   visiems kitiems - isvesti: "5% nuolaida kelionems"
 
 // 3 UZDUOTIS
 // sukurti 3 kintamuosius (klientu tipus) "bronze", "silver", "gold"
