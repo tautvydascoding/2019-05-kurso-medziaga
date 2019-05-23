@@ -9,6 +9,17 @@ console.log(names);
 // pa'googlinti "javascript array Methods":  https://www.w3schools.com/js/js_array_methods.asp
 // ismeginti visas komandas/ metodus
 // metodas - jau esama js f-ja, kuria suprogramavo js kalbos kurejai
+zmg.pop(); // pop - istrini paskutini masyvo elementa
+console.log( "istryniau paskutini: " + zmg.join( "; " ) );
+
+
+
+
+zmg.unshift('Vyras');
+console.log( "idejau i pradzia: " + zmg.join ( "; ") );
+
+zmg.shift( );
+console.log( "istrynem ");
 
 // metodai:
 // .shift()
@@ -30,6 +41,7 @@ keliautojas = ["Tomas", "Pietkus", 25, "VDU - inzinerija"];
 
 // --------GERESNI UZDAVINIAI:
 // 4. sukurti masyva (50 ilgumo) naudojant FOR ir uzpildyti visa skaiciais "0" (kiekvienas stalcius turi but lygus "0");
+
 // 5.1  sukurti masyva naudojant WHILE (50 ilgumo) ir uzpildyti visa skaiciumi 1;
 // 5.2: kas antra ^ masyvo elementa pakeisti i "3"
 // [1, 3, 1, 3, 1, 3, 1, 3, 1, 3, ....
