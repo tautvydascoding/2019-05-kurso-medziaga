@@ -127,8 +127,14 @@ for (  i = 0; i < names.length; i++) {
 // 5) Turime masyva su zmoniu nr.  ieskomiZmones = [2, 16, 17, 18, 19, 25];
 // A) atspausdinti visus numerius
 // B) isvesti ju pavardes ir vardus
- ieskomiZmones = [1, 16, 17, 18, 19, 25];
-
+ ieskomiZmones = [0, 16, 17, 18, 19, 25];
+for (  i = 0; i < ieskomiZmones.length; i++) {
+    // A
+    console.log(   ieskomiZmones[i]   );
+    // B
+    sk = ieskomiZmones[i];
+    console.log( names[sk] + " " + lastNames[ sk ]  );
+}
 
 // var a = Math.random(); // 0 - 1
 // if ( a <= 0.1) {
