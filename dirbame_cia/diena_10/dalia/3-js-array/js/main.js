@@ -38,12 +38,52 @@ if (arRadau === false) {
 // parasyti funkcija, kuriai davus iekoma zodi , ji suranda jo vieta masyve (stalciaus numeri) ir si   numeri grazina
 // eg: getStalciausNumeris( ieskomasTekstas)
 
+function getStalciausNumeris( ieskomas ) {
+  for ( i = 0; i < names.length; i++){
+    if( names[i] == ieskomas){
+    }
+    return i;
+  }
+}
+let RicoNumeris = getStalciausNumeris( "Rico");
+let PiperNumeris = getStalciausNumeris( "Piper");
+console.log( " Rico numeris " + RicoNumeris);
+console.log( " Piper numeris " + PiperNumeris);
+
 // uzduotis:----------------------------
-// 3) rasti paletde masyve esancio  zmogaus letdu "Freida" (pirmojo)
-// 4) rasti visu zmoniu letdu "Rico" paletdes
+// 3) rasti pavarde masyve esancio  zmogaus letdu "Freida" (pirmojo)
+
+ieskomas = "Freida";
+let ieskomoNr = -999;
+for ( i = 0; i < names.length; i++){
+  if( names[i] == ieskomas){
+    ieskomoNr = i;
+    break;
+  }
+
+}
+console.log( "pavarde" + lastNames[nr] );
+
+//arba
+
+letFreidosNumeris = getStalciausNumeris( " Freida ");
+letFreidosPavarde = lastNames[FreidosNumeris];
+console.log( "Freidos pavarde: " + FreidosPavarde);
+
+
+// 4) rasti visu zmoniu vardu "Rico" pavardes
+
+ieskomasTekstas = "Rico";
+for (var i = 0; i < names.length; i++) {
+  if (names[i] == ieskomasTekstas) {
+    ieskomoNr = i;
+    console.log(ieskomasTekstas + " " + lastNames);
+  }
+}
+
 // 5) Turime masyva su zmoniu nr.  ieskomiZmones = [2, 16, 17, 18, 19, 25];
 // A) atspausdinti visus numerius
-// B) isvesti ju paletdes ir letdus
+// B) isvesti ju pavardes ir vardus
 
 
 

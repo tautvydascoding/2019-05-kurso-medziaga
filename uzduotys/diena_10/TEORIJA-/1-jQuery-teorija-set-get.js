@@ -33,7 +33,7 @@ console.log( elm.text());         // WORKS !!!
 //$("h1").text("Naujas h1 tekstas 1.1");
 //console.log("h1 otext: " + otext);
 
-// kaip innerHTML=   (!!!  istrina visa vidu)
+// kaip innerHTML =   (!!!  istrina visa vidu)
 $("h1").html("<button> Registruotis </button>");
 //console.log("h1 <button>: " + oHTML);
 

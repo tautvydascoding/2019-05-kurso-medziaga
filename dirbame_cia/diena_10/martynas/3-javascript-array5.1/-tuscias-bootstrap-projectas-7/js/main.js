@@ -1,3 +1,4 @@
+console.log(" Labas ");
 // apsilimui
 
 var masyvas = [];
@@ -11,6 +12,15 @@ var max = 100;
 // kursime nauja masyva uzpildyta, atsitiktiniais skaiciais nuo 10 - 100.
 // masyvo ilgis 60
 
+let i = 0;
+let darbuotojai = [];
+for (i = 0; i < 60; i++) {
+
+    //random - loterija nuo 0 iki 0.99999
+    darbuotojai[i] = Math.floor (Math.random() * 100 + 10);
+}
+console.log(darbuotojai);
+
 // 2 UZDUOTIS:
 // burtu keliu masyvo narius, su 10 % tikimybe paversti negiamais  ( padauginti is  -1)
 // pvz:
@@ -18,11 +28,32 @@ var max = 100;
 // if ( a <= 0.1) {
 //     console.log( "laimejai" );
 // }
-// skaiciai simbolizuoja kiek darbuotojai pagamina
+
+
+for ( i = 0; i < darbuotojai.length; i++) {
+    a = Math.random ();
+    if (a <= 0.1) {
+         // random nuo 0 iki 0.999999999
+        darbuotojai[i] = darbuotojai[i] * -1;
+    }
+
+
+}
+
+console.log(darbuotojai);
+
 // 3 UZDUOTIS:
 // visus skaicius paversti teigiamas (is masyvo parts)
 
+
+for ( i = 0; i < darbuotojai; i++) {
+    //neigiamu skaiciu pavertimas teigiamais
+    if (darbuotojai[i] < 0) {
+        darbuotojai [i] = darbuotojai [i] * -1;
+    }
+}
 // 4 UZDUOTIS:
 // surasti geriausia darbuotoja
+
 // 5 UZDUOTIS:
 //surasti blogiausia darbuotoja

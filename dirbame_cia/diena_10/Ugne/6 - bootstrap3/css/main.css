@@ -1,0 +1,19 @@
+nav{
+  height: 100vh;
+}
+
+header{
+  height: 25%;
+}
+
+footer{
+  height: 25%;
+}
+
+article{
+  height: 50%;
+}
+
+body{
+  background-color: pink;
+}
