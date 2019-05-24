@@ -1,4 +1,3 @@
-
 h1 {
     color: red;
 }
@@ -13,10 +12,4 @@ h1 {
 }
 .aukstis-500 {
     height: 500px;
-}
-
-.logo {
-    width: 100px;
-    height: 100px;
-    box-shadow: 10px 10px 10px 10px grey;
 }

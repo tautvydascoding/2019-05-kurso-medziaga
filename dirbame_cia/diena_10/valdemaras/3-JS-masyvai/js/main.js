@@ -71,10 +71,14 @@ for (i = 0; i < ieskomiZmones.length; i++) {
 }
 
 // B) isvesti ju pavardes ir vardus
+for (i = 0; i < ieskomiZmones.length; i++) {
+    console.log(ieskomiZmones[i]);
+    sk = ieskomiZmones[i] ;
+    console.log(names[sk] +  " " + lastNames[ sk ]);
+}
 
-
-
-// var a = Math.random(); // 0 - 1
-// if ( a <= 0.1) {
-//     console.log("laimejai");
-// }
+var a = Math.random(0);
+console.log(a);// 0 - 1
+if ( a <= 0.1) {
+    console.log("laimejai");
+}
