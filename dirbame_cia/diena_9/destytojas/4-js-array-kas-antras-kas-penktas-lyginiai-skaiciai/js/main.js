@@ -33,3 +33,13 @@ for (  i = 4; i < masyvas2.length; i=i+5) {
     masyvas2[i] = 9;
 }
 console.log(   masyvas2  );
+
+
+
+// let ilgis = masyvas2.length;
+// masyvas2.splice( 2, 0, "Persiklaus i Vilniu");
+// masyvas2.pop(); // istrina paskutini mas elementa
+// masyvas2.unshift("sitas atsiras pradzioje");
+// masyvas2.shift();  // istrina pirma
+// masyvas2.sort();   //
+// let visiDuoduom = masyvas2.concat( );
