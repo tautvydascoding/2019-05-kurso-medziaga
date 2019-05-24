@@ -8,7 +8,7 @@ var kopija1 = mas.slice(0);   // Becomes arr2a = ['a', 'b', 'c'] - deep copy
 var kopija2 = mas.concat(  );   // Becomes arr2b = ['a', 'b', 'c'] - deep copy
 let i = 0;
 // ================= ========= ======== ========
- ieskomiZmones = [2, 16, 17, 18, 19, 25];
+
 
 var names = ["Enriqueta", "Sybil", "Piper", "Anh", "Carmelo", "Regan", "Synthia", "Newton", "Norbert", "Krystyna", "Fidelia", "Christoper", "Lewis", "Jeromy", "Joy", "Lorri", "Owen", "Rosenda", "Devora", "Treva", "Leanora", "Meghann", "Jacqueline", "Bunny", "Tenisha", "Rico", "Clementina", "Samella", "Rico", "Sandi", "Efrain", "Tena", "Vivan", "Hiedi", "Naida", "Evette", "Shane", "Freida", "Marielle", "Wynona", "Cheree", "Gaston", "Aja", "Timika", "Jude", "Griselda", "Luise", "Rico", "Minh", "Warren"];
 
@@ -83,16 +83,51 @@ for (  i = 0; i < 2; i++) {
 
 
 // 2 UZDUOTIS (f-ja iekom stalciaus)
-// parasyti funkcija, kuriai davus iekoma zodi , ji suranda jo vieta masyve (stalciaus numeri) ir si   numeri grazina
+// parasyti funkcija, kuriai davus iekoma zodi ,
+// ji suranda jo vieta masyve (stalciaus numeri)
+// ir si   numeri grazina
 // eg: getStalciausNumeris( ieskomasTekstas)
-
+function getStalciausNumeris( ieskomas ) {
+    for (  i = 0; i < names.length; i++) {
+        if( names[i]  == ieskomas) {
+            return i;
+        }
+    }
+}
+let RicoNumeris =  getStalciausNumeris( "Rico" );
+let PiperNumeris = getStalciausNumeris( "Piper" );
+console.log(" RICO numeris" +  RicoNumeris  );
+console.log(" Piper numeris" + PiperNumeris );
 // uzduotis:----------------------------
 // 3) rasti pavarde masyve esancio  zmogaus vardu "Freida" (pirmojo)
+ieskomas = "Freida";
+let ieskomoNR = -999;
+for (  i = 0; i < names.length; i++) {
+    if( names[i]  == ieskomas) {
+         ieskomoNR = i;
+         break;
+    }
+}
+console.log( "pavarde" + lastNames[ieskomoNR] );
+// ARBA
+let FreidosNumeris =  getStalciausNumeris( "Freida" );
+let FreidosPavarde = lastNames[FreidosNumeris];
+console.log( "Freidos pavarde:" + FreidosPavarde );
+
 // 4) rasti visu zmoniu vardu "Rico" pavardes
+ieskomasTekstas = "Rico";
+for (  i = 0; i < names.length; i++) {
+    // tikrinu ar masyvo stalciu yra   mano tekstas-"Rico"
+    if (names[i] == ieskomasTekstas) {
+        // radau Rico
+        ieskomoNR = i;
+        console.log(ieskomasTekstas + " " + lastNames[ ieskomoNR ]);
+    }
+}
 // 5) Turime masyva su zmoniu nr.  ieskomiZmones = [2, 16, 17, 18, 19, 25];
 // A) atspausdinti visus numerius
 // B) isvesti ju pavardes ir vardus
-
+ ieskomiZmones = [1, 16, 17, 18, 19, 25];
 
 
 // var a = Math.random(); // 0 - 1
