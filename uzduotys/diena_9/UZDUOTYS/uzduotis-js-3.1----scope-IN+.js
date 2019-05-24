@@ -58,6 +58,7 @@
  //     console.log( "1. xx:", xx);
  //     console.log( "2. this.xx:",   this.xx);
  // }
+ // isvesti(999);
  // console.log( "3. xx:", xx);
 
 
