@@ -73,3 +73,6 @@ for ( i = 0; i < visiDarbuotojai.length; i++) {
     }
 // UZDUOTIS 1.4
 // isvesti visa informacija apie kiekviena  darbuotoja  (naudojant DU FOR ciklus)
+for ( i = 0; i < visiDarbuotojai.length; i++) {
+  console.log( "darbuotojo numeris" );
+}
