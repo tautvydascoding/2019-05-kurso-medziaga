@@ -18,9 +18,10 @@ var max = 100;
 // if ( a <= 0.1) {
 //     console.log( "laimejai" );
 // }
-
+// skaiciai simbolizuoja kiek darbuotojai pagamina
 // 3 UZDUOTIS:
 // visus skaicius paversti teigiamas (is masyvo parts)
+
 // 4 UZDUOTIS:
 // surasti geriausia darbuotoja
 // 5 UZDUOTIS:
