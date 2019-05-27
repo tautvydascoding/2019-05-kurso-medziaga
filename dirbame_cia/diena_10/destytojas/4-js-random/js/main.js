@@ -3,10 +3,13 @@ console.log(" Labas ");
 
 var masyvas = [];
 var min = 10;
-var max = 100;
+var max = 101;
 // 0 UZDUOTIS - pasikartoti:
 // skaicius, kurie yra lyginiai i pakeisti i zodi "lyginis"
 
+if( max % 2 == 0) {
+    console.log("skaicius lyginis");
+}
 
 // 1 UZDUOTIS:
 // kursime nauja masyva uzpildyta, atsitiktiniais skaiciais nuo 10 - 100.
@@ -48,9 +51,9 @@ console.log( darbuotojai );
 let geriausias = -99999;
 let geriausioDarbuotojoNR = -1;
 for (  i = 0; i < darbuotojai.length; i++) {
-    if ( geriausias < darbuotojai[i]) {
-        geriausias = darbuotojai[i];
-        geriausioDarbuotojoNR = i;
+    if ( geriausias < darbuotojai[i]) { // 10  5 60
+        geriausias = darbuotojai[i];   // nuo siol 10, 60
+        geriausioDarbuotojoNR = i;     // 0  2
     }
 }
 console.log( "geriausias rezultatas:" + geriausias);
