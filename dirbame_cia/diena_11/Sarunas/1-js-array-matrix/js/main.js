@@ -74,50 +74,50 @@ document.querySelector('body').innerHTML += "<br>";
 
  // UZDUOTIS 1.4
  // isvesti visa informacija apie kiekviena  darbuotoja  (naudojant DU FOR ciklus)
-document.write( "================ FOR FOR============ <br>" );
-for ( i = 0; i < visiDarbuotojai.length; i++) {
-    //console.log("darbuotojo numeris:" +i);
-    //ciklas paims eilutes (konkretaus darbuotojo duomenis)
+// ciklas dirbs tiek kiek turime darbuotoju
+// i - stulpelis
+
+document.write( "========FOR FOR======== <BR>" );
+for (  i = 0; i < visiDarbuotojai.length; i++) {
+    // console.log( "darbuotojo numeris:" + i);
+    // ciklas paims eilutes (komkretaus darbuotojo duomenis)
     // k = eilute
-    for ( k = 0; k < visiDarbuotojai.length; k++){
+    for (  k = 0; k < visiDarbuotojai[i].length; k++) {
         document.write( visiDarbuotojai[i][k] );
     }
     document.write( "<br>" );
 }
 
-
  // PAPAILDOMI LOGIKOS UZDAVINIAI (tiems kas juda greiciau nei visa klase ):
  // 1.5) surasti jauniausia darbuotoja
-
- // 1.6) surasti seniausia darbuotoja
+ // 1.6) surasti seniausia  darbuotoja
  // 1.6) apskaiciuoti darbuotoju amziaus vidurki
-
 
 // UZDUOTIS 2 --------------
 // sukurti matrica, kurioje bus saugoma kiekvienos prekes info:
-// Antraste, "img" + "1.jpg", kaina, prekes aprasymas
+// Antraste, "img pavadinimas", kaina, prekes aprasymas
 
 // 2.A. sukurti masyva preke: Antraste, img pavadinimas, prekes aprasymas, kaina
 // butu gerai, jei kainos butu nuo 10 iki 200 eur (ivairios)
 let preke1 = ["Dviratis", "1.jpg", 299, "Juodas kalnu dviratis"];
 let preke2 = ["Paspirtukas", "2.jpg", 45, "Elektrinis paspirtukas"];
-let preke3 = ["Rieduciai", "3.jpg", 250, "Oranziniais ratukais"];
+let preke3 = ["Rieduciai", "3.jpg", 250, "Orandziniais ratukais"];
 // 2.B. i masyva visosPrekes, ideti "preke" masyva
 let visosPrekes = [];
-visosPrekes.push( preke1 ); // push - ideda i masyvo gala
-visosPrekes.push( preke2 ); // push - ideda i masyvo gala
-visosPrekes.push( preke3 ); // push - ideda i masyvo gala
-
+visosPrekes.push(  preke1 );  // push - ideda i masyvo gala
+visosPrekes.push(  preke2 );
+visosPrekes.push(  preke3 );
 // 2.C. atvaizduodi kiekvienoje eiluteje po 3 prekes (naudojant for arba foreach(PHP kalba)) ir bootstrap dizaina
-for ( i = 0; i < visosPrekes.length; i++) {
+for (  i = 0; i < visosPrekes.length; i++) {
 
-    tekstas = "<article class='bg-info'>"
-    tekstas = tekstas + "<h2>" + visosPrekes[i][0] + "</h2>"
-    tekstas = tekstas + "<p>" + visosPrekes[i][1] + "</p>"
-    tekstas = tekstas + "<p>" + visosPrekes[i][2] + "</p>"
+    tekstas = "<article class='bg-info  '> ";
+    tekstas = tekstas + "<h2>" + visosPrekes[i][0] + "</h2>";
+    tekstas = tekstas + "<p>" + visosPrekes[i][1] + "</p>";
+    tekstas = tekstas + "<p>" + visosPrekes[i][2] + "</p>";
     tekstas = tekstas + "</article> ";
-      document.querySelector('body').innerHTML += tekstas; // 0 yra 0
-}
+     document.querySelector('body').innerHTML += tekstas; // 0 0 yra pavadinimas
+ }
+
 // nuotrauka (javascript kalbai)
 // let x = "<img src='img/1.jpg' alt='medziginis fotelis'>";
 
