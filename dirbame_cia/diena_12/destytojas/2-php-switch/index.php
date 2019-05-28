@@ -18,17 +18,24 @@ switch ($vartojoTipas) {
         echo "labas hacker'i ";
         break;
 }
+
+echo "<br /><br /><br />";
 // paduoti varda ir Jeigu jis lygus:
 // "audi" - atspausdinti "Susimastykite apie variklio prieziura"
 // "BMW" - atspausdinti "Susimastykite apie greiti ir vairavimo kultura"
 // "opel" - atspausdinti "Susimastykite apie naujus priedus"
 
-$automobilis = "audi";
+
+
+$automobilis = "   AUdi kieta ";
+$automobilis = mb_strtolower($automobilis, 'UTF-8');
+$automobilis = trim( $automobilis);  // pasalinam tarpus ir tabus
+
 switch ($automobilis) {
     case 'audi':
         echo "Susimastykite apie variklio prieziura";
         break;
-    case 'BMW':
+    case 'bmg':
         echo "Susimastykite apie greiti ir vairavimo kultura";
         break;
     case 'opel':
@@ -40,4 +47,3 @@ switch ($automobilis) {
 }
 
  ?>
- 
