@@ -26,13 +26,13 @@ console.log("Labas");
 // UZDUOTIS
 // 1.0
 // kaip perkelti klase 'h3' po 'h4'
-// 1.1
+
 // kaip perkelti klase 'reklama' virs 'section'
-// 1.2
+
 // kaip perkelti 'h3' po 'div'
-// 1.3
+
 // kaip perkelti 'h4' i  'nav' vidu
-// 1.4
+
 // kaip perkelti 'h5'  virs  'article'
 // 1.5
 // kaip perkelti 'section'  po  'article'
