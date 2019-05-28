@@ -29,7 +29,8 @@
 </form>
 
 // UZDUOTIS 1
-// pakeisti visus h1 tekstus i "Antraste nr: XX" ( vietoj "xx" isvesti skaiciu, kelinta tai antrate)
+// pakeisti visus h1 tekstus i "Antraste nr: XX"
+//( vietoj "xx" isvesti skaiciu, kelinta tai antrate)
 
 //  UZDUOTIS 2
 // pakeisti visus h2 tekstus, kurie yra "section" elemente.

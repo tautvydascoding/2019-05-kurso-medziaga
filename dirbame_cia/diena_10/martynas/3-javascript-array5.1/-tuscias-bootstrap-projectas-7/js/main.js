@@ -54,6 +54,16 @@ for ( i = 0; i < darbuotojai; i++) {
 }
 // 4 UZDUOTIS:
 // surasti geriausia darbuotoja
+let geriausias = -99999;
+let geriausioDarbuotojoNR = -1;
+for (  i = 0; i < darbuotojai.length; i++) {
+    if ( geriausias < darbuotojai[i]) {
+        geriausias = darbuotojai[i];
+        geriausioDarbuotojoNR = i;
+    }
+}
+console.log( "geriausias rezultatas:" + geriausias);
+console.log( "geriausias darbuotojas:" + geriausioDarbuotojoNR);
 
 // 5 UZDUOTIS:
 //surasti blogiausia darbuotoja
