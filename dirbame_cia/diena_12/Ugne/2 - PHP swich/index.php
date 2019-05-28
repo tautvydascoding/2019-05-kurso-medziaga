@@ -25,5 +25,25 @@ $br = "<br>";
      break;
  }
 
+echo $br . "______________SWITCH UZDUOTIS____________" . $br . $br;
+
+$vardas = "ugne";
+switch ($vardas) {
+  case "audi":
+    echo "Susimastykite apie variklio prieziura";
+    break;
+
+  case "BMW":
+    echo "Susimastykite apie greiti ir vairavimo kultura";
+    break;
+
+    case "opel":
+      echo "Susimastykite apie naujus priedus";
+      break;
+
+  default:
+    echo "Nerandame $vardas markės automobilio!";
+    break;
+}
 
  ?>
