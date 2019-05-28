@@ -136,7 +136,7 @@ for (i = 0; i < visosPrekes.length; i++) {
    // nuotrauka (javascript kalbai)
    let x = "<img src='img/1.jpg' alt='medziginis fotelis'>";
 
-   document.querySelector('body').innerHTML += 
+   // document.querySelector('body').innerHTML += 
 
    // 2  budai nuotraukoms (PHP kalbai)
     // printf("<img src='./img/" . $visosPrekes[$i][1] . "' width='200px;' alt=''  />");

@@ -1,7 +1,7 @@
 console.log("Labas");
 
-let vardas = "Tomas";
-console.log( vardas );
+// let vardas = "Tomas";
+// console.log( vardas );
 
 // function vardas() {
 //     console.log("Tomas Statnaitis");
@@ -69,19 +69,48 @@ document.querySelector("h2").style.backgroundColor = 'red'; 		// change the heig
 //  kuri atspausdina i konsole "x" reiksme
 //  iskviesti f-ja print(15.99);
 
+function printKaina(x) {
+
+    console.log(x);
+
+}
+
+printKaina(15.99);
+
 //  1.2 UZDUOTIS
 // iskviesti f-ja print 3 kartus, kad atspausdintu 3 skirtingas kainas:  999 , 13.49, 100.05
 //    vietoj x irasant, koki nors teksta pvz: printKaina( 999);
 
+function printKaina() {
+    console.log(999);
+    console.log(13.49);
+    console.log(100.05);
+
+}
+
+printKaina();
+
 // 2.1 UZDUOTIS
 // parasyti f-ja "pazymiuVidurkis()", kuri apskaiciuoja vidurki is  5 menesiu pazymiu
 // suskaiciuoti pazymiu vidurki (pazymius sukurti f-jos viduje) 5, 10 , 8 , 6 , 8  (ir atspausdintu vidurki)
+function pazymiuVidurkis() {
+    let pazymiai = 5+10+8+6+8;
+    let pazymiuVidurkis = pazymiai/5;
+    console.log(pazymiuVidurkis);
 
+}
+
+pazymiuVidurkis();
 // 2.2 UZDUOTIS
 // parasyti f-ja "pazymiuVidurkis1(x1, x2, x3, x4, x5)", kuriai galima paduoti 5 kintamuosius,
 // kuri apskaiciuoja vidurki is paduotu 5 menesiu pazymiu
 // suskaiciuoti pazymiu vidurki, 5, 10 , 8 , 6 , 8  (ir atspausdintu vidurki)
+function pazymiuVidurkis1(x1, x2, x3, x4, x5) {
+    let pazymiuVidurkis = x/5;
+    console.log(pazymiuVidurkis);
 
+}
+pazymiuVidurkis(5, 10 , 8 , 6 , 8);
 
 //=====================RETURN==================
 
@@ -90,6 +119,14 @@ document.querySelector("h2").style.backgroundColor = 'red'; 		// change the heig
 // B) parasyti f-ja "getVardas()", kuri turi "return" zodeli ir grazina varda i iskveitimo vieta.
 // C) patikrinti ar veikia f-ja
 
+
+function getVardas() {
+let vardas ="tomas";
+    return;
+
+}
+
+getVardas();
 // 2 UZDUOTIS
 // parasyti f-ja "getVardasPavarde()", kuri turi "return" zodeli ir grazina varda ir pavarde i iskveitimo vieta.
 //  f-joje sukurti kintamaji   "pavarde" Tomauskas, "vardas" - Antanas

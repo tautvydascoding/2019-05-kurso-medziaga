@@ -139,7 +139,7 @@ piestiStulpeli(1);
 
 
 function algosDidejimas() {
-    let kiekMenesiu = 10 * 12;
+    // let kiekMenesiu = 10 * 12;
     let menAtlyginimas = 680;
     let algosPokytis = 0.01;
     let suma = menAtlyginimas * algosPokytis;
