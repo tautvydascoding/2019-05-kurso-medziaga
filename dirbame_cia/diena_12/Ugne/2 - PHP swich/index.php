@@ -7,6 +7,7 @@ $br = "<br>";
  // "audi" - atspausdinti "Susimastykite apie variklio prieziura"
  // "BMW" - atspausdinti "Susimastykite apie greiti ir vairavimo kultura"
  // "opel" - atspausdinti "Susimastykite apie naujus priedus"
+ echo "Labutukas Ugne! $br";
 
  $vartotojoTipas = "kikas";
  switch ($vartotojoTipas) {
@@ -16,7 +17,6 @@ $br = "<br>";
      break;
 
    case "ugne":
-     echo "Labutukas Ugne! $br";
      echo "Oleee";
      break;
 
@@ -27,13 +27,14 @@ $br = "<br>";
 
 echo $br . "______________SWITCH UZDUOTIS____________" . $br . $br;
 
-$vardas = "ugne";
+$vardas = "    BMw";
+$vardas = mb_strtolower($vardas, 'UTF-8');
 switch ($vardas) {
   case "audi":
     echo "Susimastykite apie variklio prieziura";
     break;
 
-  case "BMW":
+  case "bmw":
     echo "Susimastykite apie greiti ir vairavimo kultura";
     break;
 
