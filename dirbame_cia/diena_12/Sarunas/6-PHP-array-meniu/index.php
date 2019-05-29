@@ -21,8 +21,28 @@
 
         <h1>Isijunk konsole</h1>
 
+        <nav>
+            <ul>
+                <li>Home</li>
+                <li>About</li>
+                <li>Gallery</li>
+                <li>Contact</li>
+                <li>Blog</li>
+            </ul>
+        </nav>
 
-
+        <?php
+            $meniu = ['Home', 'About', 'Gallery', 'Contact' ];
+         ?>
+        <nav>
+            <ul>
+                <?php
+                for ($i=0; $i <  count($meniu); $i++) {
+                    echo "<li> $meniu[$i]   </li>";
+                }
+                 ?>
+            </ul>
+        </nav>
 
         <!-- js puslapio apacioje -->
         <script src="http://code.jquery.com/jquery-3.3.1.min.js"  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
@@ -31,8 +51,5 @@
         <!-- !!! mano js failas - VISADA pats zemiausias -->
         <!-- <script type="text/javascript" src="js/main.min.js">     </script> -->
         <script type="text/javascript" src="js/main.js">     </script>
-        <nav>
-          
-        </nav>
     </body>
 </html>

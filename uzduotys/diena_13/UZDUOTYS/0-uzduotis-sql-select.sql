@@ -1,7 +1,11 @@
 -- uzduotis:
 -- 0. istrinti paskutine nuotrauka
 -- 0. Pakeisti Litos pavarde i Litaitė
+UPDATE doctors
+set lname = "Litaitė"
+WHERE id=5;
 -- 1. ISVESTI SURIKIUOTUS GYTYTOJUS PAGAL pavarde
+
 -- 2. ISVESTI GYTYTOJUS kuriu id mazesnis uz 3
 -- 3. ISVESTI paciantus kuriu vardas is raides "A"
 
