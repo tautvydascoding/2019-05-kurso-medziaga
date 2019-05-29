@@ -18,42 +18,49 @@
          -->
     </head>
     <body>
+      <header class="container bg-dark text-info h-50">
+        <nav class="navbar fixed-top">
+          <ul class="navbar">
+            <?php
+                $menu = array("Home", "About", "Gallery", "Contacts");
+                for ($i=0; $i<count($menu); $i++){
+                  echo "<li class='navbar'>";
+                  echo "$menu[$i]";
+                  echo "</li>";
+                }
+             ?>
+          </ul>
+        </nav>
+      <div class="col-12">
+        <h1>Superveplos e parduotuve</h1>
 
-      <?php
-      $kaina = "900 Eur";
-      $antraste = "Kompiuteris";
-      $aprasymas = "Pirk pirk sita nesamone!";
-       ?>
-
-        <h1>Isijunk konsole</h1>
-<div class="container bg-success">
-  <div class="row">
-    <?php
-for ($i=0; $i<6; $i++){
-echo "<div class='col-4'>";
-include("preke.php");
-echo "</div>";
-};
-     ?>
-  </div>
-</div>
-
-
-        <!--
-        // 3) index.php
-        // sukurti kintamuosius:
-        // $kaina = ...;
-        // $antraste = ...;
-        // $aprasymas = ...;
-        // 4) preke.php faile   isvesti kintamuosius $kaina, $antraste, $aprasymas
-        pvz
-        <h2> <?php
-         echo $antraste; ?> </h2> -->
+      </div>
+      </header>
 
 
 
 
+<main>
+  <?php
+  $kaina = "900 Eur";
+  $antraste = "Kompiuteris";
+  $aprasymas = "Pirk pirk sita nesamone!";
+  $kaina1 = "BANDYMAS";
+   ?>
 
+    <div class="container">
+      <div class="row">
+        <?php
+            for ($i=0; $i<24; $i++){
+              echo "<div class='col-4'>";
+              include("preke.php");
+              echo "</div>";
+              }
+         ?>
+      </div>
+    </div>
+
+</main>
 
         <!-- js puslapio apacioje -->
         <script src="http://code.jquery.com/jquery-3.3.1.min.js"  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
