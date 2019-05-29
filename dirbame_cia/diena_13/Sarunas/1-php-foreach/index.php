@@ -19,33 +19,32 @@
     </head>
     <body>
 
-        <h1> PHP Foreach meniu isvedimas</h1>
+        <h1>PHP Foreach meniu isvedimas</h1>
         <?php
-            $meniu = ["Home", 'About', "Galery", "Contacts", "Blog"];
+            $meniu = ["Home", 'About', "Gallery", "Contacts", "Blog"];
          ?>
         <nav>
             <ul>
-              <?php
-              foreach ($meniu as $vienoStalciausInfo){
-                  echo "<li>$vienoStalciausInfo</li>";
+                <?php
+                foreach ($meniu as $vienoStalciausInfo) {
+                    echo "<li>$vienoStalciausInfo</li> ";
                 }
-                  ?>
+                 ?>
             </ul>
         </nav>
 
         <?php
             $fotos = [
-              "1.jpg",
-              "2.jpg",
-              "3.jpg",
-              "4.jpg",
-              "5.jpg",
-              "6.png"];
-            foreach ($fotos as $foto) : ?>
-              <img src="img/<?php echo $foto; ?>" widt=30% alt="">;
+                "1.jpg",
+                "2.jpg",
+                "3.jpg",
+                "4.jpg",
+                "5.jpg",
+                "6.png"];
+            foreach ($fotos as $foto) :   ?>
+                <img src="img/<?php     echo $foto;  ?>" width="30%"  alt="">
 
-            <?php endforeach; ?>
-
+          <?php   endforeach;  ?>
 
 
 
