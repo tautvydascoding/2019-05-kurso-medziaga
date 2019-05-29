@@ -19,32 +19,71 @@
     </head>
     <body>
 
-        <h1> PHP Foreach meniu isvedimas</h1>
-        <?php
-            $meniu = ["Home", 'About', "Galery", "Contacts", "Blog"];
-         ?>
-        <nav>
+        <h1>Isijunk konsole</h1>
+
+        <nav class="navbar">
             <ul>
-              <?php
-              foreach ($meniu as $vienoStalciausInfo){
-                  echo "<li>$vienoStalciausInfo</li>";
-                }
-                  ?>
+                <li>Home</li>
+                <li>about</li>
+                <li>gallery</li>
+                <li>contact</li>
+                <li>blog</li>
             </ul>
         </nav>
 
-        <?php
-            $fotos = [
-              "1.jpg",
-              "2.jpg",
-              "3.jpg",
-              "4.jpg",
-              "5.jpg",
-              "6.png"];
-            foreach ($fotos as $foto) : ?>
-              <img src="img/<?php echo $foto; ?>" widt=30% alt="">;
 
-            <?php endforeach; ?>
+        <?php
+        $meniu = ["home", "about", "gallery", "contact", "blog"];
+
+        foreach ($meniu as $key) {
+            echo "<li class='btn'> $key </li> <br>";
+        }
+
+         ?>
+
+
+         <!-- <div class="container">
+             <div class="row">
+                 <img src='img/1.jpg' alt=''  />
+                 <img src='img/2.jpg' alt=''  />
+                 <img src='img/3.jpg' alt=''  />
+                 <img src='img/4.jpg' alt=''  />
+                 <img src='img/5.jpg' alt=''  />
+                 <img src='img/6.jpg' alt=''  /> -->
+             <!-- </div>
+
+         </div> -->
+
+         <?php
+
+         $foto = ["1.jpg", "2.jpg", "3.jpg", "4.jpg", "5.jpg", "6.jpg"];
+
+
+         foreach ($foto as $fotos) : ?>
+
+         <img src="img/<?php echo $fotos  ?>" width="30%" alt="">
+
+     <?php endforeach ?>
+
+
+     <div class="container">
+         <div class="row bg-info">
+             <?php
+
+              $foto = ["1.jpg", "2.jpg", "3.jpg", "4.jpg", "5.jpg", "6.jpg"];
+
+             for ($i=0; $i < 4 ; $i++) {
+                 echo "<img src='img/$foto[$i]' alt=''  />";
+             }
+
+
+             ?>
+         </div>
+
+     </div>
+
+
+
 
 
 
