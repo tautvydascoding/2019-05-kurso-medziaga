@@ -86,12 +86,11 @@ for ($i=0; $i < count($visosPrekes); $i++) {
 // D. naudojant du FOR FOR arba FOREACH FOREACH
 
 for ($i=0; $i < count($visosPrekes) ; $i++) {
-    echo "<div class='container bg-success'>;
+
     foreach ($visosPrekes[$i] as $prekesParametras) {
         echo "<h2>" . $prekesParametras . "</h2>";
+        echo "<img    src='./img/"     . $prekesParametras. "' width='200px' alt=''  />";
     }
-
-        echo "</div>";
 
 }
 
