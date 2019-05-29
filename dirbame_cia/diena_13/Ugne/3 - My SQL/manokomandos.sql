@@ -55,18 +55,51 @@ SET lname = 'Litaite'
 WHERE name = 'Ji';
 
 -- 1. ISVESTI SURIKIUOTUS GYTYTOJUS PAGAL pavarde
+SELECT * FROM doctors
+ORDER BY (lname);
+
+--ARBA
+
+SELECT lname FROM doctors
+ORDER BY (lname);
+
 -- 2. ISVESTI GYTYTOJUS kuriu id mazesnis uz 3
+SELECT * FROM doctors
+WHERE id < 3;
+
 -- 3. ISVESTI paciantus kuriu vardas is raides "A"
+SELECT name FROM patients
+WHERE name LIKE 'a%';
 
 -- UZDUOTIS  1.1  (SELECT) : ISVESTI 4 IR 5 gydytoja
--- UZDUOTIS  1.2  (SELECT) : ISVESTI visus gydytojus, kuriu vardas: 'Tim' ARBA pavarde 'Leo'
--- UZDUOTIS  1.3  (SELECT): isvesti visus gydytojus, kuriu 'id' mazesnis uz 4
--- UZDUOTIS  1.4  (SELECT): isvesti visus gydytojus, bet ne 'Ona'
--- UZDUOTIS  1.5  (SELECT): isvesti visus paciantus, surikiuotus pagal varda
--- // UZDUOTIS 2: pervadinti gydytoja 'Lita' i 'Litas'
+SELECT * FROM doctors
+WHERE id BETWEEN 4 AND 5;
 
+-- UZDUOTIS  1.2  (SELECT) : ISVESTI visus gydytojus, kuriu vardas: 'Tim' ARBA pavarde 'Leo'
+SELECT * FROM doctors
+WHERE name = 'Tim' OR 'Tomas';
+
+-- UZDUOTIS  1.3  (SELECT): isvesti visus gydytojus, kuriu 'id' mazesnis uz 4
+SELECT * FROM doctors
+WHERE id < 4;
+
+-- UZDUOTIS  1.4  (SELECT): isvesti visus gydytojus, bet ne 'Ona'
+SELECT * FROM doctors
+WHERE name != 'Ugne';
+
+-- UZDUOTIS  1.5  (SELECT): isvesti visus paciantus, surikiuotus pagal varda
+SELECT name FROM patients
+ORDER BY (name);
+
+-- // UZDUOTIS 2: pervadinti gydytoja 'Lita' i 'Litas'
+UPDATE doctors
+SET lname = "Pakeista"
+WHERE name = "Ji";
 
 
 -- UZDUOTIS UPDATE- pakeisti Koris pavarde i Makalas (suradus pagal id)
 -- UZDUOTIS UPDATE- pakeisti Koris pavarde i Paulaitis (suradus pagal id ir pavarde)
+
 -- UZDUOTIS (select LIKE)- paimti visus gydytojus, kuriu pavarde parsideda is "L" raides
+SELECT name, lname FROM doctors
+WHERE lname LIKE 'l%';
