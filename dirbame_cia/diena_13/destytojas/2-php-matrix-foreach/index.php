@@ -30,7 +30,7 @@
 $preke1 = [
             "antraste" => "Dviratis",
             "foto" => "1.jpg",
-            "aprasymas" => "Klanu dviratsi XXL",
+            "aprasymas" => "Kalnu dviratis XXL",
             "kaina" => 650
         ];
 $preke2 = [
@@ -50,14 +50,37 @@ $preke3 = [
 // echo "<br />";
 // var_dump($preke1);
 
-$visosPrekes = [$preke1, $preke2, $preke3];
+// print_r( $visosPrekes ); // testuoju
 
 // A. sukurti masyva preke2: Antraste, img pavadinimas, prekes aprasymas, kaina
 // A. sukurti masyva preke3: Antraste, img pavadinimas, prekes aprasymas, kaina
 // B. i masyva visosPrekes, ideti "preke" masyva
+$visosPrekes = [$preke1, $preke2, $preke3];
 // C. atvaizduodi kiekvienoje eiluteje po 3 prekes
+foreach ($visosPrekes as  $preke) {
+    // echo "<h2>  {$preke['antraste']} </h2>";
+    // arba
+    echo "<h2>" . $preke['antraste'] . "</h2>";
+    echo "<p>"  . $preke['aprasymas'] . "</p>";
+    echo "<button>" . $preke['kaina'] . "</button>";
+}
+echo "=================<br />";
+for ($i=0; $i < count($visosPrekes); $i++) {
+    echo "<h2>" . $visosPrekes[$i]['antraste'] . "</h2>";
+    echo "<p>" . $visosPrekes[$i]['aprasymas'] . "</p>";
+    echo "<button>" . $visosPrekes[$i]['kaina'] . "</button>";
+}
+echo "=================<br />";
+echo "=================<br />";
+for ($i=0; $i < count($visosPrekes) ; $i++) {
+    foreach ($visosPrekes[$i] as $prekesParametras) {
+        echo "<h2>". $prekesParametras ."</h2>";
+    }
+}
+
 // (naudojant for arba foreach) ir bootstrap dizaina
 // D. naudojant du FOR FOR arba FOREACH FOREACH
+
         // echo "aaa";
         // print( "aaaa"); // f-ja
         // print_r( $manoMasyvas );  // isveda visa masyva
