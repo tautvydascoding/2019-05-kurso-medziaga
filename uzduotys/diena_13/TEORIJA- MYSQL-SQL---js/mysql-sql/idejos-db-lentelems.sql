@@ -24,7 +24,7 @@ id    vardas   klausimas    tel_1              email
 =======vartotoju atsiliepimai/komentarai ========
 id    vardas   user_id   atsiliepimas/komentaras   ar_rodyti   data              email
 1     Tomas       13      Lorem....                    true     2010-06-06          Tomas@tomas.lt
-2     Julius      64      Lorem....                    false    2010-06-05         julius@julius.lt
+2     Julius      64    Lorem....                    false    2010-06-05         julius@julius.lt
 
 ======= Prekes/ straisniai   ========
 id    pavadinimas   aprasymas      kaina    nuolaida  pozicija      data   kiekis
@@ -34,9 +34,9 @@ id    pavadinimas   aprasymas      kaina    nuolaida  pozicija      data   kieki
 
 ======= Paveiksliukai   ========
 id    pavadinimas   aprasymas              pozicija      prekes_id
-1     foto1.jpg       Lorem....                  3              1
+1     foto1.jpg       Lorem....                  3              1 // nuotrauku tik pavadinimai laikomi
 2     foto2123123.PNG Lorem....                99999            18
-3     foto123.jpg       Lorem....                2              5
+3     foto123.jpg     Lorem....                2              5
 
 
 
