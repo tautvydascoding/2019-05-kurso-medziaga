@@ -25,6 +25,9 @@ switch ($vartotojoTipas) {
 }
 
 
+
+
+
 // PASIZIURETI KAS YRA PHP, js "Switch"
 
 
