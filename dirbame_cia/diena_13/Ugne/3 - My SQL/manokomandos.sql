@@ -103,3 +103,13 @@ WHERE name = "Ji";
 -- UZDUOTIS (select LIKE)- paimti visus gydytojus, kuriu pavarde parsideda is "L" raides
 SELECT name, lname FROM doctors
 WHERE lname LIKE 'l%';
+
+SELECT patients.lname FROM patients
+              INNER JOIN doctors
+              ON patients.doctor_id = doctors.id
+              WHERE doctors.name = "Kazys";
+
+SELECT doctors.name FROM doctors
+              INNER JOIN patients
+              ON patients.doctor_id = doctors.id
+              WHERE patients.lname = "Loan";
