@@ -1,6 +1,6 @@
 ============WIN===================
 einam MAMP/bin/mysql/bin
-randame mysql.exe ir ant jo spaudizma DPK -  Send To  Desctop
+randame mysql.exe ir ant jo spaudizma DPK -  Send To  Desktop
 ant to failiuko, kuri nusiuntem mysql.exe
 spaudzima DPK - > Properties
 ....exe -u root -p
@@ -10,7 +10,7 @@ spaudzima DPK - > Properties
 pasisitkrinti:
 !!!
 1) isijungti MAMP
-2)  pasileisti mysql.exe
+2)  pasileisti mysql.exe Desktop'e
 3) ivesti slaptazodi: root
 NOTE: jeigu issijungia, MAMP'e pasikeiskita portus i 80 arba su PrintScreen mygtuku pagauti error
 4) ivesti komanda: show databases;
