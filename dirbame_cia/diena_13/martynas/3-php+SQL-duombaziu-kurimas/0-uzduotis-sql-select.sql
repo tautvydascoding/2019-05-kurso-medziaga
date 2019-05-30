@@ -57,3 +57,11 @@ WHERE id=6 and name = "Makalas";
 -- UZDUOTIS (select LIKE)- paimti visus gydytojus, kuriu pavarde parsideda is "L" raides
 select * from doctors
 WHERE lname like 'l%';
+
+
+--
+
+SELECT patients.lname from patients
+            inner join doctors
+            on patients.doctor_id = doctors.id
+            where doctors.name = "Ona";
