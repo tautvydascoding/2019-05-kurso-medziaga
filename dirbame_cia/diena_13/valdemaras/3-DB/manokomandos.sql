@@ -49,3 +49,29 @@ INSERT INTO patients VALUES (NULL, 'Tom', 'Naro', 5);
 INSERT INTO patients VALUES (NULL, 'Jili', 'Jato', 4);
 
 SELECT * FROM patients;
+
+UPDATE doctors
+set name = "Lite"
+WHERE id=4;
+
+UPDATE doctors
+set lname = "Litaitė"
+WHERE id=4;
+
+SELECT * FROM doctors
+ORDER BY lname ASC;
+
+SELECT * FROM doctors
+WHERE id < 3;
+
+SELECT * FROM patients
+WHERE name >= 'A'
+ORDER BY name;
+
+SELECT name from patients
+WHERE name = "A"
+ORDER by name;
+
+UPDATE doctors
+set lname = "Makalas"
+WHERE id=5;
