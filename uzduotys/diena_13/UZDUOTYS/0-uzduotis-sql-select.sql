@@ -2,6 +2,8 @@
 -- 0. istrinti paskutine nuotrauka
 -- 0. Pakeisti Litos pavarde i Litaitė
 
+
+
 -- 1. ISVESTI SURIKIUOTUS GYTYTOJUS PAGAL pavarde
 
 -- 2. ISVESTI GYTYTOJUS kuriu id mazesnis uz 3
