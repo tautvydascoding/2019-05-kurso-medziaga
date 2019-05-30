@@ -20,7 +20,7 @@ echo "<br / >";
 
 $automarke = " AUdi";
 $automarke = mb_strtolower($automarke, 'UTF-8');
-$automarke = trim($automarke); //pasila tarpus ir tabus
+$automarke = trim($automarke); //pasalina tarpus ir tabus
 
 switch ($automarke) {
     case 'audi':
