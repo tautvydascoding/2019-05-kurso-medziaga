@@ -7,7 +7,6 @@
 
     // PRISIJUNGIMAS
     $prisijungimas = mysqli_connect(DB_HOST, MYSQL_USER, MYSQL_PASSWORD, DB_NAME);
-    mysqli_set_charset($prisijungimas, 'utf8mb4'); // pakeiciam teksto koduote, kad veiktu lietuviskos raides keliant duomenis is db. Rasant koduotes tipa, negalima naudoti bruksnelio, priesingai nei html faile. Nes taip yra suprogramuotas mysql.
 
     // ! reiskia ar false? sitas if tikrina ar prisijungem sekmingai
     if ( !$prisijungimas ) {
@@ -22,7 +21,7 @@
         //$query
         $manoSQL = "SELECT * FROM doctors WHERE id = $nr";
         // $rezultatai - mysqlo objektas (VISI FAILAI DUOMENU BAZEI SAUGOMI KAIP OBJEKTAI)
-        $rezultataiOBJ = mysqli_query(getPrisijungimas(), $manoSQL);
+        $rezultataiOBJ = mysqli_query(getPrisijungimas(), $manoSQL); // irodom, kad turim prisijungima prie mysqli
         // print_r($rezultataiOBJ); // test
         $rezultataiArray = mysqli_fetch_assoc($rezultataiOBJ); // assoc - konvertuoja i asociatyvu masyva, array i paprasta masyva, row i masyva su skaiciais vietoj table names.
         //  ir dar galima naudot field.
