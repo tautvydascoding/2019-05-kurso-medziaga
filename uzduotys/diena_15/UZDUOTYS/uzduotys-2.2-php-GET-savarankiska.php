@@ -4,7 +4,7 @@
 // 1. sukurti tuscia porjekta (default)
 
 // 2. doctor.php faile parasyti PHP koda:
-    $numeris = 2;
+    $numeris = 2;  // norimo gydytojo is DB numeris (id)
     $gydytojas = getDoctor( $numeris);
 
     echo $gydytojas[1] .  $gydytojas[2] ;
