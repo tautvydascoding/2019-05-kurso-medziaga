@@ -18,11 +18,10 @@ function getPrisijungimas(){
 }
 
 function getDoctor($x){
-  $query = "SELECT name, lname FROM doctors WHERE id=$x";
+  $query = "SELECT * FROM doctors WHERE id=$x";
   $result = mySQLi_query(getPrisijungimas(), $query);
   // prit_r ($result); pasitikrinimui
   $result = mysqli_fetch_assoc($result);
-  // $result = mysqli_fetch_assoc($result); - paprasta masyva grazina
   // print_r ($result);
   return $result;
 }
@@ -32,7 +31,7 @@ $gydytojas3 = getDoctor(3);
 $gydytojas4 = getDoctor(4);
 $gydytojas1 = getDoctor(1);
 
-// print_r (getDoctor(4));
+print_r (getDoctor(4));
 
 
 

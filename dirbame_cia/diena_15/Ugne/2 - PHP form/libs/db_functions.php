@@ -1,36 +1,45 @@
 <?php
 require_once('config.php');
+require_once('template_item.php');
 // include_once
 // include
 
 $prisijungimas = mysqli_connect(MYSQL_HOST, MYSQL_USER, MYSQL_PASSWORD, DB_NAME);
+
+// Kal lietuviskos raides veiktu
+
+mysqli_set_charset($prisijungimas, 'utf8');
 
 //PRISIJUNGIMAS, tikrinam ar prisijungiam
 
 if(!$prisijungimas){
   echo "Bandykite taisyti klaidas";
 }
-
 //Norint rasyti komandas SQL getprisijungimas() bus kaip $prisijungimas
 function getPrisijungimas(){
   global $prisijungimas;
   return $prisijungimas;
 }
 
+
+
+
+
 function getDoctor($x){
-  $query = "SELECT name, lname FROM doctors WHERE id=$x";
+  $query = "SELECT name, lname, id FROM doctors WHERE id=$x";
   $result = mySQLi_query(getPrisijungimas(), $query);
   // prit_r ($result); pasitikrinimui
   $result = mysqli_fetch_assoc($result);
-  // $result = mysqli_fetch_assoc($result); - paprasta masyva grazina
+  // $result = mysqli_fetch_row($result); - paprasta masyva grazina
   // print_r ($result);
   return $result;
 }
 
-$gydytojas2 = getDoctor(2);
-$gydytojas3 = getDoctor(3);
-$gydytojas4 = getDoctor(4);
-$gydytojas1 = getDoctor(1);
+
+// $gydytojas2 = getDoctor(2);
+// $gydytojas3 = getDoctor(3);
+// $gydytojas4 = getDoctor(4);
+// $gydytojas1 = getDoctor(1);
 
 // print_r (getDoctor(4));
 

@@ -22,7 +22,6 @@ function getDoctor($x){
   $result = mySQLi_query(getPrisijungimas(), $query);
   // prit_r ($result); pasitikrinimui
   $result = mysqli_fetch_assoc($result);
-  // $result = mysqli_fetch_assoc($result); - paprasta masyva grazina
   // print_r ($result);
   return $result;
 }
