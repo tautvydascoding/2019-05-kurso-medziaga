@@ -2,6 +2,7 @@
 // 1. sukurti index.php
 // 2. parasyti PHP koda:
     //  susikurti masyv1- preke1: kaina, pavadinimas, kiekis
+
     $numeris = $_GET['x'];
     echo "numeris: $numeris <br />";
     echo $preke1[$numeris] . "<hr />";

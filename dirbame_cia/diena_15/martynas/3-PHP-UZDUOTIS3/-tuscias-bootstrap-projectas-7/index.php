@@ -19,35 +19,33 @@
     </head>
     <body>
 
-        <h1>PHP form - duomenu pernesimas is vieno failo i
-            kita naudojant GET
-        </h1>
-
-        <p>(ka vartotojas ives tai nueis i PHP masyva GET)</p>
-
-
-        <form action="registracija.php" method="get">
-
-            <input type="text" name="vardas" value="" placeholder="jusu vardas"> <br />
-            <input type="text" name="pavarde" value="" placeholder="jusu pavarde"> <br />
-            <input type="text" name="telefonas" value="" placeholder="jusu telefonas" required> <br />
-
-
-            <button type="submit"> registruotis </button> -->
-
-            <!-- arba -->
-            <input type="submit" name="" value="regist">
-
-        </form>
+        <h1>Isijunk konsole</h1>
 
         <?php
 
-        $x = $_GET['BLA'];
-        echo $x;
+        $preke1 = [69, "kede", "3vnt"];
+        //
+        $numeris = $_GET['x'];
+        echo "numeris: $numeris <br />";
+        echo $preke1[$numeris] . "<hr />";
 
-         ?>
+
+        $preke2 = [85, "stalas", 5];
+        $preke3 = [1000, "lova", 52];
+        $visosPrekes = [$preke1, $preke2, $preke3];
+
+        $numeris = $_GET['x'];
+        $manoPreke =  $visosPrekes[$numeris];
+        print_r($manoPreke);
+        echo "<hr />";
 
 
+
+
+
+
+
+        ?>
 
 
 
