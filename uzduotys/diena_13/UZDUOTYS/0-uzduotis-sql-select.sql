@@ -25,7 +25,7 @@ WHERE name like 'a%';
 
 -- UZDUOTIS  1.1  (SELECT) : ISVESTI 4 IR 5 gydytoja
 select * from doctors
-where id = 5 and id = 4;
+where id = 5 and id = 4;  -- KLAIDA
 
 -- UZDUOTIS  1.2  (SELECT) : ISVESTI visus gydytojus, kuriu vardas: 'Tim' ARBA pavarde 'Leo'
 SELECT * from doctors
@@ -50,7 +50,7 @@ WHERE id=5;
 UPDATE doctors
 set name = "Makalas"
 WHERE id=6;
--- UZDUOTIS UPDATE- pakeisti Koris pavarde i Paulaitis (suradus pagal id ir pavarde)
+-- UZDUOTIS UPDATE- pakeisti Koris pavarde i Paulaitis (suradus pagal id ir pavarde) //KLAIDA
 UPDATE doctors
 set lname = "Paulaitis"
 WHERE id=6 and name = "Makalas";
