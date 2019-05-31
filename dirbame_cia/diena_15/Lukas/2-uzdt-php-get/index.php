@@ -7,46 +7,22 @@
         <!-- !!! mano CSS failas vissada zemiau, nie kiti css failai -->
         <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"> -->
         <link rel="stylesheet" href="./libs/bootstrap/css/bootstrap.css">
-
-        <!-- !!idedame CSS faila, nes kitaip neveiks -->
         <link rel="stylesheet" href="css/main.css">
-        <!-- NOTE: jeigu neveikia:
-            1) ar failo pavadinimas geras
-            2) ar kelias geras?   (ar "/" teisingi; direktorija ar gere )
-            3) ar   rel="stylesheet"
-            4) ar link uzdalete ">"
-         -->
+
     </head>
     <body>
 
-        <h1>PHP form - duomenu pernesimas is vieno failo i
-            kita naudojant GET
-        </h1>
+        <h1>Duomenu pernesimas is vieno failo i kita naudojant $_GET</h1>
+        <p>(ivestos reiksmes nukeliaus i php masyva GET)</p>
 
-        <p>(ka vartotojas ives tai nueis i PHP masyva GET)</p>
-
-
-        <form action="registracija.php" method="get">
-
-            <input type="text" name="vardas" value="" placeholder="jusu vardas"> <br />
-            <input type="text" name="pavarde" value="" placeholder="jusu pavarde"> <br />
-            <input type="text" name="telefonas" value="" placeholder="jusu telefonas" required> <br />
-
-
-            <button type="submit"> registruotis </button> -->
-
+        <form action="registracija.php" method="post"> <!-- action pasako kompiuteriui ka daryti kai paspausim submit mygtuka. -->
+            <input type="text" name="vardas" value="" placeholder="Iveskite varda"> <!-- name, nurodom get masyvo php kalboje stalciaus pavadinima -->
+            <input type="text" name="pavarde" value="" placeholder="Iveskite pavarde">
+            <input type="text" name="tel" value="" placeholder="Iveskite tel" required>
+            <button type = "submit">Registruotis</button>
             <!-- arba -->
-            <input type="submit" name="" value="regist">
-
+            <input type="submit" name="" value="Registracija">
         </form>
-
-        <?php
-
-        $x = $_GET['BLA'];
-        echo $x;
-
-         ?>
-
 
 
 

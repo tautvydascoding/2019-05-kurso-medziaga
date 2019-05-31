@@ -19,33 +19,15 @@
     </head>
     <body>
 
-        <h1>PHP form - duomenu pernesimas is vieno failo i
-            kita naudojant GET
-        </h1>
+        <h1>Isijunk konsole</h1>
 
-        <p>(ka vartotojas ives tai nueis i PHP masyva GET)</p>
-
-
-        <form action="registracija.php" method="get">
-
-            <input type="text" name="vardas" value="" placeholder="jusu vardas"> <br />
-            <input type="text" name="pavarde" value="" placeholder="jusu pavarde"> <br />
-            <input type="text" name="telefonas" value="" placeholder="jusu telefonas" required> <br />
-
-
-            <button type="submit"> registruotis </button> -->
-
-            <!-- arba -->
-            <input type="submit" name="" value="regist">
-
+        <form action="subscribe.php" method="get">
+            <input type="email" name="elpastas" placeholder="email" required>
+            <button type="submit" value="registruotis">subscribe</button>
         </form>
 
-        <?php
 
-        $x = $_GET['BLA'];
-        echo $x;
 
-         ?>
 
 
 

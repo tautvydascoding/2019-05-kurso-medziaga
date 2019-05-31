@@ -7,45 +7,32 @@
         <!-- !!! mano CSS failas vissada zemiau, nie kiti css failai -->
         <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"> -->
         <link rel="stylesheet" href="./libs/bootstrap/css/bootstrap.css">
-
-        <!-- !!idedame CSS faila, nes kitaip neveiks -->
         <link rel="stylesheet" href="css/main.css">
-        <!-- NOTE: jeigu neveikia:
-            1) ar failo pavadinimas geras
-            2) ar kelias geras?   (ar "/" teisingi; direktorija ar gere )
-            3) ar   rel="stylesheet"
-            4) ar link uzdalete ">"
-         -->
+
     </head>
     <body>
-
-        <h1>PHP form - duomenu pernesimas is vieno failo i
-            kita naudojant GET
-        </h1>
-
-        <p>(ka vartotojas ives tai nueis i PHP masyva GET)</p>
-
-
-        <form action="registracija.php" method="get">
-
-            <input type="text" name="vardas" value="" placeholder="jusu vardas"> <br />
-            <input type="text" name="pavarde" value="" placeholder="jusu pavarde"> <br />
-            <input type="text" name="telefonas" value="" placeholder="jusu telefonas" required> <br />
-
-
-            <button type="submit"> registruotis </button> -->
-
-            <!-- arba -->
-            <input type="submit" name="" value="regist">
-
-        </form>
-
         <?php
+        $preke1 = [10, "koldunas",  20];
+        $preke2 = [20, "batonas",  30];
+        $preke3 = [30, "agurkas",  40];
+        $visosPrekes = [$preke1, $preke2, $preke3];
 
-        $x = $_GET['BLA'];
-        echo $x;
+        print_r($preke1);
+        $numeris = $_GET['x'];
+        echo "numeris: $numeris <br />";
+        echo $preke1[$numeris] . "<hr />";
+        echo "<br />";
+        echo "<br />";
+        echo "<br />";
 
-         ?>
+        $numeris = $_GET['x'];
+        $manoPreke =  $visosPrekes[$numeris];
+        print_r($manoPreke);
+        echo "<hr />";
+        ?>
+
+
+
 
 
 

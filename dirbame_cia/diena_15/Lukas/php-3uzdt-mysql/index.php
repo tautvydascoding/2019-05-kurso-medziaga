@@ -7,46 +7,35 @@
         <!-- !!! mano CSS failas vissada zemiau, nie kiti css failai -->
         <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"> -->
         <link rel="stylesheet" href="./libs/bootstrap/css/bootstrap.css">
-
-        <!-- !!idedame CSS faila, nes kitaip neveiks -->
         <link rel="stylesheet" href="css/main.css">
-        <!-- NOTE: jeigu neveikia:
-            1) ar failo pavadinimas geras
-            2) ar kelias geras?   (ar "/" teisingi; direktorija ar gere )
-            3) ar   rel="stylesheet"
-            4) ar link uzdalete ">"
-         -->
     </head>
     <body>
 
-        <h1>PHP form - duomenu pernesimas is vieno failo i
-            kita naudojant GET
-        </h1>
+        <!-- // uzduotis 2: atspausdinti gydytoja i <p> </p>, kurio 'id' yra 4
+        // uzduotis 3.1: atspausdinti visas gydytoju pavardes naudojant FOR cikla, kaip list item "ul li"
+        // uzduotis 3.2: patobulinti 'uzduotis3',
+            kad paspaudus ant gydytojo pavardes   atidarytu doctor.php faila
+            HINT: '<a href=""></a>' nuorodoje,
+        // uzduotis 3.3:
+                doctor.php faile isvesti info apie - paspausta gydytoja:
+                vardas pavarde numeris
 
-        <p>(ka vartotojas ives tai nueis i PHP masyva GET)</p>
-
-
-        <form action="registracija.php" method="get">
-
-            <input type="text" name="vardas" value="" placeholder="jusu vardas"> <br />
-            <input type="text" name="pavarde" value="" placeholder="jusu pavarde"> <br />
-            <input type="text" name="telefonas" value="" placeholder="jusu telefonas" required> <br />
-
-
-            <button type="submit"> registruotis </button> -->
-
-            <!-- arba -->
-            <input type="submit" name="" value="regist">
-
-        </form>
-
-        <?php
-
-        $x = $_GET['BLA'];
-        echo $x;
-
-         ?>
-
+            HINT: 'a' nuorodoje, prideti '?kintamasis=...'   ir doctor.php faile su $_GET pasiimti kintamaji -->
+        <p>
+            <?php
+            include_once("db_functions.php");
+            $numeris = 4;
+            $gydytojas = getDoctor($numeris);
+            // print_r($gydytojas);
+            echo $gydytojas["name"] . " " . $gydytojas["lname"];
+            ?>
+        </p>
+        <ul>
+            <?php for ($i=1; $i < 6; $i++) {
+                $gydytojas = getDoctor($i);
+                echo "<a href='doctor.php?id=". $i . "'>" . "<li>" . $gydytojas["name"] . " " . $gydytojas["lname"] . "</li>" . "</a>";
+            } ?>
+        </ul>
 
 
 
