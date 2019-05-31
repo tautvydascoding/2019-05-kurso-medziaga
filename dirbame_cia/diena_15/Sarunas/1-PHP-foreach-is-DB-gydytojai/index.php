@@ -19,21 +19,28 @@
     </head>
     <body>
 
-        <!-- <h1>Isijunk konsole</h1> -->
+        <h1>Isijunk konsole</h1>
 
 
         <?php
-          require_once('db_functions.php');
-      echo "<div class='row'>";
-          for ($i=0; $i < 6 ; $i++) {
-            $gydArray = getDoctor($i);
-            if ( empty($gydArray) == false) {
-                include('template-doctor.php'); // isvedu gydytoja
-            }
-          }
-      echo "</div>";
+            require_once('db_functions.php');
+            echo "<div class='row'> ";
+                for ($i=0; $i < 6; $i++) {
+                    $gydArray = getDoctor($i);
+                    include('template-doctor.php'); // isvedu gydytoja
+                }
+            echo "</div>";
 
-        ?>
+            echo "<hr />";
+            echo "<hr />";
+            for ($i=0; $i < 6; $i++) {
+                $gydArray = getDoctor($i);
+                // tikrinmae ar masyvas ne tuscias
+                if ( empty($gydArray) == false) {
+                    include('template-doctor.php');
+                }
+            }
+         ?>
 
 
 
