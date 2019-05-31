@@ -1,4 +1,4 @@
-<?php
+5<?php
 // 1. sukurti index.php
 // 2. parasyti PHP koda:
     //  susikurti masyva- preke1: kaina, pavadinimas, kiekis

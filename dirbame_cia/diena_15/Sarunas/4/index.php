@@ -20,7 +20,7 @@
     $prek3 = [50.00, "Lova", "1vnt"];
     $visosPrekes = [$prek1, $prek2, $prek3 ];
     //print_r($visosPrekes);//tst
-    $numeris = $_GET['x'];
+    $numeris = $_GET['x']; // url adrese (narsykleje) keisime
     $manoPreke =  $visosPrekes[$numeris];
     print_r($manoPreke);
     echo "<hr />";
