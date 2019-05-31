@@ -3,41 +3,61 @@
     <head>
         <meta charset="utf-8">
         <title></title>
-
-        <!-- !!! mano CSS failas vissada zemiau, nie kiti css failai -->
-        <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"> -->
         <link rel="stylesheet" href="./libs/bootstrap/css/bootstrap.css">
-
-        <!-- !!idedame CSS faila, nes kitaip neveiks -->
         <link rel="stylesheet" href="css/main.css">
-        <!-- NOTE: jeigu neveikia:
-            1) ar failo pavadinimas geras
-            2) ar kelias geras?   (ar "/" teisingi; direktorija ar gere )
-            3) ar   rel="stylesheet"
-            4) ar link uzdalete ">"
-         -->
+
     </head>
     <body>
 
-        <h1>Isijunk konsole</h1>
+        <h1>PHP form</h1>
+        <h2>Duomenu pernesimas is vieno failo i kita naudojant GET</h2>
+        <p>(ivestos reiksmes nukeliauja i php masyva GET)</p>
 
-        <!-- 1. index.php faile sukurti HTML form'a naudojant metoda (GET) ir  su ivedimo laukais:
-         vardas, pavarde, telefonas, mygtukas 'registruotis'
+        <form action="registracija.php" method="get">
+          <input type="text" name="vardas" placeholder="Jūsų vardas"/><br />
+          <input type="text" name="pavarde" placeholder="Jūsų pavardė"/><br />
+          <input  type="text" name="tel" placeholder="Telefono nr" required/><br />
 
-        2. kai paspaudzia 'registruotis', vartotoja perkelti i registracija.php faila (formoje action='registracija.php')
+          <button class="btn btn-info" type="submit">Registruotis</button>
+          <!-- arba -->
+          <input class="btn btn-info" type="submit" value="Registracija2">
 
-        3. registracija.php faile pasinaudojant globaliu PHP masyvu $_GET atspausdinti vartotojo ivestu duomenis
-        pvz.:
-        print_r( $_GET);
+        </form><br />
 
-        // PASIBANDYTI PAPILDOMAI
-        pvz.: print_r( $GLOBALS)
+        <h3>2.1 Uzduotis</h3><hr />
 
-        
+        <?php
+        $x = $_GET['tekstas'];
+        echo $x;
+        ?>
 
-        // UZDUOTIS
-        // pasisveikinti su katik uzsiregistravusius zmogumi ir
-        // graziai atspausdinti uzsiregistravusio zmoguas duomenis -->
+
+        <br /><h3>2.1.2 Uzduotis</h3><hr />
+
+        <?php
+        $preke1 = ['800 Eur', 'Dviratis', 200 ];
+        $numeris = $_GET['x'];
+        echo "numeris: $numeris <br />";
+        echo $preke1[$numeris] . "<hr />";
+
+        ?>
+
+        <br /><h4>2.1.2 Uzduotis sunkesne</h4><br />
+
+        <?php
+        $preke2 = ['1200 Eur', 'Rasiklis', 1];
+        $preke3 = ['40 Eur', 'Zaislas', 20 ];
+        $visosPrekes = [$preke1, $preke2, $preke3];
+
+        $numeris = $_GET['x'];
+        $manoPreke =  $visosPrekes[$numeris];
+        echo "<p>" . $manoPreke[1] . " kainuoja: " . $manoPreke[0] . "</p>";
+        echo "<hr />";
+
+        ?>
+
+
+
 
 
 
