@@ -14,7 +14,7 @@
 
 // UZDUOTIS 1.3:
 // su kokiu nors ciklu atspausdinti VISUS gydytojus
-// <h2 class='bg-info m-1'> vardas pavarde</h2>
+// <h2 class='bg-info   m-1'> vardas pavarde</h2>
 
 // UZDUOTIS 1.3.2
 // A) sukurti nauja nauja faila, pvz:  template-item.php
