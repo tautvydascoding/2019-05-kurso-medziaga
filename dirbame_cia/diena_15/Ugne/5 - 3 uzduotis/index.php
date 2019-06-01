@@ -1,39 +1,41 @@
+<!DOCTYPE html>
 <html>
     <head>
         <meta charset="utf-8">
-        <title>Paint mE shop</title>
+        <title></title>
         <link rel="stylesheet" href="./libs/bootstrap/css/bootstrap.css">
         <link rel="stylesheet" href="css/main.css">
-        <script src="https://kit.fontawesome.com/a0b467e28c.js"></script>
 
     </head>
-
     <body>
-                          <!-- Header -->
+      <?php  require_once('db_functions.php');
 
-      <?php include('header_page.php'); ?>
+      ?>
 
+        <h1>PHP form</h1>
 
-                      <!-- Main -->
-      <main class="container">
-        <section class="py-5">
-          <div class="container">
-            <h2 class="font-weight-light">About</h2>
-          </div>
+        <?php
+        echo "<ul>";
+        for($i=1; $i<5; $i++){
+        echo '<li> Gydytojo pavarde: <a href="doctor.php?id=$i">' . getDoctor($i)['lname'] . '</a></li>';
 
-        </section>
+        }
+        echo   "</ul>";
 
-      </main>
-
-                    <!-- Footer -->
-      <footer>
-            <?php include('footer.php'); ?>
-      </footer>
+        ?>
 
 
 
 
 
+
+
+
+        <!--
+
+
+
+            HINT: 'a' nuorodoje, prideti '?kintamasis=...'   ir doctor.php faile su $_GET pasiimti kintamaji -->
 
 
 

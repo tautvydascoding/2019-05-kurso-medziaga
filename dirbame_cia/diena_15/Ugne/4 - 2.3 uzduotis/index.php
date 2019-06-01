@@ -1,35 +1,18 @@
+<!DOCTYPE html>
 <html>
     <head>
         <meta charset="utf-8">
-        <title>Paint mE shop</title>
+        <title></title>
         <link rel="stylesheet" href="./libs/bootstrap/css/bootstrap.css">
         <link rel="stylesheet" href="css/main.css">
-        <script src="https://kit.fontawesome.com/a0b467e28c.js"></script>
 
     </head>
-
     <body>
-                          <!-- Header -->
 
-      <?php include('header_page.php'); ?>
+        <h1>PHP form</h1>
+        <h2>Duomenu pernesimas is vieno failo i kita naudojant GET</h2>
 
-
-                      <!-- Main -->
-      <main class="container">
-        <section class="py-5">
-          <div class="container">
-            <h2 class="font-weight-light">About</h2>
-          </div>
-
-        </section>
-
-      </main>
-
-                    <!-- Footer -->
-      <footer>
-            <?php include('footer.php'); ?>
-      </footer>
-
+        <br /><h3>2.2. Uzduotis</h3><hr />
 
 
 

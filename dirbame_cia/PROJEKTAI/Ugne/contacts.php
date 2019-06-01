@@ -17,10 +17,9 @@
                       <!-- Main -->
       <main class="container">
         <section class="py-5">
-          <div class="container">
-            <h2 class="font-weight-light">About</h2>
+          <div>
+            <h2 class="font-weight-light">Contact</h2>
           </div>
-
         </section>
 
       </main>
