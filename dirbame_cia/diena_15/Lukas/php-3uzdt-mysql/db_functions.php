@@ -11,8 +11,7 @@
     // ! reiskia ar false? sitas if tikrina ar prisijungem sekmingai
     if ( !$prisijungimas ) {
         echo "ERROR <br />" . mysqli_connect_error();
-    }
-
+    } 
     function getPrisijungimas() {
         global $prisijungimas; // php funkcijos yra uzdaros, todel reikia naudoti global kad paimt kintamaji
         return $prisijungimas;
