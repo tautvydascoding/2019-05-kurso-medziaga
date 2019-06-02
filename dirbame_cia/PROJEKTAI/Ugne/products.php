@@ -9,24 +9,49 @@
     </head>
 
     <body>
+      <?php require_once('db_functions.php')?>
+
                           <!-- Header -->
 
       <?php include('header_page.php'); ?>
 
+                          <!-- Main -->
 
-                      <!-- Main -->
-      <main class="container">
-        <section class="py-5">
-          <div>
-            <h2 class="font-weight-light">Products</h2>
+
+      <main>
+        <section class="py-5 container">
+          <div class="text-center row m-2">
+            <div class="col-12">
+              <h2 class="font-weight-light">Products</h2>
+            </div>
           </div>
-          <div class="d-flex justify-content-md-between">
-            <div class="d-flex justify-content-between">
-                <div class="p-2">Preke 1</div>
-                <div class="p-2">Preke 2</div>
-                <div class="p-2">Preke 3</div>
-                </div>
-              </div>
+
+
+<?php
+
+$allItems = [];
+for($i=1; $i<8; $i++){
+  $allItems[$i] = getItem($i);
+}
+
+echo "<div class='row d-flex justify-content-between m-3'>";
+  for($i=1; $i<count($allItems); $i++){
+    echo "<div class='col-5 m-2'>";
+    echo "<img class='item-img img-responsive' src='img/" . getItem($i)['imgname'] . "'>";
+    echo "</div>";
+
+
+
+    // echo "<div class='col-5 m-5'>";
+    // echo "<img class='col-5 item-img img-responsive' src='img/" . getItem($i)['imgname'] . "'>";
+    // echo "<div class= 'col-12 text-center m-2'><h4 class='font-weight-light'>\"" . getItem($i)['name'] . "\"</h4>";
+    // echo "<div class= 'col-12 text-center m-2'><h5 class='font-weight-light'>" . getItem($i)['price'] . " Eur</h5></div>";
+  }
+
+echo "</div>";
+
+?>
+
         </section>
 
       </main>

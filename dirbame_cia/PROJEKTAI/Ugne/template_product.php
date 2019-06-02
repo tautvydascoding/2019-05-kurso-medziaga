@@ -26,11 +26,11 @@
               <div class="row">
                   <div class="col-12 text-center">
                       <h2 class="font-weight-light">
-                          "<?php    echo getItem(1)['name'];    ?>"
+                          "<?php    echo getItem(2)['name'];    ?>"
                       </h2>
                     </div>
                   <div class="col-12 text-center">
-                      <h3 class=""><?php    echo getItem(1)['price'];    ?> Eur</h3></div>
+                      <h4 class=""><?php    echo getItem(2)['price'];    ?> Eur</h4></div>
               </div>
         </section>
 
@@ -38,14 +38,14 @@
               <div class="row">
                     <div class="col-7">
                       <img class="item-img img-responsive" src="img/<?php
-                          echo getItem(1)['imgname']; ?>">
+                          echo getItem(2)['imgname']; ?>">
                     </div>
 
 
                     <div class="col-5">
                       <div class= "col-12 text-center">
                         <p class="font-weight-light">
-                          <?php    echo getItem(1)['description'];    ?>
+                          <?php    echo getItem(2)['description'];    ?>
                         </p>
                       </div>
 
