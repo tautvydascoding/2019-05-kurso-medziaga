@@ -6,9 +6,8 @@
 
     //PRISIJUNTIMAS
     $prisijungimas = mysqli_connect(DB_HOST,  MYSQL_USER, MYSQL_PASSWORD, DB_NAME   );
-
-    // kad lietuviskos ir ru veiktu
-    mysqli_set_charset($prisijungimas, 'utf8mb4');
+    //a kad MYSQL nesugadintu LT kalbos saugomos DB-je
+    mysqli_set_charset(getPrisijungtimas(), 'utf8mb4');
 
     // ! - AR FALSE?
     if( !$prisijungimas )   {
@@ -36,96 +35,90 @@
 
     // $gydytojas2 = getDoctor( 2 );
     // print_r($gydytojas2); // test
+
     // $gydytojas3 = getDoctor( 3 );
     // print_r($gydytojas3); // test
     // $gydytojas1 = getDoctor( 1 );
     // $gydytojas4 = getDoctor( 4 );
 
+    // 5. createDoctor($vardas, $pavarde)
+function createDoctor( $vardas, $pavarde) {
+    $vardasUzkoduotas = mysqli_real_escape_string (getPrisijungtimas(), $vardas );
+    $pavardeUzkoduotas = mysqli_real_escape_string (getPrisijungtimas(), $pavarde );
 
-    // ----------------DELETE trinti--------------------
-    // $nr - numeris arba id, gydytojo, kuri istrinsime
-    function deleteDoctor( $nr ) {
-        $mano_sql_tekstas = "DELETE FROM doctors
-                                    WHERE id='$nr'
-                                    LIMIT 1
-                            ";
-        mysqli_query(   getDBPrisiungimas()  , $mano_sql_tekstas);
+    $manoSQL = "INSERT INTO  doctors
+                    VALUES( null, '$vardasUzkoduotas', '$pavardeUzkoduotas') ";
+    $rezultatai = mysqli_query(getPrisijungtimas(),  $manoSQL); // print_r(    $rezultataiOBJ );  // test
+    if ( !$rezultatai) {
+        echo "ERROR: nepavyko sukurti gydytojo. SQL klaida:" . mysqli_error(getPrisijungtimas());
+    } else {
+        // echo "Gydytojas uzregistruotas!";
     }
-    // deleteDoctor( 7 );
+}
+// createDoctor("Gedas", "Karlova");
+// createDoctor("Karolis", "Kukutis");
+// createDoctor("Lina", "Lietuvaite");
+    // 6. deleteDoctor($nr)
+function deleteDoctor($nr) {
+    $manoSQL = "DELETE FROM doctors WHERE id=$nr LIMIT 1";
 
-    //
-    function createDoctor($vardas, $pavarde){
-        $vardas_apdorotas =  mysqli_real_escape_string (getDBPrisiungimas(), $vardas );
-        $pavarde_apdorotas =  mysqli_real_escape_string (getDBPrisiungimas(), $pavarde );
-
-        $mano_sql_tekstas = "INSERT INTO doctors
-                                    VALUES('', '$vardas_apdorotas', '$pavarde_apdorotas' );
-                            ";
-        $arPavyko = mysqli_query(   getDBPrisiungimas() , $mano_sql_tekstas);
-
-        if ( !$arPavyko ) {
-             // '(! )' JEIGU skliaustuose FALSE?
-             echo "EROROR: nepavyko uzregistruoti gydytojo." . mysqli_error( getDBPrisiungimas() );
-        } else {
-            // echo "pavyko sukurti";
-        }
+    $rezultatai = mysqli_query(getPrisijungtimas(),  $manoSQL); // print_r(    $rezultataiOBJ );  // test
+    if ( !$rezultatai) {
+        echo "ERROR: nepavyko istrinti gydytojo. SQL klaida:" . mysqli_error(getPrisijungtimas());
+    } else {
+        // echo "Gydytojas uzregistruotas!";
     }
-    // createDoctor('Faustas', 'Gete');
+}
+// deleteDoctor(8); // test
+    // 7. updateDoctor($nr, $vardas, $pavarde)
+function    updateDoctor($nr, $vardas, $pavarde) {
+    $nrUzkoduotas = mysqli_real_escape_string (getPrisijungtimas(), $nr );
+    $vardasUzkoduotas = mysqli_real_escape_string (getPrisijungtimas(), $vardas );
+    $pavardeUzkoduotas = mysqli_real_escape_string (getPrisijungtimas(), $pavarde );
 
-    function updateDoctor($nr, $vardas, $pavarde) {
-        $vardas_apdorotas =  mysqli_real_escape_string (getDBPrisiungimas(), $vardas );
-        $pavarde_apdorotas =  mysqli_real_escape_string (getDBPrisiungimas(), $pavarde );
 
-        $mano_sql_tekstas = " UPDATE doctors SET
-                                name = '$vardas_apdorotas',
-                                lname = '$pavarde_apdorotas'
-                                WHERE id='$nr'
-                                LIMIT 1;
-                            ";
-        $arPavyko = mysqli_query(   getDBPrisiungimas() , $mano_sql_tekstas);
-
-        if ( !$arPavyko ) {
-             // '(! )' JEIGU skliaustuose FALSE?
-             echo "EROROR: nepavyko uzregistruoti gydytojo." . mysqli_error( getDBPrisiungimas() );
-        } else {
-            // echo "pavyko sukurti";
-        }
+    $manoSQL = "UPDATE doctors SET
+                                    name = '$vardasUzkoduotas',
+                                    lname = '$pavardeUzkoduotas'
+                                WHERE id = '$nrUzkoduotas'
+                                LIMIT 1
+              ";
+    $rezultatai = mysqli_query(getPrisijungtimas(),  $manoSQL); // print_r(    $rezultataiOBJ );  // test
+    if ( !$rezultatai) {
+        echo "ERROR: nepavyko redaguoti. SQL klaida:" . mysqli_error(getPrisijungtimas());
+    } else {
+        // echo "Gydytojas uzregistruotas!";
     }
-    // updateDoctor(3, 'Ona', 'Harkauskeine');
+}
+// test
+// updateDoctor(6, "Jonas", "Jonaitis");
 
+    // 8. getDoctors($kiekGydytoju=99999)
+function getDoctors($kiekGydytoju = 99999) {
+    $manoSQL = "SELECT * FROM doctors LIMIT  $kiekGydytoju   ";
+    $rezultatai = mysqli_query(getPrisijungtimas(),  $manoSQL); // print_r(    $rezultataiOBJ );  // test
 
-    function getDoctors($kiekis = 99999) {
-        $mano_sql_tekstas = "SELECT * FROM doctors
-                                      ORDER BY name DESC
-                                      LIMIT $kiekis
-                            ";
-        // LIMIT 5 - limit skaiciai rasomi ne kabutese
-        // ORDER BY - surikiuoja pabal stulpeli 'name'
+    if ( !$rezultatai) {
+        echo "ERROR: Neradome gydytoju. SQL klaida:" . mysqli_error(getPrisijungtimas());
+        return null;
+    } else {
 
-        // $rezultatai - mysql objektas
-        $rezultatai = mysqli_query( getDBPrisiungimas() , $mano_sql_tekstas);
-
-        // tikrunu ar gryzo duomenu
-        if ( $rezultatai ) {
-             return $rezultatai; //  mysql objektas
-        } else {
-            return NULL; //
-        }
-
+        return $rezultatai; // graziname MYSQL OBJEKTA
     }
+}
+$gydytojaiOBJ = getDoctors(2);  // paimk 4 gydytojus paciu pirmus
+print_r( $gydytojaiOBJ ); // test
 
-    // testuojam ar veikia
-    // $gydytojai = getDoctors(   ); // skaicius - kiek gydytoju paimsime
+// ar radome gydytoju DB-je?
+if (mysqli_num_rows($gydytojaiOBJ) > 0) {
+    $vienasGydArray = mysqli_fetch_assoc($gydytojaiOBJ);     // mysqli_fetch_assoc - paima viena eilue is OBJ ir pavercia i array
+    while ($vienasGydArray == true) {
 
-    // $vienas_gydytojas = mysqli_fetch_assoc($gydytojai); // mysqli_fetch_assoc - paima sekanti gydytoja is mysql objekto IR sudajo jo stulpelius i ARRAY
-
-    // tikrinu ar turiu gydytojo duomenis
-    // while ( $vienas_gydytojas ) {
-    //     echo " <h2>"  . $vienas_gydytojas['name'] . $vienas_gydytojas['lname'] . "</h2>";
-    //
-    //     // kad to pacio gydytojo neisvestu - vel ir vel - imam sekanti
-    //     $vienas_gydytojas = mysqli_fetch_assoc($gydytojai); // mysqli_fetch_assoc - paima sekanti gydytoja is mysql objekto IR sudajo jo stulpelius i ARRAY
-    // }
-
+        echo "<h2>". $vienasGydArray['name'] ."</h2>";
+        $vienasGydArray = mysqli_fetch_assoc($gydytojaiOBJ);     // mysqli_fetch_assoc - paima viena (SEKANCIA) eilue is OBJ ir pavercia i array
+    }
+} else {
+    echo "NEI NIEVO GYDYTOJO NERADOME <br />";
+}
 
  ?>
