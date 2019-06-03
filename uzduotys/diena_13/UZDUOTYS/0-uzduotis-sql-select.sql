@@ -19,8 +19,6 @@
 -- WHERE name = "A"
 -- ORDER by name;
 
--- UZDUOTIS  1.1  (SELECT) : ISVESTI 4 IR 5 gydytoja
-
 -- UZDUOTIS  1.2  (SELECT) : ISVESTI visus gydytojus, kuriu vardas: 'Tim' ARBA pavarde 'Leo'
 
 -- UZDUOTIS  1.3  (SELECT): isvesti visus gydytojus, kuriu 'id' mazesnis uz 4
@@ -33,7 +31,11 @@
 
 
 -- UZDUOTIS UPDATE- pakeisti Koris pavarde i Makalas (suradus pagal id)
-
--- UZDUOTIS UPDATE- pakeisti Koris pavarde i Paulaitis (suradus pagal id ir pavarde)
-
+UPDATE doctors
+set name = "Makalas"
+WHERE id=6;
+-- UZDUOTIS UPDATE- pakeisti Koris pavarde i Paulaitis (suradus pagal id ir pavarde) //KLAIDA
+UPDATE doctors
+set lname = "Paulaitis"
+WHERE id=6 and name = "Makalas";
 -- UZDUOTIS (select LIKE)- paimti visus gydytojus, kuriu pavarde parsideda is "L" raides
