@@ -73,10 +73,14 @@
     // 7. updateDoctor($nr, $vardas, $pavarde)
 
     function updateDoctor($nr, $vardas, $pavarde){
+        $nrUzkoduotas = mysqli_real_escape_string (getPrisijungtimas(), $nr);
+        $vardasUzkoduotas = mysqli_real_escape_string (getPrisijungtimas(), $vardas);
+        $pavardeUzkoduotas = mysqli_real_escape_string (getPrisijungtimas(), $pavarde);
+
         $manoSQL="UPDATE doctors SET
-                                 name='$vardas' ,
-                                 lname='$pavarde'
-                                 WHERE id='$nr'
+                                 name='$vardasUzkoduotas' ,
+                                 lname='$pavardeUzkoduotas'
+                                 WHERE id='$nrUzkoduotas'
                                  LIMIT 1;";
         $rezultatai = mysqli_query(getPrisijungtimas(),  $manoSQL);
         if (!$rezultatai) {
