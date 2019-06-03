@@ -35,6 +35,8 @@ CREATE TABLE items(
   imgname varchar(50)
 );
 
+
+
 INSERT INTO items
 VALUES (null, 'Playing', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.', 200.00 , 'acrylic-canva-playing.jpg');
 
@@ -57,6 +59,38 @@ VALUES (null, 'Goals', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit
 UPDATE items
 SET imgname = 'acrylic-canva-playing.jpg'
 WHERE name = 'Playing';
+
+ALTER TABLE items
+ADD thumbnail varchar(50);
+
+
+
+
+UPDATE items
+SET thumbnail = 'canva-playing-thumb.png'
+WHERE name = 'Playing';
+
+UPDATE items
+SET thumbnail = 'canva-brightside-thumb.png'
+WHERE name = 'Bright side';
+
+UPDATE items
+SET thumbnail = 'canva-effect-thumb.png'
+WHERE name = 'Effect';
+
+UPDATE items
+SET thumbnail = 'canva-goals-thumb.png'
+WHERE name = 'Goals';
+
+UPDATE items
+SET thumbnail = 'canva-contrast-thumb.png'
+WHERE name = 'Contrast';
+
+UPDATE items
+SET thumbnail = 'canva-visionary-thumb.png'
+WHERE name = 'Visionary';
+
+
 
 -- ----------------- navigation lenteles komandos---------------------------
 
