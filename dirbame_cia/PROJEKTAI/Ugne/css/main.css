@@ -21,16 +21,22 @@
 }
 
 .footer-image {
-  height: 30vh;
+  height: 20vh;
   background-color: #f4f4f4;
 
 }
 
 .item-img{
   max-width: 100%;
-  height: auto;
-  border: 1px;
-  border-style: solid;
-  border-color: #22262a;
+  max-height: 80%;
+}
 
+.logo{
+  max-height: 40px ;
+  width: auto;
+}
+
+a:hover{
+  text-decoration: none;
+  color: pink;
 }

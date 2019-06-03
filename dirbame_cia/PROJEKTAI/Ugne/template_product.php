@@ -20,32 +20,38 @@
                       <!-- Main -->
 
 
-
       <main class="container mt-5">
         <section class="container-fluid mt-5">
               <div class="row">
                   <div class="col-12 text-center">
                       <h2 class="font-weight-light">
-                          "<?php    echo getItem(2)['name'];    ?>"
+                          "<?php    $id = $_GET['id'];
+                          echo getItem($id)['name'];    ?>"
                       </h2>
                     </div>
                   <div class="col-12 text-center">
-                      <h4 class=""><?php    echo getItem(2)['price'];    ?> Eur</h4></div>
+                      <h4 class=""><?php
+                        $id = $_GET['id'];
+                        echo getItem($id)['price'];    ?>Eur</h4>
+                  </div>
               </div>
         </section>
 
         <section class="container-fluid mt-5">
               <div class="row">
-                    <div class="col-7">
+                    <div class="col-7 d-flex justify-content-center">
                       <img class="item-img img-responsive" src="img/<?php
-                          echo getItem(2)['imgname']; ?>">
+                      $id = $_GET['id'];
+                      echo getItem($id)['imgname']; ?>">
                     </div>
 
 
-                    <div class="col-5">
+                    <div class="col-5 ">
                       <div class= "col-12 text-center">
                         <p class="font-weight-light">
-                          <?php    echo getItem(2)['description'];    ?>
+                          <?php
+                          $id = $_GET['id'];
+                          echo getItem($id)['description'];    ?>
                         </p>
                       </div>
 
