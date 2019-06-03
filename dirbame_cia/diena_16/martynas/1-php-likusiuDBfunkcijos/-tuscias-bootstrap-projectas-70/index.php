@@ -21,7 +21,31 @@
 
         <h1>Isijunk konsole</h1>
 
-    
+    <?php
+
+    include_once('db_functions.php');
+
+    $visiGydytojai = getDoctors(10);
+
+    $vienasGyd=mysqli_fetch_assoc($visiGydytojai);
+
+    while ($vienasGyd==true) {
+        echo "<h2>" .$vienasGyd['name']." ".$vienasGyd['lname'].  "</h2>";
+            $vienasGyd=mysqli_fetch_assoc($visiGydytojai);
+    }
+
+// if (mysqli_num_rows($gydytojaiOBJ) > 0) {
+//     $vienasGydArray = mysqli_fetch_assoc($gydytojaiOBJ);
+//     while ($vienasGydArray) {
+//         echo "<h2>" .$vienasGydArray['name']." ".$vienasGydArray['lname'].  "</h2>";
+//         $vienasGydArray = mysqli_fetch_assoc($gydytojaiOBJ);
+//
+//     }
+// }
+
+
+
+     ?>
 
 
 
