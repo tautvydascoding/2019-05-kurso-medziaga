@@ -1,31 +1,34 @@
-<!DOCTYPE html>
+
 <html>
     <head>
         <meta charset="utf-8">
-        <title></title>
+        <title>Paint mE shop</title>
         <link rel="stylesheet" href="./libs/bootstrap/css/bootstrap.css">
         <link rel="stylesheet" href="css/main.css">
+        <script src="https://kit.fontawesome.com/a0b467e28c.js"></script>
 
     </head>
 
 
     <body>
+                          <!-- Header -->
 
-      <h2>aaaa</h2>
+      <?php include('header.php'); ?>
 
-      <header>
-              <!-- cia bus dedamas header.php -->
-      </header>
 
+                      <!-- Main -->
       <main class="container">
-        <!-- cia bus dedamas products.php -->
-
-
+        <section class="py-5">
+          <div class="container">
+            <h2 class="font-weight-light">Page Content</h2>
+          </div>
+        </section>
 
       </main>
 
+                    <!-- Footer -->
       <footer>
-            <!-- cia bus dedamas footer.php -->
+            <?php include('footer.php'); ?>
       </footer>
 
 

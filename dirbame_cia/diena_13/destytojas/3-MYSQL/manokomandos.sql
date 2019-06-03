@@ -15,7 +15,7 @@ SELECT User, Password, Delete_priv  FROM user;
 CREATE DATABASE hospital5;
 -- pasitikrinimui
 show databases;
--- !!
+-- !!  BUTINA - issirinkti DB
 use hospital5;
 
 -- lenteles kurimas

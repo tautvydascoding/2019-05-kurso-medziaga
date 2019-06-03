@@ -37,7 +37,7 @@
         <?php
         $preke1 = ['800 Eur', 'Dviratis', 200 ];
         $numeris = $_GET['x'];
-        echo "numeris: $numeris <br />";
+        echo "numeris:" . $numeris . "<br />";
         echo $preke1[$numeris] . "<hr />";
 
         ?>
