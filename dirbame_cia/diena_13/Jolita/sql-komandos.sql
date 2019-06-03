@@ -73,11 +73,7 @@ CREATE TABLE img (
         name  VARCHAR(100),
         patient_id  INT(6)
 );
-INSERT INTO img VALUES ("", "foto.jpg",  3 );
-INSERT INTO img VALUES ("", "3.jpg",  1 );
-INSERT INTO img VALUES ("", "1.jpg",  1 );
-INSERT INTO img VALUES ("", "3.jpg",  3 );
-
+INSERT INTO img VALUES ("", "C:\Users\Aceris\Desktop\skaiciuokle\img\auto.jpg",  3 );
 
 
 --  iskome 3-cios nuotraukos savininko

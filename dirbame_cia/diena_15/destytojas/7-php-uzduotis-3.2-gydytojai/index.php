@@ -18,5 +18,12 @@
                 echo "<li><a href='doctor.php?nr=$i'> " .  $gyt['name'] . "</a></li>";
           }
             ?>
+
+
+
+            <a href="doctor.php?id=3"> Kaip kloti plyteles</a>
+            <a href="doctor.php?id=16"> Kaip maisyti cementa</a>
+            <a href="doctor.php?id=17"> Kaip glaistuoti sienas</a>
+            <a href="doctor.php?id=20"> Kaip griauti siena</a>
     </body>
 </html>
