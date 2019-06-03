@@ -8,7 +8,9 @@
 
 
         <?php
+            print_r($_GET);
         $x = $_GET['tekstas'];
+
         echo $x;
 
 
