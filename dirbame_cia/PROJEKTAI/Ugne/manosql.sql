@@ -99,6 +99,13 @@ CREATE TABLE navigation(
   item varchar(50)
 );
 
+ALTER TABLE navigation
+ADD link varchar(50);
+
+UPDATE navigation
+SET link = 'index.php'
+WHERE id = 1;
+
 
 INSERT INTO navigation VALUES (null,'Home');
 INSERT INTO navigation VALUES (null,'Products');

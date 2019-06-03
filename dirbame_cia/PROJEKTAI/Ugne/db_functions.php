@@ -26,4 +26,12 @@
         return $resultArray;
     }
 
+
+    function getMenu($nr) {
+        $query = "SELECT * FROM navigation WHERE id='$nr' ";
+        $rezult = mysqli_query(getLoginDB(),  $query);
+        $resultArray = mysqli_fetch_assoc($rezult);
+        return $resultArray;
+    }
+
  ?>

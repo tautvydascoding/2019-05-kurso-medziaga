@@ -33,6 +33,49 @@
       }
     }
 
-    createDoctor("Ieva", "Gajau");
+
+// ----------------trinti--------------
+
+function deleteDoctor( $nr) {
+$manoSQL = "DELETE FROM doctors
+            WHERE id=$nr";
+$rezultatai = mysqli_query(getPrisijungtimas(),  $manoSQL);
+if (!$rezultatai){
+echo  "ERROR. Nepavyko istrinti. SQL klaida:" . mysqli_error(getPrisijungtimas());
+}
+}
+
+deleteDoctor(6);
+
+// ----------------trinti--------------
+
+
+function updateDoctor($nr, $vardas, $pavarde){
+  $manoSQL = "UPDATE doctors SET
+                                name =  '$vardas',
+                                lname = '$pavarde'
+                              WHERE id = '$nr'
+                              LIMIT 2;";
+
+  $rezultatai = mysqli_query(getPrisijungtimas(),  $manoSQL);
+  if (!$rezultatai){
+  echo  "ERROR. Nepavyko redaguoti. SQL klaida:" . mysqli_error(getPrisijungimas());
+  }
+}
+
+updateDoctor(1, 'Ledas', 'Pakeistas');
+
+
+
+
+// ----------------visa lentele spaust--------------
+
+function getDoctors( $kiekis = 99 ) {
+$manoSQL = "SELECT * FROM doctors LIMIT '$kiekis' ;";
+$rezultatai = mysqli_query(getPrisijungtimas(),  $manoSQL);
+return $rezultatai;
+}
+
+$gydytojai = getDoctors(4);
 
  ?>
