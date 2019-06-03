@@ -6,3 +6,7 @@ $("button").click(function() {
         document.write("jusu slaptazodis per ilgas");
     }
 });
+
+$('input[type="submit"]').click(function(){
+$(this).css('color','red');
+});

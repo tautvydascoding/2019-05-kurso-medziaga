@@ -33,12 +33,19 @@
             <input type="text" name="telefonas" value="" placeholder="jusu telefonas" required> <br />
 
 
-            <button type="submit"> registruotis </button>
+            <button type="submit"> registruotis </button> -->
 
             <!-- arba -->
             <input type="submit" name="" value="regist">
 
         </form>
+
+        <?php
+
+        $x = $_GET['BLA'];
+        echo $x;
+
+         ?>
 
 
 
