@@ -17,9 +17,7 @@
                       <!-- Main -->
       <main class="container">
         <section class="py-5">
-          <div>
-            <h2 class="font-weight-light">Your cart</h2>
-          </div>
+
         </section>
 
       </main>

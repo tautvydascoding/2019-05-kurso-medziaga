@@ -5,4 +5,7 @@
   define('MYSQL_USER', 'root');
   define('MYSQL_PASSWORD', 'saskam0990');
 
+  define('HOME_NUMBER_OF_ARTICLES', 6 );
+  define('RESULT_NUMBER_OF_ARTICLES', 12 );
+
  ?>

@@ -18,7 +18,7 @@
       <main class="container">
         <section class="py-5">
           <div class="container">
-            <h2 class="font-weight-light">About</h2>
+              <?php include('carousel.php'); ?>
           </div>
 
         </section>
