@@ -99,8 +99,29 @@ CREATE TABLE navigation(
   item varchar(50)
 );
 
+ALTER TABLE navigation
+ADD link varchar(50);
+
+UPDATE navigation
+SET link = 'index.php'
+WHERE id = 1;
+
 
 INSERT INTO navigation VALUES (null,'Home');
 INSERT INTO navigation VALUES (null,'Products');
 INSERT INTO navigation VALUES (null,'About');
 INSERT INTO navigation VALUES (null,'Contact');
+INSERT INTO navigation VALUES (null,'Cart', 'cart.php');
+
+
+-- ----------------- carousel lenteles komandos---------------------------
+
+CREATE TABLE carousel(
+  id INT(6) AUTO_INCREMENT PRIMARY KEY,
+  imgname varchar(50)
+);
+
+INSERT INTO carousel VALUES (null,'slider-img-1.jpg');
+INSERT INTO carousel VALUES (null,'slider-img-2.jpg');
+INSERT INTO carousel VALUES (null,'slider-img-3.jpg');
+INSERT INTO carousel VALUES (null,'slider-img-4.jpg');
