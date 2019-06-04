@@ -10,7 +10,8 @@
         <?php
         require_once('db_functions.php');
 
-         $numeris = $_GET['nr']; // is narsykels URL
+         $numeris = $_GET['nr'];
+         // is narsykels URL, keiciant numeri, paims skirtingus duomenis db
          // echo "Numeris: $numeris "; // test
 
          $gyt = getDoctor($numeris);

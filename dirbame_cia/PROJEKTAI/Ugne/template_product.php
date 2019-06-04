@@ -13,8 +13,21 @@
 
       <?php
       require_once('db_functions.php');
-      include('header_page.php');
+
        ?>
+
+       <?php include('nav.php'); ?>
+
+
+       <header class="header-page">
+         <div class="container h-100">
+           <div class="row h-100 align-items-center">
+             <div class="col-12 text-center">
+               <h1 class="font-weight-light p-5"><span class="header-page-name ">Canva</span></h1>
+             </div>
+           </div>
+         </div>
+       </header>
 
 
                       <!-- Main -->
@@ -39,24 +52,24 @@
 
         <section class="container-fluid mt-5">
               <div class="row">
-                    <div class="col-7 d-flex justify-content-center">
+                    <div class="col-lg-7 col-md-12 justify-content-center">
                       <img class="item-img img-responsive" src="img/<?php
                       $id = $_GET['id'];
                       echo getItem($id)['imgname']; ?>">
                     </div>
 
 
-                    <div class="col-5 ">
+                    <div class="col-lg-5 col-md-12 justify-content-center">
                       <div class= "col-12 text-center">
-                        <p class="font-weight-light">
+                        <p class="font-weight-light mt-5">
                           <?php
                           $id = $_GET['id'];
                           echo getItem($id)['description'];    ?>
                         </p>
                       </div>
 
-                      <div class= "col-12">
-                        <a class="btn btn-outline-dark my-2 my-sm-0 ml-3 w-100" href="products.php">Add to cart</a>
+                      <div class= "col-12 justify-content-center">
+                        <a class="btn btn-outline-dark my-2 my-sm-0 w-100" href="cart.php">Add to cart</a>
                       </div>
 
                     </div>

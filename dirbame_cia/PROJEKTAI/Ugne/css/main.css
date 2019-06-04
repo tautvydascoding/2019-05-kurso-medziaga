@@ -21,14 +21,18 @@
 }
 
 .footer-image {
-  height: 20vh;
+  height: 30vh;
   background-color: #f4f4f4;
 
 }
 
 .item-img{
   max-width: 100%;
-  max-height: 80%;
+  max-height: 100%;
+  width: 100%;
+  height: auto;
+  display: block;
+
 }
 
 .logo{
@@ -39,4 +43,9 @@
 a:hover{
   text-decoration: none;
   color: pink;
+}
+
+.header-page-name{
+  background-color: #ececec75;
+
 }
