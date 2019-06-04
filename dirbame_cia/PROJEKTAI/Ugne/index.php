@@ -20,9 +20,9 @@
       <main class="container">
         <section class="py-5">
           <div class="container">
-            <h2 class="font-weight-light">Page Content</h2>
+            <h2 class="font-weight-light text-center">Featured</h2>
           </div>
-          
+          <?php include('featured.php'); ?>
         </section>
 
       </main>

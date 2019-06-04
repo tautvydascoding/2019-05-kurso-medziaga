@@ -18,14 +18,14 @@
           }
 
           for($i=1; $i<count($allItems)+1; $i++){
+            if (getMenu($i)['item'] != "Cart"){
             echo "<li class='nav-item'><a class='nav-link' href='" . getMenu($i)['link'] . "?id=$i" . "'>";
             echo getMenu($i)['item'] . "</a></li>";
-        
-
+            }
           }
 
          ?>
-            <a class="nav-item btn btn-outline-dark my-2 my-sm-0 ml-1" href="cart.php">
+            <a class="nav-item btn btn-outline-dark my-2 my-sm-0 ml-1" href="cart.php?id=5">
               <i class="fas fa-shopping-cart"></i> 0 / 0,00 Eur</a>
 
       </ul>
