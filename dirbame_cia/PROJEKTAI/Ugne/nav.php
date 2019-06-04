@@ -6,23 +6,39 @@
         </button>
     <div class="collapse navbar-collapse" id="navbarResponsive">
       <ul class="navbar-nav ml-auto">
-        <li class="nav-item">
-          <a class="nav-link" href="index.php">Home</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="products.php">Products</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="about.php">About</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="contacts.php">Contact</a>
-        </li>
+        <?php
 
-          <a class="btn btn-outline-dark my-2 my-sm-0 ml-3" href="cart.php">
+        require_once('db_functions.php');
+
+        $allItems = [];
+        for($i=1; $i<15; $i++){
+          if (!empty(getMenu($i))){
+            $allItems[$i] = getMenu($i);
+            }
+          }
+
+          for($i=1; $i<count($allItems)+1; $i++){
+            if (getMenu($i)['item'] != "Cart"){
+            echo "<li class='nav-item'><a class='nav-link' href='" . getMenu($i)['link'] . "?id=$i" . "'>";
+            echo getMenu($i)['item'] . "</a></li>";
+            }
+          }
+
+         ?>
+            <a class="nav-item btn btn-outline-dark my-2 my-sm-0 ml-1" href="cart.php?id=5">
               <i class="fas fa-shopping-cart"></i> 0 / 0,00 Eur</a>
 
       </ul>
     </div>
   </div>
 </nav>
+
+<!-- <li class="nav-item">
+  <a class="nav-link" href="products.php">Products</a>
+</li>
+<li class="nav-item">
+  <a class="nav-link" href="about.php">About</a>
+</li>
+<li class="nav-item">
+  <a class="nav-link" href="contacts.php">Contact</a>
+</li> -->

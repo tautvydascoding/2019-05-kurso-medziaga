@@ -20,11 +20,6 @@
 
       <main>
         <section class="py-5 container">
-          <div class="text-center row m-2">
-            <div class="col-12">
-              <h2 class="font-weight-light">Products</h2>
-            </div>
-          </div>
 
 
 <?php
