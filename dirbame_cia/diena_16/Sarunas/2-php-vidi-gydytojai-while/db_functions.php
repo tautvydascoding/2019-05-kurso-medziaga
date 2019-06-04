@@ -106,19 +106,19 @@ function getDoctors($kiekGydytoju = 99999) {
         return $rezultatai; // graziname MYSQL OBJEKTA
     }
 }
-$gydytojaiOBJ = getDoctors(2);  // paimk 4 gydytojus paciu pirmus
-print_r( $gydytojaiOBJ ); // test
-
-// ar radome gydytoju DB-je?
-if (mysqli_num_rows($gydytojaiOBJ) > 0) {
-    $vienasGydArray = mysqli_fetch_assoc($gydytojaiOBJ);     // mysqli_fetch_assoc - paima viena eilue is OBJ ir pavercia i array
-    while ($vienasGydArray == true) {
-
-        echo "<h2>". $vienasGydArray['name'] ."</h2>";
-        $vienasGydArray = mysqli_fetch_assoc($gydytojaiOBJ);     // mysqli_fetch_assoc - paima viena (SEKANCIA) eilue is OBJ ir pavercia i array
-    }
-} else {
-    echo "NEI NIEVO GYDYTOJO NERADOME <br />";
-}
+// $gydytojaiOBJ = getDoctors(2);  // paimk 4 gydytojus paciu pirmus
+// print_r( $gydytojaiOBJ ); // test
+//
+// // ar radome gydytoju DB-je?
+// if (mysqli_num_rows($gydytojaiOBJ) > 0) {
+//     $vienasGydArray = mysqli_fetch_assoc($gydytojaiOBJ);     // mysqli_fetch_assoc - paima viena eilue is OBJ ir pavercia i array
+//     while ($vienasGydArray == true) {
+//
+//         echo "<h2>". $vienasGydArray['name'] ."</h2>";
+//         $vienasGydArray = mysqli_fetch_assoc($gydytojaiOBJ);     // mysqli_fetch_assoc - paima viena (SEKANCIA) eilue is OBJ ir pavercia i array
+//     }
+// } else {
+//     echo "NEI NIEVO GYDYTOJO NERADOME <br />";
+// }
 
  ?>
