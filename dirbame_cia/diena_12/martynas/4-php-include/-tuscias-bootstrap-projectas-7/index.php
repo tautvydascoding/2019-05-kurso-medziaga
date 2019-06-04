@@ -22,7 +22,7 @@
 
     <body>
 
-        
+
 
 
         <?php $kaina = 100;
@@ -51,16 +51,16 @@
                     echo "<div class='col-4'>";
                     include("preke.php");
                     echo "</div>";
-                    // echo '<div class="card ml-1 mr-1 mt-1 mb-1">
-                    //   <img class="card-img-top" src="/images/pathToYourImage.png" alt="Card image cap">
-                    //   <div class="card-body">
-                    //     <h4 class="card-title">Preke</h4>
-                    //     <p class="card-text">
-                    //       Nuostabiausia preke zemeje
-                    //     </p>
-                    //     <a href="#!" class="btn btn-primary">Kaina</a>
-                    //   </div>
-                    // </div>';
+                    echo '<div class="card ml-1 mr-1 mt-1 mb-1">
+                      <img class="card-img-top" src="/images/pathToYourImage.png" alt="Card image cap">
+                      <div class="card-body">
+                        <h4 class="card-title">Preke</h4>
+                        <p class="card-text">
+                          Nuostabiausia preke zemeje
+                        </p>
+                        <a href="#!" class="btn btn-primary">Kaina</a>
+                      </div>
+                    </div>';
                 }
 
                  ?>
