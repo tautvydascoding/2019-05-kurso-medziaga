@@ -6,6 +6,8 @@
 
     //PRISIJUNTIMAS
     $prisijungimas = mysqli_connect(DB_HOST,  MYSQL_USER, MYSQL_PASSWORD, DB_NAME   );
+    //a kad MYSQL nesugadintu LT kalbos saugomos DB-je
+    mysqli_set_charset(getPrisijungtimas(), 'utf8mb4');
 
     // ! - AR FALSE?
     if( !$prisijungimas )   {
@@ -67,7 +69,7 @@ function deleteDoctor($nr) {
         // echo "Gydytojas uzregistruotas!";
     }
 }
-deleteDoctor(8);
+// deleteDoctor(8); // test
     // 7. updateDoctor($nr, $vardas, $pavarde)
 function    updateDoctor($nr, $vardas, $pavarde) {
     $nrUzkoduotas = mysqli_real_escape_string (getPrisijungtimas(), $nr );
@@ -88,8 +90,35 @@ function    updateDoctor($nr, $vardas, $pavarde) {
         // echo "Gydytojas uzregistruotas!";
     }
 }
-updateDoctor(6, "Jonas", "Jonaitis");
+// test
+// updateDoctor(6, "Jonas", "Jonaitis");
 
     // 8. getDoctors($kiekGydytoju=99999)
+function getDoctors($kiekGydytoju = 99999) {
+    $manoSQL = "SELECT * FROM doctors LIMIT  $kiekGydytoju   ";
+    $rezultatai = mysqli_query(getPrisijungtimas(),  $manoSQL); // print_r(    $rezultataiOBJ );  // test
+
+    if ( !$rezultatai) {
+        echo "ERROR: Neradome gydytoju. SQL klaida:" . mysqli_error(getPrisijungtimas());
+        return null;
+    } else {
+
+        return $rezultatai; // graziname MYSQL OBJEKTA
+    }
+}
+$gydytojaiOBJ = getDoctors(2);  // paimk 4 gydytojus paciu pirmus
+print_r( $gydytojaiOBJ ); // test
+
+// ar radome gydytoju DB-je?
+if (mysqli_num_rows($gydytojaiOBJ) > 0) {
+    $vienasGydArray = mysqli_fetch_assoc($gydytojaiOBJ);     // mysqli_fetch_assoc - paima viena eilue is OBJ ir pavercia i array
+    while ($vienasGydArray == true) {
+
+        echo "<h2>". $vienasGydArray['name'] ."</h2>";
+        $vienasGydArray = mysqli_fetch_assoc($gydytojaiOBJ);     // mysqli_fetch_assoc - paima viena (SEKANCIA) eilue is OBJ ir pavercia i array
+    }
+} else {
+    echo "NEI NIEVO GYDYTOJO NERADOME <br />";
+}
 
  ?>

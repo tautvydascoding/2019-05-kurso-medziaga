@@ -22,17 +22,7 @@
         <h1>Isijunk konsole</h1>
 
 
-    <?php
 
-    include('db_functions.php');
-    $visiGydytojai = getDoctors(10);
-
-    $vienasgyd = mysqli_fetch_assoc($visiGydytojai);
-    // ar turime gydytojo masyva pilna
-    while( $vienasgyd == true ) {
-        echo "<h2> .$vienasGyd['name'] . $vienasGyd['lname']</h2>";
-        $vienasGyd = mysqli_fetch_assoc($visiGydytojai);
-    ?>
 
 
         <!-- js puslapio apacioje -->
