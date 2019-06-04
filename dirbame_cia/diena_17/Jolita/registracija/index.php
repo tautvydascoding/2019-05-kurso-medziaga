@@ -21,8 +21,11 @@
 
         <h1>Isijunk konsole</h1>
 
-<a href='naujasGydytojas.php?vardas=TOMAS&pavarde=TOMAUSKIS'> Kurti Nauja</a>
-<a href='trinti.php?nr=2'> Trinti gydytoja</a>
+<form class="" action="registracija.php" method="get">
+    <input type="text" name="vardas" value="" placeholder="iveskita varda">
+    <input type="text" name="pavarde" value="" placeholder="iveskita pavarde">
+    <button type="submit" name="button"> Registracija</button>
+</form>
 
 
 
