@@ -11,14 +11,36 @@
     <body>
                           <!-- Header -->
 
-      <?php include('header_page.php'); ?>
+      <?php include('header_page.php');
+            require_once('db_functions.php')
+       ?>
 
 
                       <!-- Main -->
       <main class="container">
         <section class="py-5">
           <div>
-          
+              <form>
+                  <div class="form-group row justify-content-center">
+
+                    <form action="/contactform.php" method="_GET">
+                      <div class="col-sm-10 m-3">
+                        <input class="form-control" type="text" name="name" placeholder="Name" required/>
+                      </div>
+
+                      <div class="col-sm-10 m-3">
+                    <input class="form-control" type="email" name="email" placeholder="E-mail" required />
+                      </div>
+
+                    <div class="col-sm-10 m-3 h-75">
+                      <textarea rows="4" cols="50" class="form-control" type="text" name="message" placeholder="Your message" required></textarea>
+                    </div>
+
+                    <button type="submit"  class="btn btn-outline-dark w-25 m-3">Send</button>
+                  </form>
+
+                </div>
+              </form>
           </div>
         </section>
 
