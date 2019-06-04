@@ -6,7 +6,7 @@
 
         <!-- !!! mano CSS failas vissada zemiau, nie kiti css failai -->
         <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"> -->
-        <link rel="stylesheet" href="libs/bootstrap/css/bootstrap.css">
+        <link rel="stylesheet" href="./libs/bootstrap/css/bootstrap.css">
 
         <!-- !!idedame CSS faila, nes kitaip neveiks -->
         <link rel="stylesheet" href="css/main.css">
@@ -18,28 +18,12 @@
          -->
     </head>
     <body>
-        <div class="container">
-            <header>
-                Virsus
-                <nav>
-                    <ul>
-                        <li>Home</li>
-                    </ul>
-                </nav>
-            </header>
-<!-- --------------------------------- -->
-
 
         <h1>Isijunk konsole</h1>
 
 
 
 
-<!-- --------------------------------- -->
-            <footer>
-                apacia 2019
-            </footer>
-        </div> <!-- container  end -->
 
         <!-- js puslapio apacioje -->
         <script src="http://code.jquery.com/jquery-3.3.1.min.js"  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
