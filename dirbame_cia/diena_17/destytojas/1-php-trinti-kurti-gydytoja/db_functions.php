@@ -17,7 +17,7 @@
         global $prisijungimas;
         return $prisijungimas;
     }
-    getPrisijungtimas();
+    // getPrisijungtimas();
 
 /*
     $nr - id duomenu bazeje (gydytojo)

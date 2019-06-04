@@ -49,23 +49,23 @@
                                     WHERE id='$nr'
                                     LIMIT 1
                             ";
-        mysqli_query(   getDBPrisiungimas()  , $mano_sql_tekstas);
+        mysqli_query(   getPrisijungtimas()  , $mano_sql_tekstas);
     }
     // deleteDoctor( 7 );
 
     //
     function createDoctor($vardas, $pavarde){
-        $vardas_apdorotas =  mysqli_real_escape_string (getDBPrisiungimas(), $vardas );
-        $pavarde_apdorotas =  mysqli_real_escape_string (getDBPrisiungimas(), $pavarde );
+        $vardas_apdorotas =  mysqli_real_escape_string (getPrisijungtimas(), $vardas );
+        $pavarde_apdorotas =  mysqli_real_escape_string (getPrisijungtimas(), $pavarde );
 
         $mano_sql_tekstas = "INSERT INTO doctors
                                     VALUES('', '$vardas_apdorotas', '$pavarde_apdorotas' );
                             ";
-        $arPavyko = mysqli_query(   getDBPrisiungimas() , $mano_sql_tekstas);
+        $arPavyko = mysqli_query(   getPrisijungtimas() , $mano_sql_tekstas);
 
         if ( !$arPavyko ) {
              // '(! )' JEIGU skliaustuose FALSE?
-             echo "EROROR: nepavyko uzregistruoti gydytojo." . mysqli_error( getDBPrisiungimas() );
+             echo "EROROR: nepavyko uzregistruoti gydytojo." . mysqli_error( getPrisijungtimas() );
         } else {
             // echo "pavyko sukurti";
         }
@@ -73,8 +73,8 @@
     // createDoctor('Faustas', 'Gete');
 
     function updateDoctor($nr, $vardas, $pavarde) {
-        $vardas_apdorotas =  mysqli_real_escape_string (getDBPrisiungimas(), $vardas );
-        $pavarde_apdorotas =  mysqli_real_escape_string (getDBPrisiungimas(), $pavarde );
+        $vardas_apdorotas =  mysqli_real_escape_string (getPrisijungtimas(), $vardas );
+        $pavarde_apdorotas =  mysqli_real_escape_string (getPrisijungtimas(), $pavarde );
 
         $mano_sql_tekstas = " UPDATE doctors SET
                                 name = '$vardas_apdorotas',
@@ -82,11 +82,11 @@
                                 WHERE id='$nr'
                                 LIMIT 1;
                             ";
-        $arPavyko = mysqli_query(   getDBPrisiungimas() , $mano_sql_tekstas);
+        $arPavyko = mysqli_query(   getPrisijungtimas() , $mano_sql_tekstas);
 
         if ( !$arPavyko ) {
              // '(! )' JEIGU skliaustuose FALSE?
-             echo "EROROR: nepavyko uzregistruoti gydytojo." . mysqli_error( getDBPrisiungimas() );
+             echo "EROROR: nepavyko uzregistruoti gydytojo." . mysqli_error( getPrisijungtimas() );
         } else {
             // echo "pavyko sukurti";
         }
@@ -103,7 +103,7 @@
         // ORDER BY - surikiuoja pabal stulpeli 'name'
 
         // $rezultatai - mysql objektas
-        $rezultatai = mysqli_query( getDBPrisiungimas() , $mano_sql_tekstas);
+        $rezultatai = mysqli_query( getPrisijungtimas() , $mano_sql_tekstas);
 
         // tikrunu ar gryzo duomenu
         if ( $rezultatai ) {

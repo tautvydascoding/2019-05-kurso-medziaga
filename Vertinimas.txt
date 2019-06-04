@@ -30,4 +30,9 @@ PRIVALOMA: panaudoti bent 4x kartus: include("...")
 
 ... jusu idejos :)
 
+
+Extra balai:
+Lukas 0.5 uz INER JOIN
+Ugne  0.5 uz ~INER JOIN
+
  
