@@ -25,6 +25,14 @@
         return $resultArray;
     }
 
+    //--------------GET ITEMS (GAUTI PRODUKTUS) FUNKCIJA-----------------------
+
+      function getItems($itemLimit = 50) {
+          $query = "SELECT * FROM items LIMIT $itemLimit ";
+          $result = mysqli_query(getLoginDB(),  $query);
+          return $result;
+      }
+
     //--------------GET MENU FUNKCIJA-----------------------
 
     function getMenu($nr) {
@@ -58,5 +66,27 @@
               echo "Something went wrong! Your message was not sent." . mysqli_error(getLoginDB());
           }
       }
+
+        //--------------createItem funkcija naujam produktui kurti--------------
+
+
+        function createItem( $name, $description, $price, $imgname, $thumbnail) {
+            $nameCrypted = mysqli_real_escape_string (getLoginDB(), $name );
+            $descriptionCrypted = mysqli_real_escape_string (getLoginDB(), $description );
+            $priceCrypted = mysqli_real_escape_string (getLoginDB(), $price );
+            $imgnameCrypted = mysqli_real_escape_string (getLoginDB(), $imgname );
+            $thumbnailCrypted = mysqli_real_escape_string (getLoginDB(), $thumbnail );
+
+            $query = "INSERT INTO  items
+                            VALUES( null, '$nameCrypted', '$descriptionCrypted', '$priceCrypted', '$imgnameCrypted', '$thumbnailCrypted') ";
+
+            $result = mysqli_query(getLoginDB(),  $query);
+            if ( !$result) {
+                echo "Nepavyko sukurti naujos prekes" . mysqli_error(getLoginDB());
+            }
+        }
+
+        //--------------deleteItem funkcija  produktui istrinti--------------
+
 
  ?>

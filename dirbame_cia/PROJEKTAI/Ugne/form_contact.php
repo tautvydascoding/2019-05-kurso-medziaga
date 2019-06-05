@@ -77,7 +77,7 @@
 
        ?>
 
-       <button type="submit"  class="btn btn-outline-dark w-50 mb-5">Back to home page</button>
+       <a  href="index.php" class="btn btn-outline-dark w-50 mb-5">Back to home page</a>
 
 </div>
 

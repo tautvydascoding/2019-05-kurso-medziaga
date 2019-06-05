@@ -69,7 +69,7 @@
                       </div>
 
                       <div class= "col-12 justify-content-center">
-                        <a class="btn btn-outline-dark my-2 my-sm-0 w-100" href="cart.php">Add to cart</a>
+                        <a class="btn btn-outline-dark my-2 my-sm-0 w-100" href="cart.php?id=5">Add to cart</a>
                       </div>
 
                     </div>

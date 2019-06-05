@@ -13,14 +13,6 @@
         }
        ?>
 
-    <!-- <div class="carousel-item active">
-      <img class="d-block w-100" src="img/slider-img-1.jpg" data-src="holder.js/900x400?theme=social" alt="First slide">
-    </div>
-
-    <div class="carousel-item">
-      <img class="d-block w-100" src="#" data-src="holder.js/900x400?theme=industrial" alt="Second slide">
-    </div> -->
-
   </div>
 
 

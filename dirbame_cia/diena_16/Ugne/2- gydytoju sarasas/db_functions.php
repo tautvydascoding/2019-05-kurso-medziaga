@@ -57,18 +57,6 @@
 
 
 
-    // function getPatient( $kiekis = 99 ) {
-    //           $manoSQL = "SELECT doctors.id, patients.doctor_id
-    //                       FROM doctors
-    //                       INNER JOIN patients ON doctors.id = patients.doctor_id ;";
-    //           $rezultatai = mysqli_query(getPrisijungimas(),  $manoSQL);
-    //           $rezultatai  = mysqli_fetch_assoc($rezultatai);
-    //         if (!$rezultatai){
-    //           echo "ERROR";
-    //         } else {
-    //           return $rezultatai;
-    //         }
-    // }
 
 
 

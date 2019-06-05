@@ -1,40 +1,38 @@
+<!DOCTYPE html>
 <html>
     <head>
         <meta charset="utf-8">
-        <title>Paint mE shop</title>
+        <title></title>
         <link rel="stylesheet" href="./libs/bootstrap/css/bootstrap.css">
         <link rel="stylesheet" href="css/main.css">
-        <script src="https://kit.fontawesome.com/a0b467e28c.js"></script>
-
     </head>
-
     <body>
-                          <!-- Header -->
+      <?php
+      require_once('db_functions.php');
+       ?>
+       <div class="row justify-content-center">
+      <?php
 
-      <?php include('header_page.php'); ?>
+// Prekes irasymas i DB
 
+      $name = $_POST['name'];
+      $description = $_POST['description'];
+      $price = $_POST['price'];
+      $imgname = $_POST['imgname'];
+      $thumbnail = $_POST['thumbnail'];
+      createItem( $name, $description, $price, $imgname, $thumbnail);
 
-                      <!-- Main -->
-      <main class="container">
-        <section class="py-5">
-          <div class="container">
-            <h2 class="font-weight-light">Products</h2>
-          </div>
-        </section>
+         ?>
 
-      </main>
+       <a  href="index.php" class="btn btn-outline-dark w-50 mb-5">Back to admin panel</a>
 
-                    <!-- Footer -->
-      <footer>
-            <?php include('footer.php'); ?>
-      </footer>
-
-
-
+</div>
 
 
 
+<!-- echo "<div class='alert text-center alert-success w-50 m-5' role='alert'><strong>Well done!</strong> Item added to database.</div>";
 
+echo "<div class='alert text-center alert-danger w-50 m-5' role='alert'><strong>Something went wrong!</strong> Item not added to the database. </div>"; -->
 
 
 
