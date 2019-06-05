@@ -31,7 +31,25 @@
 <!-- --------------------------------- -->
 
 
-        <h1>Isijunk konsole</h1>
+        <h1>Jusu klausimai</h1>
+        <form action="siusti-email.php" method="post">
+          <label for="name">Jusu vardas </label>
+          <input type="text" name="name"> <br>
+
+          <label for="name">Jusu elpastas </label>
+          <input type="email" name="elpastas"> <br>
+
+          <label for="klausijmas">Jusu klausimas </label>
+          <textarea name="klausimas" rows="4" cols="60"></textarea>
+
+          <button type="submit" name="button">Klausti</button>
+
+          <input type="submit" name="" value="">
+
+
+
+
+        </form>
 
 
 
