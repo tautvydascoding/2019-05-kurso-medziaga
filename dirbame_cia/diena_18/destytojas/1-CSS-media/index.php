@@ -4,9 +4,11 @@
         <meta charset="utf-8">
         <title></title>
 
+        <!-- HTML scale 1 - kad mazinanat ekrana eitu patestuoti CSS media'as -->
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
         <!-- !!! mano CSS failas vissada zemiau, nie kiti css failai -->
         <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"> -->
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="libs/bootstrap/css/bootstrap.css">
 
         <!-- !!idedame CSS faila, nes kitaip neveiks -->
@@ -20,18 +22,16 @@
     </head>
     <body>
         <div class="container">
-            <header>
-                Virsus
-                <nav>
-                    <ul>
-                        <li>Home</li>
-                    </ul>
-                </nav>
-            </header>
-<!-- --------------------------------- -->
 
+            <div class="kaire  bg-info">
+                kaire
+            </div>
+            <div class="desine  bg-warning">
+                desine
+            </div>
 
-        <h1>Isijunk konsole</h1>
+            <div class="clearfix"> </div>
+
 
 
 

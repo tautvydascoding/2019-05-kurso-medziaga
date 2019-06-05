@@ -3,11 +3,12 @@
     <head>
         <meta charset="utf-8">
         <title></title>
-
+        <!-- Zemiau eilute reikalinga medioms/maziems ekranams -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <!-- !!! mano CSS failas vissada zemiau, nie kiti css failai -->
         <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"> -->
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="libs/bootstrap/css/bootstrap.css">
+
 
         <!-- !!idedame CSS faila, nes kitaip neveiks -->
         <link rel="stylesheet" href="css/main.css">
@@ -20,18 +21,15 @@
     </head>
     <body>
         <div class="container">
-            <header>
-                Virsus
-                <nav>
-                    <ul>
-                        <li>Home</li>
-                    </ul>
-                </nav>
-            </header>
-<!-- --------------------------------- -->
 
+              <div class="kaire bg-info">
+                kaire
+                  </div>
+                <div class="desine bg-warning">
+                  desine
+              </div>
+              <div class="clearfix"> </div>
 
-        <h1>Isijunk konsole</h1>
 
 
 
