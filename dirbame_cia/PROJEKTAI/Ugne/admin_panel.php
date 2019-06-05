@@ -69,7 +69,8 @@
           <div class="row">
                 <div class="row">
                     <div class="col-6 form-group">
-                            <form class="form-group row justify-content-center" action="form_createitem.php" method="post">
+                      <h5 class="">Create item</h5>
+                            <form class="form-group row justify-content-center m-2" action="form_createitem.php" method="post">
                               <div class="col-sm-10 m-3">
                                 <input class="form-control" type="text" name="name" placeholder="Item name" required/>
                               </div>
@@ -92,15 +93,62 @@
 
                             <button type="submit"  class="btn btn-outline-dark w-50 m-3">Add new item</button>
                           </form>
-<!--_____________Upload button ______________-->
-                          <form class="form-group row justify-content-center" action="upload.php" method="post" enctype="multipart/form-data">
+                            <!--_____________Upload button ______________-->
+                          <form class="w-75 row justify-content-center" action="upload.php" method="post" enctype="multipart/form-data">
                               Select image to upload:
                               <input class="form-control" type="file" name="fileToUpload" id="fileToUpload">
                               <input class="form-control" type="submit" value="Upload Image" name="submit">
                           </form>
 
                     </div>
-                    <div class="col-6"></div>
+                    <div class="col-6">
+
+                        <div class="row">
+                          <h5 class="">Delete item</h5>
+                          <form class="form-group row justify-content-center bg-light" action="form_deleteitem.php" method="post">
+
+                            <div class="col-sm-10 m-3">
+                              <input class="form-control" type="text" name="name" placeholder="Item name" required/>
+                            </div>
+
+                            <div class="col-sm-10 m-3">
+                              <input class="form-control" type="number" min="10" max="500" name="price" placeholder="Item price" required/>
+                            </div>
+
+                          <button type="submit"  class="btn btn-outline-dark w-50 m-3">Delete item</button>
+                        </form>
+                        </div>
+
+                        <div class="row">
+                          <h5 class="">Update item</h5>
+                            <form class="form-group row justify-content-center bg-light" action="form_updateitem.php" method="post">
+                              <div class="col-sm-10 m-3">
+                                <input class="form-control" type="number" min="1" max="100" name="id" placeholder="Item id" required/>
+                              </div>
+
+                                <div class="col-sm-10 m-3">
+                                      <input list="itemindex" class="form-control" name="index" placeholder="Item table index" required>
+                                      <datalist id="itemindex">
+                                        <option value="name"></option>
+                                        <option value="description"></option>
+                                        <option value="price"></option>
+                                        <option value="imgname"></option>
+                                        <option value="thumbnail"></option>
+                                      </datalist>
+                                </div>
+                                <div class="col-sm-10 m-3">
+                                      <textarea rows="4" cols="60" class="form-control" type="text" name="currentvalue" placeholder="Current value" required></textarea>
+                                </div>
+
+                                <div class="col-sm-10 m-3">
+                                      <textarea rows="4" cols="60" class="form-control" type="text" name="newvalue" placeholder="New value" required></textarea>
+                                </div>
+                                <button type="submit"  class="btn btn-outline-dark w-50 m-3">Update item</button>
+
+                          </form>
+                      </div>
+
+                    </div>
                 </div>
           </div>
 

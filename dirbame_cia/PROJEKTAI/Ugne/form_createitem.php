@@ -24,7 +24,7 @@
 
          ?>
 
-       <a  href="index.php" class="btn btn-outline-dark w-50 mb-5">Back to admin panel</a>
+       <a  href="admin_panel.php" class="btn btn-outline-dark w-50 mb-5">Back to admin panel</a>
 
 </div>
 

@@ -3,37 +3,34 @@
     <head>
         <meta charset="utf-8">
         <title></title>
-
-        <!-- !!! mano CSS failas vissada zemiau, nie kiti css failai -->
-        <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"> -->
         <link rel="stylesheet" href="./libs/bootstrap/css/bootstrap.css">
-
-        <!-- !!idedame CSS faila, nes kitaip neveiks -->
         <link rel="stylesheet" href="css/main.css">
-        <!-- NOTE: jeigu neveikia:
-            1) ar failo pavadinimas geras
-            2) ar kelias geras?   (ar "/" teisingi; direktorija ar gere )
-            3) ar   rel="stylesheet"
-            4) ar link uzdalete ">"
-         -->
     </head>
     <body>
+      <?php
+      require_once('db_functions.php');
+       ?>
+       <div class="row justify-content-center">
+      <?php
 
-        <h1>Isijunk konsole</h1>
+// Prekes istrynimas is DB
 
-        <?php
-
-        $vardas = "Antanas";
-        $pavarde = "Arlauskas";
-
-        $straipsnis = ['BMW vel preleke saligatviu', 'Lorem lorem....', '2010-12-01'];
-
-
-        include("straipsnis.php");
-
-
+      $name = $_POST['name'];
+      $price = $_POST['price'];
+      deleteItem( $name, $price);
 
          ?>
+
+       <a  href="admin_panel.php" class="btn btn-outline-dark w-50 mb-5">Back to admin panel</a>
+
+</div>
+
+
+
+<!-- echo "<div class='alert text-center alert-success w-50 m-5' role='alert'><strong>Well done!</strong> Item added to database.</div>";
+
+echo "<div class='alert text-center alert-danger w-50 m-5' role='alert'><strong>Something went wrong!</strong> Item not added to the database. </div>"; -->
+
 
 
 

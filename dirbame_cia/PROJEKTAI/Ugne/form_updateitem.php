@@ -3,45 +3,35 @@
     <head>
         <meta charset="utf-8">
         <title></title>
-
         <link rel="stylesheet" href="./libs/bootstrap/css/bootstrap.css">
-
         <link rel="stylesheet" href="css/main.css">
-
     </head>
     <body>
+      <?php
+      require_once('db_functions.php');
+       ?>
+       <div class="row justify-content-center">
+      <?php
 
-        <h1>Isijunk konsole</h1>
+// Prekes istrynimas is DB
 
+      $id = $_POST['id'];
+      $index = $_POST['index'];
+      $currentvalue = $_POST['currentvalue'];
+      $newvalue = $_POST['newvalue'];
+      updateItem( $id, $index, $currentvalue, $newvalue);
 
-        <?php
-          require_once('db_functions.php');
-          $gydytojas = getDoctor(2);
          ?>
 
-                        <!-- gydytojas -->
+       <a  href="admin_panel.php" class="btn btn-outline-dark w-50 m-5">Back to admin panel</a>
 
-        <h2><?php echo  $gydytojas['name'] . " " . $gydytojas['lname']  ?></h2>
-
-                        <!-- Visi gydytojai-->
-
-        <p>
-          <?php
-          for ($i=1; $i<5; $i++){
-            echo  $i . ". " . getDoctor($i)['name'] . " " . getDoctor($i)['lname'] . "<br /><hr />";
-          }
-
-
-           ?>
-        </p>
+</div>
 
 
 
+<!-- echo "<div class='alert text-center alert-success w-50 m-5' role='alert'><strong>Well done!</strong> Item added to database.</div>";
 
-
-
-
-
+echo "<div class='alert text-center alert-danger w-50 m-5' role='alert'><strong>Something went wrong!</strong> Item not added to the database. </div>"; -->
 
 
 

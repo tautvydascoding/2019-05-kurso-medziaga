@@ -88,5 +88,33 @@
 
         //--------------deleteItem funkcija  produktui istrinti--------------
 
+        function deleteItem($name, $price) {
+            $query = "DELETE FROM items WHERE name = '$name' && price = '$price' LIMIT 1";
+
+            $rezultatai = mysqli_query(getLoginDB(),  $query); // print_r(    $rezultataiOBJ );  // test
+            if ( $rezultatai == false) {
+                echo "ERROR: item not deleted. SQL error:" . mysqli_error(getLoginDB());
+            }
+        }
+
+        //--------------updateItem funkcija  produktui istrinti--------------
+
+        function updateItem( $id, $itemindex, $currentvalue, $newvalue) {
+            $idCrypted = mysqli_real_escape_string (getLoginDB(), $id );
+            $indexCrypted = mysqli_real_escape_string (getLoginDB(), $itemindex );
+            $currentCrypted = mysqli_real_escape_string (getLoginDB(), $currentvalue );
+            $newCrypted = mysqli_real_escape_string (getLoginDB(), $newvalue );
+
+
+            $query = "UPDATE  items
+                            SET $indexCrypted = '$newCrypted'
+                            WHERE $indexCrypted = '$currentCrypted' && id = '$id'; ";
+
+            $result = mysqli_query(getLoginDB(),  $query);
+            if ( !$result) {
+                echo "Nepavyko sukurti naujos prekes" . mysqli_error(getLoginDB());
+            }
+        }
+
 
  ?>
