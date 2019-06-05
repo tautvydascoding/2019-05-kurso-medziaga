@@ -3,10 +3,11 @@
     <head>
         <meta charset="utf-8">
         <title></title>
-
+        <!-- HTML scale 1 - mazinant ekrana patestuot media -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <!-- !!! mano CSS failas vissada zemiau, nie kiti css failai -->
         <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"> -->
-        <link rel="stylesheet" href="./libs/bootstrap/css/bootstrap.css">
+        <link rel="stylesheet" href="libs/bootstrap/css/bootstrap.css">
 
         <!-- !!idedame CSS faila, nes kitaip neveiks -->
         <link rel="stylesheet" href="css/main.css">
@@ -18,26 +19,30 @@
          -->
     </head>
     <body>
-<!-- <button type="action" name="Delete"></button> -->
+        <div class="container">
+            <div class="kaire bg-info">
+                kaire
+            </div>
 
-        <h1> Visi gydytojai </h1>
-<?php
+            <section class="desine bg-warning">
+                desine
+            </section>
+            <div class="clearfix"> </div>
+<!-- --------------------------------- -->
 
-        echo "<div>";
 
-        include('db_functions.php');
-        $visiGydytojai = getDoctors(20);
-        $vienasgydytojas = mysqli_fetch_assoc($visiGydytojai);
+<h1>MEDIA</h1>
 
-        while ( $vienasgydytojas ) {
-          echo " <h2>"  . $vienasgydytojas['name'] .' '. $vienasgydytojas['lname'] . "</h2>";
-          echo "<a href='deleteDoctor.php?nr={$vienasgydytojas['id']}'> </a>";
-        $vienasgydytojas = mysqli_fetch_assoc($visiGydytojai); // mysqli_fetch_assoc - paima sekanti gydytoja is mysql objekto IR sudajo jo stulpelius i ARRAY
-         }
-         echo "</div>";
 
-         ?>
-<button type="submit" name="button"></button>
+
+
+
+<!-- --------------------------------- -->
+            <footer>
+                apacia 2019
+            </footer>
+        </div> <!-- container  end -->
+
         <!-- js puslapio apacioje -->
         <script src="http://code.jquery.com/jquery-3.3.1.min.js"  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
          <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>

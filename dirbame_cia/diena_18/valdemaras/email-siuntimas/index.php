@@ -6,7 +6,7 @@
 
         <!-- !!! mano CSS failas vissada zemiau, nie kiti css failai -->
         <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"> -->
-        <link rel="stylesheet" href="./libs/bootstrap/css/bootstrap.css">
+        <link rel="stylesheet" href="libs/bootstrap/css/bootstrap.css">
 
         <!-- !!idedame CSS faila, nes kitaip neveiks -->
         <link rel="stylesheet" href="css/main.css">
@@ -18,26 +18,33 @@
          -->
     </head>
     <body>
-<!-- <button type="action" name="Delete"></button> -->
+        <div class="container">
+            <header>
 
-        <h1> Visi gydytojai </h1>
-<?php
+            </header>
+<!-- --------------------------------- -->
 
-        echo "<div>";
 
-        include('db_functions.php');
-        $visiGydytojai = getDoctors(20);
-        $vienasgydytojas = mysqli_fetch_assoc($visiGydytojai);
+        <h1>Isijunk konsole</h1>
 
-        while ( $vienasgydytojas ) {
-          echo " <h2>"  . $vienasgydytojas['name'] .' '. $vienasgydytojas['lname'] . "</h2>";
-          echo "<a href='deleteDoctor.php?nr={$vienasgydytojas['id']}'> </a>";
-        $vienasgydytojas = mysqli_fetch_assoc($visiGydytojai); // mysqli_fetch_assoc - paima sekanti gydytoja is mysql objekto IR sudajo jo stulpelius i ARRAY
-         }
-         echo "</div>";
+        <form class="" action="siusti-email.php" method="post">
+            <label for="name"> Jusu vardas</label>
+            <input type="text" name="name" value="" > <br />
 
-         ?>
-<button type="submit" name="button"></button>
+            <label for="elpastas"> Jusu El. pastas</label>
+            <input type="email" name="elpastas" value="" > <br />
+
+            <label for="klausimas"> Klausimas </label>
+            <textarea name="klausimas" rows="4" cols="80"></textarea> <br />
+
+            <button type="submit" name="button"> Klausti </button>
+        </form>
+
+
+<!-- --------------------------------- -->
+
+        </div> <!-- container  end -->
+
         <!-- js puslapio apacioje -->
         <script src="http://code.jquery.com/jquery-3.3.1.min.js"  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
          <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
