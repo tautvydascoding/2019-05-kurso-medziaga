@@ -1,2 +1,2 @@
 console.log(" Labas ");
-let vardas = "TOmas";
+$('.parallax-window').parallax({imageSrc: 'Ugne/img/header-img-1.jpg'});

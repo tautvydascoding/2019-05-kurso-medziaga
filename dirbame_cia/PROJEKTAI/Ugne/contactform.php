@@ -23,20 +23,24 @@
           </div>
         </div>
       </header>
-
+<div class="row justify-content-center">
       <?php
 
 
-      $name = $_GET['name'];
-      $email = $_GET['email'];
-      $message = $_GET['message'];
+      $name = $_POST['name'];
+      $email = $_POST['email'];
+      $message = $_POST['message'];
       createMessage( $name, $email, $message);
-      echo "<div class='alert alert-success w-50 m-5' role='alert'>
+      echo "
+      <div class='alert text-center alert-success w-50 m-5' role='alert'>
           <strong>Well done!</strong> Your message was sent successfully! We will get in touch with you soon.</div>";
 
 
        ?>
 
+       <button type="submit"  class="btn btn-outline-dark w-50 mb-5">Back to home page</button>
+
+</div>
 
 
 
