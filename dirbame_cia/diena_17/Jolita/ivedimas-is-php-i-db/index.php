@@ -21,7 +21,8 @@
 
         <h1>Isijunk konsole</h1>
 
-
+<a href='naujasGydytojas.php?vardas=TOMAS&pavarde=TOMAUSKIS'> Kurti Nauja</a>
+<a href='trinti.php?nr=2'> Trinti gydytoja</a>
 
 
 

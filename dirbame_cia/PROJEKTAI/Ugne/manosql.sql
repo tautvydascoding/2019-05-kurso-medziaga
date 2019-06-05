@@ -125,3 +125,12 @@ INSERT INTO carousel VALUES (null,'slider-img-1.jpg');
 INSERT INTO carousel VALUES (null,'slider-img-2.jpg');
 INSERT INTO carousel VALUES (null,'slider-img-3.jpg');
 INSERT INTO carousel VALUES (null,'slider-img-4.jpg');
+
+-- -----------------Contactform lenteles komandos---------------------------
+
+CREATE TABLE contactform (
+  id INT(6) AUTO_INCREMENT PRIMARY KEY,
+  name varchar(50),
+  email varchar(50),
+  message varchar(2000)
+);
