@@ -43,4 +43,20 @@
         return $result;
     }
 
+      //--------------createMessage funkcija kontaktu formai--------------
+
+      function createMessage( $name, $email, $message) {
+          $nameCrypted = mysqli_real_escape_string (getLoginDB(), $name );
+          $emailCrypted = mysqli_real_escape_string (getLoginDB(), $email );
+          $messageCrypted = mysqli_real_escape_string (getLoginDB(), $message );
+
+          $query = "INSERT INTO  contactform
+                          VALUES( null, '$nameCrypted', '$emailCrypted', '$messageCrypted') ";
+
+          $result = mysqli_query(getLoginDB(),  $query);
+          if ( !$result) {
+              echo "Something went wrong! Your message was not sent." . mysqli_error(getLoginDB());
+          }
+      }
+
  ?>

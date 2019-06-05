@@ -49,3 +49,8 @@ a:hover{
   background-color: #ececec75;
 
 }
+
+.parallax-window {
+    min-height: 400px;
+    background: transparent;
+}

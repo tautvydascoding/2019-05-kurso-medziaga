@@ -113,7 +113,7 @@ function getDoctors($kiekGydytoju = 99999) {
 // if (mysqli_num_rows($gydytojaiOBJ) > 0) {
 //     $vienasGydArray = mysqli_fetch_assoc($gydytojaiOBJ);     // mysqli_fetch_assoc - paima viena eilue is OBJ ir pavercia i array
 //     while ($vienasGydArray == true) {
-//
+//  
 //         echo "<h2>". $vienasGydArray['name'] ."</h2>";
 //         $vienasGydArray = mysqli_fetch_assoc($gydytojaiOBJ);     // mysqli_fetch_assoc - paima viena (SEKANCIA) eilue is OBJ ir pavercia i array
 //     }
