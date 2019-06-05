@@ -16,8 +16,9 @@
 
                       <!-- Main -->
       <main class="container">
-        <section class="py-5">
-          <div class="container">
+
+        <section class="py-5 ">
+          <div class="container justify-content-cente">
               <?php include('carousel.php'); ?>
           </div>
 

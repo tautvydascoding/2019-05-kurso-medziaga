@@ -56,8 +56,6 @@
           $result = mysqli_query(getLoginDB(),  $query);
           if ( !$result) {
               echo "Something went wrong! Your message was not sent." . mysqli_error(getLoginDB());
-          } else {
-              echo "Your message was successfully sent!";
           }
       }
 
