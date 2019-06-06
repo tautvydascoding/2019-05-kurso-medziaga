@@ -4,6 +4,7 @@
         <title>Paint mE shop</title>
         <link rel="stylesheet" href="./libs/bootstrap/css/bootstrap.css">
         <link rel="stylesheet" href="css/main.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <script src="https://kit.fontawesome.com/a0b467e28c.js"></script>
 
     </head>
@@ -11,7 +12,18 @@
     <body>
                           <!-- Header -->
 
-      <?php include('header_page.php'); ?>
+        <?php include('nav.php'); ?>
+
+
+        <header class="header-page">
+          <div class="container h-100">
+            <div class="row h-100 align-items-center">
+              <div class="col-12 text-center">
+                <h1 class="font-weight-light p-5"><span class="header-page-name ">Cart</span></h1>
+              </div>
+            </div>
+          </div>
+        </header>
 
 
                       <!-- Main -->

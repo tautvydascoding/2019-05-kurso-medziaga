@@ -1,18 +1,22 @@
 
 <?php require_once('db_functions.php') ?>
 
-<div id="carouselFadeExampleIndicators" class="carousel slide carousel-fade w-75" data-ride="carousel">
+<div id="carouselFadeExampleIndicators" class="carousel slide carousel-fade w-100" data-ride="carousel">
   <div class="carousel-inner" role="listbox">
 
     <div class="carousel-item active">
       <img class="d-block w-100" src="img/slider-img-1.jpg" data-src="holder.js/900x400?theme=social" alt="First slide">
     </div>
     <?php
-        for($i=2; $i<5; $i++){
-          echo "<div class='carousel-item '><img class='d-block w-100' src='img/" . getImg($i)['imgname'] . "' data-src='holder.js/900x400?theme=social'></div>";
+        $allimages = getImages( 30 );
+        $imgname = mysqli_fetch_assoc($allimages);
+
+
+        while (  $imgname == true ) {
+          echo "<div class='carousel-item '><img class='d-block w-100' src='img/" . $imgname['imgname'] . "' data-src='holder.js/900x400?theme=social'></div>";
+          $imgname = mysqli_fetch_assoc($allimages);
         }
        ?>
-
   </div>
 
 

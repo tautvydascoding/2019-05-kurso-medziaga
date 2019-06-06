@@ -5,6 +5,7 @@
         <title>Paint mE shop</title>
         <link rel="stylesheet" href="./libs/bootstrap/css/bootstrap.css">
         <link rel="stylesheet" href="css/main.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <script src="https://kit.fontawesome.com/a0b467e28c.js"></script>
 
     </head>
@@ -25,13 +26,13 @@
           <?php include('featured.php'); ?>
         </section>
 
-        <section class="py-5">
+        <!-- <section class="py-5">
           <div class="container parallax-window" >
-
+data-parallax="scroll" data-image-src="img/header-img-1.jpg"
           </div>
 
-        </section>
-<!-- data-parallax="scroll" data-image-src="img/header-img-1.jpg" -->
+        </section> -->
+
       </main>
 
                     <!-- Footer -->
