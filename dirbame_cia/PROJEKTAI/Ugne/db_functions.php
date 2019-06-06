@@ -35,11 +35,17 @@
 
     //--------------GET MENU FUNKCIJA-----------------------
 
-    function getMenu($nr) {
-        $query = "SELECT * FROM navigation WHERE id='$nr' ";
+    function getHeader($id) {
+        $query = "SELECT * FROM navigation WHERE id='$id' ";
         $rezult = mysqli_query(getLoginDB(),  $query);
         $resultArray = mysqli_fetch_assoc($rezult);
         return $resultArray;
+    }
+
+    function getMenu($itemLimit = 10) {
+        $query = "SELECT * FROM navigation;";
+        $result = mysqli_query(getLoginDB(),  $query);
+        return $result;
     }
 
     //--------------GET IMG FUNKCIJA SKIRTA CAROUSEL------------------
@@ -50,6 +56,14 @@
         $result = mysqli_fetch_assoc($result);
         return $result;
     }
+
+    //--------------GET images (GAUTI foto) FUNKCIJA-----------------------
+
+      function getImages($itemLimit = 50) {
+          $query = "SELECT * FROM carousel WHERE id > 1 LIMIT $itemLimit ";
+          $result = mysqli_query(getLoginDB(),  $query);
+          return $result;
+      }
 
       //--------------createMessage funkcija kontaktu formai--------------
 
@@ -116,5 +130,48 @@
             }
         }
 
+        //--------------naujas carousel image--------------
+
+
+        function createCarousel( $imgname) {
+            $imgnameCrypted = mysqli_real_escape_string (getLoginDB(), $imgname );
+
+
+            $query = "INSERT INTO  carousel
+                            VALUES( null, '$imgnameCrypted') ";
+
+            $result = mysqli_query(getLoginDB(),  $query);
+            if ( !$result) {
+                echo "Nepavyko sukurti naujos prekes" . mysqli_error(getLoginDB());
+            }
+        }
+
+        //--------------deleteItem funkcija  produktui istrinti--------------
+
+        function deleteCarousel($imgname) {
+            $query = "DELETE FROM carousel WHERE imgname = '$imgname' LIMIT 1";
+
+            $rezultatai = mysqli_query(getLoginDB(),  $query); // print_r(    $rezultataiOBJ );  // test
+            if ( $rezultatai == false) {
+                echo "ERROR: item not deleted. SQL error:" . mysqli_error(getLoginDB());
+            }
+        }
+
+        //--------------updateItem funkcija  produktui istrinti--------------
+
+        function updateCarousel($currentvalue, $newvalue) {
+            $currentCrypted = mysqli_real_escape_string (getLoginDB(), $currentvalue );
+            $newCrypted = mysqli_real_escape_string (getLoginDB(), $newvalue );
+
+
+            $query = "UPDATE  carousel
+                            SET imgname = '$newCrypted'
+                            WHERE imgname = '$currentCrypted'; ";
+
+            $result = mysqli_query(getLoginDB(),  $query);
+            if ( !$result) {
+                echo "Nepavyko sukurti naujos prekes" . mysqli_error(getLoginDB());
+            }
+        }
 
  ?>
