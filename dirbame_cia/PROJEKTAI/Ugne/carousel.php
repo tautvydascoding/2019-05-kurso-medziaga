@@ -1,7 +1,7 @@
 
 <?php require_once('db_functions.php') ?>
 
-<div id="carouselFadeExampleIndicators" class="carousel slide carousel-fade w-75" data-ride="carousel">
+<div id="carouselFadeExampleIndicators" class="carousel slide carousel-fade w-100" data-ride="carousel">
   <div class="carousel-inner" role="listbox">
 
     <div class="carousel-item active">

@@ -27,7 +27,7 @@
 
 
       </ul>
-      <a class="btn btn-outline-dark my-2 my-sm-0 m-1 cart-button-nav" href="cart.php?id=5">
+      <a class="btn btn-outline-dark my-2 my-sm-0 m-1" href="cart.php?id=5">
         <i class="fas fa-shopping-cart"></i> 0 / 0,00 Eur</a>
     </div>
 

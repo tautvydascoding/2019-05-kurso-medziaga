@@ -4,6 +4,7 @@
         <title>Paint mE shop</title>
         <link rel="stylesheet" href="./libs/bootstrap/css/bootstrap.css">
         <link rel="stylesheet" href="css/main.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <script src="https://kit.fontawesome.com/a0b467e28c.js"></script>
 
     </head>
