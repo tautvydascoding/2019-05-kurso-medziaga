@@ -20,30 +20,27 @@
 
       <main>
         <section class="py-5 container">
+          <div class='row m-3 justify-content-center '>
 
 
 <?php
 
-$allItems = [];
-for($i=1; $i<30; $i++){
-  if (!empty(getItem($i))){
-    $allItems[$i] = getItem($i);
-}
-}
+$allItems = getItems( 30 );
+
+$item = mysqli_fetch_assoc($allItems);
 
 
-echo "<div class='row m-3 justify-content-center '>";
-  for($i=1; $i<count($allItems)+1; $i++){
-    echo "<div class='col-lg-5 m-4 col-md-12'><a href='template_product.php?id=$i'>";
-    echo "<img class='item-img img-responsive img-thumbnail' src='img/" . getItem($i)['thumbnail'] . "'>";
-    echo "<div class= 'col-12 text-center m-2 text-dark'><h4 class='font-weight-light card-title'>\"" . getItem($i)['name'] . "\"</h4>";
-    echo "<h5 class='font-weight-light'>" . getItem($i)['price'] . " Eur</h5></div>";
-    echo "</div></a>";
-  }
-echo "</div>";
+while (  $item == true ) {
+  echo "<div class='col-lg-5 m-4 col-md-12'><a href='template_product.php?id=$i'>";
+  echo "<img class='item-img img-responsive img-thumbnail' src='img/" . $item['thumbnail'] . "'>";
+  echo "<div class= 'col-12 text-center m-2 text-dark'><h4 class='font-weight-light card-title'>\"" . $item['name'] . "\"</h4>";
+  echo "<h5 class='font-weight-light'>" . $item['price'] . " Eur</h5></div>";
+  echo "</div></a>";
+  $item = mysqli_fetch_assoc($allItems);
+}
 
 ?>
-
+            </div>
         </section>
 
       </main>

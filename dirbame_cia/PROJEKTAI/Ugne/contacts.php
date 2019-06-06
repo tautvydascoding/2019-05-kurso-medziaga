@@ -23,7 +23,7 @@
 
                   <div class="form-group row ">
 
-                    <form class="form-group row justify-content-center" action="contactform.php" method="post">
+                    <form class="form-group row justify-content-center" action="form_contact.php" method="post">
                       <div class="col-sm-10 m-3">
                         <input class="form-control" type="text" name="name" placeholder="Name" required/>
                       </div>

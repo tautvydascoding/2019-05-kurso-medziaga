@@ -1,0 +1,34 @@
+h1 {
+    color: red;
+}
+.aukstis-100 {
+    height: 100px;
+}
+.aukstis-200 {
+    height: 200px;
+}
+.aukstis-300 {
+    height: 300px;
+}
+.aukstis-500 {
+    height: 500px;
+}
+.desine{
+    width: 10%;
+    float: left;
+}
+
+.kaire{
+    width: 90%;
+    float: left;
+}
+/* for tbalets iki 992 */
+@media(max-width: 1000px) {
+    .desine{ width: 30%; }
+    .kaire{width: 70%; }
+}
+/* for mobile iki 767px */
+@media(max-width: 767px) {
+    .desine{ width: 50%; }
+    .kaire{width: 50%; }
+}
