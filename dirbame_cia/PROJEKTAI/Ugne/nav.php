@@ -10,18 +10,17 @@
 
         require_once('db_functions.php');
 
-        $allItems = [];
-        for($i=1; $i<15; $i++){
-          if (!empty(getMenu($i))){
-            $allItems[$i] = getMenu($i);
-            }
-          }
 
-          for($i=1; $i<count($allItems)+1; $i++){
-            if (getMenu($i)['item'] != "Cart"){
-            echo "<li class='nav-item'><a class='nav-link' href='" . getMenu($i)['link'] . "?id=$i" . "'>";
-            echo getMenu($i)['item'] . "</a></li>";
-            }
+        $allmenu = getMenu(9);
+
+        $item = mysqli_fetch_assoc($allmenu);
+
+
+
+          while (  $item == true ) {
+              echo "<li class='nav-item'><a class='nav-link' href='" . $item['link'] . "?id=" . $item['id'] . "'>";
+              echo $item['item'] . "</a></li>";
+              $item = mysqli_fetch_assoc($allmenu);
           }
 
          ?>
