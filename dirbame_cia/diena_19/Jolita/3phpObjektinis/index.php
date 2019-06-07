@@ -6,7 +6,8 @@
 
         <!-- !!! mano CSS failas vissada zemiau, nie kiti css failai -->
         <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"> -->
-        <link rel="stylesheet" href="./libs/bootstrap/css/bootstrap.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="libs/bootstrap/css/bootstrap.css">
 
         <!-- !!idedame CSS faila, nes kitaip neveiks -->
         <link rel="stylesheet" href="css/main.css">
@@ -18,16 +19,39 @@
          -->
     </head>
     <body>
+        <div class="container">
+            <header>
+                Virsus
+                <nav>
+                    <ul>
+                        <li>Home</li>
+                    </ul>
+                </nav>
+            </header>
+<!-- --------------------------------- -->
 
-        <h1>Isijunk konsole</h1>
-        <form action="registracija.php" method="get">
-                <input type="text" name="vardas" value="" placeholder="Daktaro Vardas">
-                <input type="text" name="pavarde" value="" placeholder="Daktaro Pavarde">
-                <button type="submit"> Registruotis </button>
 
-        </form>
+        <h1>Gydytojas 5</h1>
+
+<?php
+include('DB/doctors.php');
 
 
+$gyd = new Doctors();
+$gyd->prisijungti();
+$gydytojasArray = $gyd->getDoctor(5);
+
+echo "<h2>". $gydytojasArray['name'] . "</h2>"
+
+
+ ?>
+
+
+<!-- --------------------------------- -->
+            <footer>
+                apacia 2019
+            </footer>
+        </div> <!-- container  end -->
 
         <!-- js puslapio apacioje -->
         <script src="http://code.jquery.com/jquery-3.3.1.min.js"  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
