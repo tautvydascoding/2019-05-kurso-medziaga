@@ -6,6 +6,7 @@ $klientoPastas = $_POST['elpastas'];
 // echo "  $klientoVardas  $klientoPavarde  <hr /> ";
 // echo "  $klientoAntraste  <hr /> $klientoKlausimas   ";
 // echo "  <hr /> $klientoPastas   ";
+
 require_once ("libs/PHPMailer-master/PHPMailerAutoload.php");
 $mail = new PHPMailer(true);                              // Passing `true` enables exceptions
 try {
@@ -37,6 +38,10 @@ try {
     $mail->Body    = " <b>Klienatas klausia:</b>   $klientoKlausimas" ;
     $mail->AltBody = " Klieantas klausia: $klientoPastas";
     $mail->send();
+
+    createDoctor($klientoKlausimas, $klientoPastas, $klientoVardas);
+    createClientQuestion($klientoKlausimas, $klientoPastas, $klientoVardas);
+
     echo '<div class="bg-info"> ZINUTE ISSIUSTA SEKMINGAI     </div>';
 } catch (Exception $e) {
     echo '<div class="bg-danger"> neveikia     </div>' . $mail->ErrorInfo;

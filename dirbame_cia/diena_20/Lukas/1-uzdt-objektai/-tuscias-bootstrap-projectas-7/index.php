@@ -6,6 +6,7 @@
 
         <!-- !!! mano CSS failas vissada zemiau, nie kiti css failai -->
         <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"> -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="libs/bootstrap/css/bootstrap.css">
 
         <!-- !!idedame CSS faila, nes kitaip neveiks -->
@@ -18,36 +19,29 @@
          -->
     </head>
     <body>
-        <div class="container">
 
-<!-- --------------------------------- -->
+<?php
+include_once('Gyvunai.php');
+$liutas1 = new Liutas();
+$liutas2 = new Liutas();
+$liutas3 = new Liutas(); 
 
-
-        <h1>Jusu klausimai</h1>
-
-        <form  action="siusti-email.php" method="post">
-            <label for="name">  Jusu vardas  </label>
-            <input type="text" name="name" >   <br>
-
-            <label for="elpastas">  Jusu el.pastas  </label>
-            <input type="email" name="elpastas" >   <br>
-
-            <label for="klausimas"> Jusu klausimas </label>
-            <textarea name="klausimas" rows="4" cols="60">  </textarea><br>
-
-            <input type="hidden" name="" value="555666"> 
-
-            <button type="submit" name="button">  Klausti </button>
-        </form>
-
-
+echo "X? Spalva: " . $sablonas->spalva . "<br />";
+$X5 -> spalva = 'Juoda';
+echo "X5 Spalva: " . $X5->spalva . "<br />";
+$X4 -> spalva = 'pilka';
+echo "X4 Spalva: " . $X4->spalva . "<br />";
+$X3 -> spalva = 'raudona';
+echo "X3 Spalva: " . $X3->spalva . "<br />";
+$X2 -> spalva = 'zalia';
+echo "X2 Spalva: " . $X2->spalva . "<br />";
+$X1 -> spalva = 'geltona';
+echo "X1 Spalva: " . $X1->spalva . "<br />";
+// echo "Kebulo numeris " . $X5->$kebuloNumeris; // neatspausdins, nes privatus
+$X5->vaziuoti(10);
+?>
 
 
-<!-- --------------------------------- -->
-
-        </div> <!-- container  end -->
-
-        <!-- js puslapio apacioje -->
         <script src="http://code.jquery.com/jquery-3.3.1.min.js"  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
          <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
