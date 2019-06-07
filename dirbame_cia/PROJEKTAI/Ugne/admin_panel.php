@@ -92,14 +92,16 @@
                               </div>
 
                             <button type="submit"  class="btn btn-outline-dark w-50 m-3">Add new item</button>
+
+                            <form class="w-75 row justify-content-center" action="upload.php" method="post" enctype="multipart/form-data">
+                                <h5 class="">Upload image</h5><br />
+                                <input class="form-control" type="file" name="fileToUpload" id="fileToUpload">
+                                <input class="form-control" type="submit" value="Upload Image" name="submit">
+                            </form>
                           </form>
                             <!--_____________Upload button ______________-->
-                            <h5 class="">Upload image</h5><br />
-                          <form class="w-75 row justify-content-center" action="upload.php" method="post" enctype="multipart/form-data">
-                              Select image to upload:
-                              <input class="form-control" type="file" name="fileToUpload" id="fileToUpload">
-                              <input class="form-control" type="submit" value="Upload Image" name="submit">
-                          </form>
+
+
 
 
                     </div>

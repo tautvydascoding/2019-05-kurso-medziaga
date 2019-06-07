@@ -70,7 +70,9 @@
                       </div>
 
                       <div class= "col-12 justify-content-center">
-                        <a class="btn btn-outline-dark my-2 my-sm-0 w-100" href="cart.php?id=5">Add to cart</a>
+                        <a class="btn btn-outline-dark my-2 my-sm-0 w-100" href="add_to_cart.php?id=<?php
+                          $id = $_GET['id'];
+                          echo getItem($id)['id'];    ?>">Add to cart</a>
                       </div>
 
                     </div>
