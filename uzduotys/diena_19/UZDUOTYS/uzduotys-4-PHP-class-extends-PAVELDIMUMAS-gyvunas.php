@@ -4,7 +4,7 @@
  // public 'svoris', private 'pusryciai', protected 'ligos'
 
  // UZDUOTIS 1.1
- // sukurti klase 'Vilkas' su kintamaisiais:
+ // sukurt  i klase 'Vilkas' su kintamaisiais:
  // public 'tipas'
 
  // UZDUOTIS 1.2

@@ -6,6 +6,7 @@
 
         <!-- !!! mano CSS failas vissada zemiau, nie kiti css failai -->
         <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"> -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="libs/bootstrap/css/bootstrap.css">
 
         <!-- !!idedame CSS faila, nes kitaip neveiks -->
@@ -19,32 +20,37 @@
     </head>
     <body>
         <div class="container">
-
+            <header>
+                Virsus
+                <nav>
+                    <ul>
+                        <li>Home</li>
+                    </ul>
+                </nav>
+            </header>
 <!-- --------------------------------- -->
 
 
-        <h1>Jusu klausimai</h1>
+        <h1>Gydytojas 5</h1>
+        <?php
+            require_once('DB/doctors.php');
+            $gyd = new Doctors();
+            $gyd->prisijungti();
+            $gydytojasArray = $gyd->getDoctor(5);
 
-        <form  action="siusti-email.php" method="post">
-            <label for="name">  Jusu vardas  </label>
-            <input type="text" name="name" >   <br>
+            echo "<h2>". $gydytojasArray['name'] ."</h2>"
 
-            <label for="elpastas">  Jusu el.pastas  </label>
-            <input type="email" name="elpastas" >   <br>
 
-            <label for="klausimas"> Jusu klausimas </label>
-            <textarea name="klausimas" rows="4" cols="60">  </textarea><br>
 
-            <input type="hidden" name="" value="555666"> 
-
-            <button type="submit" name="button">  Klausti </button>
-        </form>
+         ?>
 
 
 
 
 <!-- --------------------------------- -->
-
+            <footer>
+                apacia 2019
+            </footer>
         </div> <!-- container  end -->
 
         <!-- js puslapio apacioje -->
