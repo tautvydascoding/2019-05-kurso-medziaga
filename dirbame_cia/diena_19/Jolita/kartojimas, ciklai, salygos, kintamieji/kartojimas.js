@@ -57,6 +57,6 @@ console.log(getVardas());
 //kai x=10, x+=3 reiskia x=x+3 x=10+3=13
 //x++ reiskia x=x+1 didinu vienu turima reiksme ir ja isimenu
 //&& privalo atitikti visas salygas
-// du status bruksniai reiskia, kad privalo atitikti bent viena salygas
+// du status bruksniai reiskia, kad privalo atitikti bent viena is salygu
 //kintamuju deklaracija, kai juos isvardinu
 //kintamuju initialize pradine reiksme sukurimas
