@@ -7,7 +7,7 @@
     <div class="collapse navbar-collapse" id="navbarResponsive">
       <ul class="navbar-nav ml-auto">
         <?php
-        
+
         require_once('db_functions.php');
 
 
@@ -22,11 +22,23 @@
               echo $item['item'] . "</a></li>";
               $item = mysqli_fetch_assoc($allmenu);
           }
+
+        // ------------------TOTAL PRICE SKAICIAVIMAS------------------------
+          $totalPrice = [];
+          if(!empty($_SESSION['cart'])){
+              $sessionCart = $_SESSION['cart'];
+              foreach ($sessionCart as $key) {
+                if (!empty($key)){
+                  array_push($totalPrice, getItem($key)['price']);
+                }
+              }
+            }
+$totalPriceSum = array_sum($totalPrice);
          ?>
       </ul>
       <a class="btn btn-outline-dark my-2 my-sm-0 ml-3" href="cart.php?id=5">
         <i class="fas fa-shopping-cart"></i> <?php  echo $_SESSION['quantity'][0]; ?> / <?php
-          echo $_SESSION['total'][0]; ?> Eur</a>
+          echo number_format((float)$_SESSION['total'][0], 2, '.', ''); ?> Eur</a>
 
 
           <input class="form-control mr-sm-0 my-2 m-1 search" type="text" placeholder="Search">

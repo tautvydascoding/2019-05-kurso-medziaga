@@ -32,47 +32,24 @@
                       <!-- Main -->
       <main class="container">
         <section class="py-5">
-          <div class="container">
-	          <table class="table table-hover table-condensed font-weight-light">
-    				<thead>
-						<tr>
-							<th  class=" col-md-5 font-weight-light">Product</th>
-							<th  class=" col-md-4 font-weight-light">Price</th>
-							<th  class=" col-md-3"></th>
-						</tr>
-					</thead>
-          <?php
-          $totalPrice = [];
-          if(!empty($_SESSION['cart'])){  
-              $sessionCart = $_SESSION['cart'];
-              foreach ($sessionCart as $key) {
-                if (!empty($key)){
-                  include('cart/shopping-cart-item.php');
-                  array_push($totalPrice, getItem($key)['price']);
-                }
-              }
-            } else {echo "<h5 class='font-weight-light m-2'>Your cart is empty</h5>";}
+                <div class="container">
 
-           ?>
-					<tfoot>
+                    <?php
+                    $totalPrice = [];
+                    if(!empty($_SESSION['cart'])){
+                        $sessionCart = $_SESSION['cart'];
+                        foreach ($sessionCart as $key) {
+                          if (!empty($key)){
+                            include('cart/shopping-cart-item.php');
+                            array_push($totalPrice, getItem($key)['price']);
+                          }
+                        }
+                      } else {echo "<div class='row text-center'><div class='col-12'><h5 class='font-weight-light m-2'>Your cart is empty</h5></div>";
+                              echo "<div class='col-12'><a class='btn btn-outline-dark my-2 my-sm-0 ml-3' href='products.php?id=2'>Shop now</a></div></div>";}
 
-						<tr >
-							<td class="col-4"><a href="products.php?id=2" class="btn btn-outline-dark"></i>Shop more</a></td>
+                     ?>
 
-							<td class="hidden-xs text-center col-4"><strong>Total <?php
-              $totalPriceSum = array_sum($totalPrice);
-              echo $totalPriceSum;
-
-              $_SESSION['total'][0] = $totalPriceSum;
-              $_SESSION['quantity'][0] = count($totalPrice);
-              ?>
-                Eur</strong></td>
-							<td class="col-4"><a href="cart/form_checkout.php" class="btn btn-block btn-outline-dark">Checkout</i></a></td>
-						</tr>
-					</tfoot>
-				</table>
-</div>
-
+               </div>
         </section>
 
       </main>
