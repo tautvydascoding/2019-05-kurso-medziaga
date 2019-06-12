@@ -3,25 +3,25 @@
     <head>
         <meta charset="utf-8">
         <title></title>
-        <link rel="stylesheet" href="./libs/bootstrap/css/bootstrap.css">
-        <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="..\..\libs/bootstrap/css/bootstrap.css">
+        <link rel="stylesheet" href="..\..\css/main.css">
     </head>
     <body>
       <?php
-      require_once('db_functions.php');
+      require_once('..\..\db_functions.php');
        ?>
        <div class="row justify-content-center">
       <?php
 
-// Prekes irasymas i DB
+// Prekes istrynimas is DB
 
-      $imgname = $_POST['imgname'];
+      $id = $_POST['id'];
 
-      createCarousel($imgname);
+      deleteMenuItem($id);
 
          ?>
 
-       <a  href="admin_panel.php" class="btn btn-outline-dark w-50 mb-5">Back to admin panel</a>
+       <a  href="..\admin_panel_navigation.php" class="btn btn-outline-dark w-50 mb-5">Back to admin panel</a>
 
 </div>
 
@@ -40,6 +40,6 @@ echo "<div class='alert text-center alert-danger w-50 m-5' role='alert'><strong>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
         <!-- !!! mano js failas - VISADA pats zemiausias -->
         <!-- <script type="text/javascript" src="js/main.min.js">     </script> -->
-        <script type="text/javascript" src="js/main.js">     </script>
+        <script type="text/javascript" src="..\..\js/main.js">     </script>
     </body>
 </html>

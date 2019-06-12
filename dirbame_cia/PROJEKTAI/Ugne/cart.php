@@ -12,7 +12,9 @@
     <body>
                           <!-- Header -->
 
-        <?php include('nav.php'); ?>
+        <?php
+        session_start();
+        include('nav.php'); ?>
 
 
         <header class="header-page">
@@ -29,34 +31,58 @@
                       <!-- Main -->
       <main class="container">
         <section class="py-5">
-
-                      <!-- SESSION[CART] -->
-
+          <div class="container">
+	          <table class="table table-hover table-condensed font-weight-light">
+    				<thead>
+						<tr>
+							<th  class=" col-md-5 font-weight-light">Product</th>
+							<th  class=" col-md-4 font-weight-light">Price</th>
+							<th  class=" col-md-3"></th>
+						</tr>
+					</thead>
           <?php
-          require_once ('db_functions.php');
-          session_start();
 
-          var_dump($_SESSION['cart']);
-          $orderItem = implode(',', $_SESSION['cart']);
+$sessionCart = $_SESSION['cart'];
 
-          // $item = mysqli_fetch_assoc($allItems);
-          //
-          //
-          // while (  $item == true ) {
-          //   echo "<div class='col-lg-5 m-4 col-md-12'><a href='template_product.php?id=" . $item['id'] . "'>";
-          //   echo "<img class='item-img img-responsive img-thumbnail' src='img/" . $item['thumbnail'] . "'>";
-          //   echo "<div class= 'col-12 text-center m-2 text-dark'><h4 class='font-weight-light card-title'>\"" . $item['name'] . "\"</h4>";
-          //   echo "<h5 class='font-weight-light'>" . $item['price'] . " Eur</h5></div>";
-          //   echo "</div></a>";
-          //   $item = mysqli_fetch_assoc($allItems);
-          // }
+// foreach ($sessionCart as $item) {
+//   if (!empty($item)){
+//   include('shopping-cart-item.php');
+// }
+// }
 
-
-
-
-
-          print_r($_SESSION['cart']);
+for($i=1; $i<count($sessionCart); $i++){
+if (!empty($sessionCart[$i])){
+  include('shopping-cart-item.php');
+}
+}
            ?>
+					<tfoot>
+
+						<tr >
+							<td class="col-4"><a href="products.php?id=2" class="btn btn-outline-dark"></i>Shop more</a></td>
+
+							<td class="hidden-xs text-center col-4"><strong>Total <?php
+              $totalPrice = [];
+
+              for($i=1; $i<count($sessionCart); $i++){
+              if (!empty($sessionCart[$i])){
+                $id = $sessionCart[$i];
+                array_push($totalPrice, getItem($id)['price']);
+                }
+              }
+
+              $totalPriceSum = array_sum($totalPrice);
+              echo $totalPriceSum;
+
+
+
+              ?>
+                Eur</strong></td>
+							<td class="col-4"><a href="#" class="btn btn-block btn-outline-dark">Checkout</i></a></td>
+						</tr>
+					</tfoot>
+				</table>
+</div>
 
         </section>
 

@@ -48,6 +48,17 @@
         return $result;
     }
 
+    //--------------deleteMenuItem funkcija istrinti--------------
+
+    function deleteMenuItem($id) {
+        $query = "DELETE FROM navigation WHERE id = '$id' LIMIT 1";
+
+        $rezultatai = mysqli_query(getLoginDB(),  $query); // print_r(    $rezultataiOBJ );  // test
+        if ( $rezultatai == false) {
+            echo "ERROR: item not deleted. SQL error:" . mysqli_error(getLoginDB());
+        }
+    }
+
     //--------------GET IMG FUNKCIJA SKIRTA CAROUSEL------------------
 
     function getImg($nr) {
@@ -102,8 +113,8 @@
 
         //--------------deleteItem funkcija  produktui istrinti--------------
 
-        function deleteItem($name, $price) {
-            $query = "DELETE FROM items WHERE name = '$name' && price = '$price' LIMIT 1";
+        function deleteItem($id) {
+            $query = "DELETE FROM items WHERE id = '$id' LIMIT 1";
 
             $rezultatai = mysqli_query(getLoginDB(),  $query); // print_r(    $rezultataiOBJ );  // test
             if ( $rezultatai == false) {
@@ -111,30 +122,86 @@
             }
         }
 
-        //--------------updateItem funkcija  produktui istrinti--------------
+        //--------------updateItem funkcija  produktui pakeisti--------------
 
-        function updateItem( $id, $itemindex, $currentvalue, $newvalue) {
+        function updateItem($id, $name, $description, $price, $imgname, $thumbname) {
             $idCrypted = mysqli_real_escape_string (getLoginDB(), $id );
-            $indexCrypted = mysqli_real_escape_string (getLoginDB(), $itemindex );
-            $currentCrypted = mysqli_real_escape_string (getLoginDB(), $currentvalue );
-            $newCrypted = mysqli_real_escape_string (getLoginDB(), $newvalue );
+            $nameCrypted = mysqli_real_escape_string (getLoginDB(), $name );
+            $descriptionCrypted = mysqli_real_escape_string (getLoginDB(), $description );
+            $priceCrypted = mysqli_real_escape_string (getLoginDB(), $price );
+            $imgnameCrypted = mysqli_real_escape_string (getLoginDB(), $imgname );
+            $thumbnameCrypted = mysqli_real_escape_string (getLoginDB(), $thumbname );
 
+
+            $queryCheck = "SELECT * FROM items
+                              WHERE id = '$id' AND
+                                    name = '$name' AND
+                                    description = '$description' AND
+                                    price = '$price' AND
+                                    imgname = '$imgnameCrypted' AND
+                                    thumbnail = '$thumbnameCrypted'
+                             LIMIT 1;
+                                  ";
 
             $query = "UPDATE  items
-                            SET $indexCrypted = '$newCrypted'
-                            WHERE $indexCrypted = '$currentCrypted' && id = '$id'; ";
+                            SET name = '$nameCrypted',
+                                description = '$descriptionCrypted',
+                                price = '$priceCrypted',
+                                imgname = '$imgnameCrypted',
+                                thumbnail = '$thumbnameCrypted'
+                            WHERE id = '$idCrypted'; ";
 
-            $result = mysqli_query(getLoginDB(),  $query);
-            if ( !$result) {
-                echo "Nepavyko sukurti naujos prekes" . mysqli_error(getLoginDB());
-            }
+            $result = mysqli_query(getLoginDB(), $queryCheck);
+
+            if ($result->num_rows == 0) {
+              $newResult = mysqli_query(getLoginDB(),  $query);
+              echo "Item updated successfully!";
+          } else {
+            echo "Nothing changed. Information already exists.";
+
+          }
         }
 
-        //--------------naujas carousel image--------------
+        //-------------getAbout funkcija aprasymui gauti--------------
+
+        function getAbout() {
+            $query = "SELECT * FROM about
+                      WHERE id = 1; ";
+
+            $result = mysqli_query(getLoginDB(), $query);
+            $resultArray = mysqli_fetch_assoc($result);
+            return $resultArray;
+        }
+
+
+
+        //--------------updateAbout funkcija aprasymui pakeisti pakeisti--------------
+
+        function updateAbout($id, $text) {
+            $idCrypted = mysqli_real_escape_string (getLoginDB(), $id );
+            $textCrypted = mysqli_real_escape_string (getLoginDB(), $text );
+
+            $query = "UPDATE about
+                            SET atext = '$textCrypted'
+                            WHERE id = '$idCrypted'; ";
+
+            $result = mysqli_query(getLoginDB(), $query);
+        }
+
+
+        //--------------GET IMAGES (GAUTI karuseles foto) FUNKCIJA-----------------------
+
+          function getCarouselImages($itemLimit = 50) {
+              $query = "SELECT * FROM carousel LIMIT $itemLimit ";
+              $result = mysqli_query(getLoginDB(),  $query);
+              return $result;
+          }
+
+        //--------------naujas carousel image-------------
 
 
         function createCarousel( $imgname) {
-            $imgnameCrypted = mysqli_real_escape_string (getLoginDB(), $imgname );
+            $imgnameCrypted = mysqli_real_escape_string(getLoginDB(), $imgname );
 
 
             $query = "INSERT INTO  carousel
@@ -148,8 +215,8 @@
 
         //--------------deleteItem funkcija  produktui istrinti--------------
 
-        function deleteCarousel($imgname) {
-            $query = "DELETE FROM carousel WHERE imgname = '$imgname' LIMIT 1";
+        function deleteCarousel($id) {
+            $query = "DELETE FROM carousel WHERE id = '$id' LIMIT 1";
 
             $rezultatai = mysqli_query(getLoginDB(),  $query); // print_r(    $rezultataiOBJ );  // test
             if ( $rezultatai == false) {
@@ -157,21 +224,36 @@
             }
         }
 
-        //--------------updateItem funkcija  produktui istrinti--------------
+        //--------------LOGIN--------------
 
-        function updateCarousel($currentvalue, $newvalue) {
-            $currentCrypted = mysqli_real_escape_string (getLoginDB(), $currentvalue );
-            $newCrypted = mysqli_real_escape_string (getLoginDB(), $newvalue );
+        function loginToAdmin($email, $password) {
+            $cryptedEmail = mysqli_real_escape_string(getLoginDB(), $email );
+            $cryptedPassword = mysqli_real_escape_string(getLoginDB(), $password );
+            $query = "SELECT * FROM users
+                            WHERE password = '$cryptedPassword' AND email = '$cryptedEmail'; ";
+
+            $result = mysqli_query(getLoginDB(),  $query);
+            if ($result->num_rows == 0) {
+                echo "Wrong password or e-mail" . mysqli_error(getLoginDB());
+            } else {
+              header("Location: admin_panel.php");
+            }
+        }
 
 
-            $query = "UPDATE  carousel
-                            SET imgname = '$newCrypted'
-                            WHERE imgname = '$currentCrypted'; ";
+  //--------------CREATE menu item FUNKCIJA-----------------------
+          function createNavigationItem($name, $link){
+            $nameCrypted = mysqli_real_escape_string (getLoginDB(), $name );
+            $linkCrypted = mysqli_real_escape_string (getLoginDB(), $link );
+
+
+            $query = "INSERT INTO  navigation
+                            VALUES( null, '$nameCrypted', '$linkCrypted') ";
 
             $result = mysqli_query(getLoginDB(),  $query);
             if ( !$result) {
                 echo "Nepavyko sukurti naujos prekes" . mysqli_error(getLoginDB());
             }
-        }
+          }
 
  ?>
