@@ -18,11 +18,11 @@
   <!-- The slideshow -->
   <div class="carousel-inner">
       <div class="carousel-item active">
-        <img class='img-fluid' src="img/duk.jpg" alt="estetika"  width="600" >
+        <img class='img-fluid' src="img/knyga.jpg" alt="estetika"  width="600" >
       </div>
 
         <?php
-            $visosFoto = getFotkes(15);
+            $visosFoto = getFotkes(10);
             $fotoname = mysqli_fetch_assoc($visosFoto);
             while (  $fotoname == true ) {
               echo "<div class='carousel-item'> <img class='img-fluid' src='img/". $fotoname['name']."'  width='600' > </div>";

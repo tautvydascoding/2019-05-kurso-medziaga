@@ -163,17 +163,26 @@ function updateAtsakymas($id, $atsakymas, $klausimoNumeris) {
     }
     // IDEA: funkcijos darbui su foto
 
-    function getFoto($b) {
-        $mano_sql_tekstas = "SELECT * FROM foto WHERE id='$b' ";
-        $result = mysqli_query(getPrisijungimas(),  $mano_sql_tekstas);
-        $resultMasyvas = mysqli_fetch_assoc($result);
-        return $resultMasyvas;
-    }
+    // function getFoto($b) {
+    //     $mano_sql_tekstas = "SELECT * FROM foto WHERE id='$b' ";
+    //     $result = mysqli_query(getPrisijungimas(),  $mano_sql_tekstas);
+    //     $resultMasyvas = mysqli_fetch_assoc($result);
+    //     return $resultMasyvas;
+    // }
 
 
-
-      function getFotkes($itemLimit = 15) {
+// IDEA: funkcija naudoju caruselėje
+      function getFotkes($itemLimit = 10) {
           $mano_sql_tekstas = "SELECT * FROM foto WHERE id > 1 LIMIT $itemLimit ";
           $result = mysqli_query(getPrisijungimas(),  $mano_sql_tekstas);
           return $result;
       }
+// IDEA: funkcija reikalinga paieskai DB atsakymuose
+
+function getSearchRezultata($keywords){
+    $mano_sql = "SELECT * FROM atsakymai WHERE atsakymas='%$keywords%'";
+    $atsOBJ = mysqli_query(getPrisijungimas(),  $mano_sql);
+    $atsArray = mysqli_fetch_assoc($atsOBJ);
+    return $atsArray;
+
+}

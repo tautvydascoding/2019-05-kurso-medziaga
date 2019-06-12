@@ -4,6 +4,13 @@ h2 {
 h3 {
     text-align: left;
 }
+table {
+  border-collapse: collapse;
+}
+
+table, td, th {
+  border: 1px solid black;
+}
 
 * {
   box-sizing: border-box;

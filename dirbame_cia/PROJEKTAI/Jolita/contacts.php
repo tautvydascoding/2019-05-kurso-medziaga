@@ -6,7 +6,7 @@ include("header.php");
 
 
               <div class="container">
-                  <h3>Turite klausimų, rašykite mums</h3>
+                  <h3 class="text-center">Turite klausimų? Naudokite paiešką, galbūt jau yra atsakymas į Jums rūpimą klausimą, jei neradote, rašykite mums</h3>
        <form action="siusti.php" method="get">
          <div class="row">
 
