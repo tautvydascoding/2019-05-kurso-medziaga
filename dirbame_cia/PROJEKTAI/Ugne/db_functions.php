@@ -257,4 +257,24 @@
             }
           }
 
+  //--------------CREATE order FUNKCIJA-----------------------
+          function createOrderInfo($name, $lname, $email, $phone, $address, $city, $country, $message, $orderItemNames) {
+              $nameCrypted = mysqli_real_escape_string (getLoginDB(), $name );
+              $lnameCrypted = mysqli_real_escape_string (getLoginDB(), $lname );
+              $emailCrypted = mysqli_real_escape_string (getLoginDB(), $email );
+              $phoneCrypted = mysqli_real_escape_string (getLoginDB(), $phone );
+              $addressCrypted = mysqli_real_escape_string (getLoginDB(), $address );
+              $cityCrypted = mysqli_real_escape_string (getLoginDB(), $city );
+              $countryCrypted = mysqli_real_escape_string (getLoginDB(), $country );
+              $messageCrypted = mysqli_real_escape_string (getLoginDB(), $message );
+              $orderItemNamesCrypted = mysqli_real_escape_string (getLoginDB(), $orderItemNames );
+
+              $query = "INSERT INTO  orders
+                              VALUES( null, '$nameCrypted', '$lnameCrypted', '$emailCrypted', '$phoneCrypted', '$addressCrypted', '$cityCrypted', '$countryCrypted', '$messageCrypted', '$orderItemNamesCrypted') ";
+
+              $result = mysqli_query(getLoginDB(),  $query);
+              if ( !$result) {
+                  echo "Something went wrong!" . mysqli_error(getLoginDB());
+              }
+          }
  ?>

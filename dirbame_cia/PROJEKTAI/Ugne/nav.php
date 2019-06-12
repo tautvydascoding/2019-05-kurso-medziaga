@@ -7,7 +7,7 @@
     <div class="collapse navbar-collapse" id="navbarResponsive">
       <ul class="navbar-nav ml-auto">
         <?php
-        session_start();
+        
         require_once('db_functions.php');
 
 
@@ -22,10 +22,7 @@
               echo $item['item'] . "</a></li>";
               $item = mysqli_fetch_assoc($allmenu);
           }
-
          ?>
-
-
       </ul>
       <a class="btn btn-outline-dark my-2 my-sm-0 ml-3" href="cart.php?id=5">
         <i class="fas fa-shopping-cart"></i> <?php  echo $_SESSION['quantity'][0]; ?> / <?php
@@ -41,13 +38,3 @@
   </div>
 
 </nav>
-
-<!-- <li class="nav-item">
-  <a class="nav-link" href="products.php">Products</a>
-</li>
-<li class="nav-item">
-  <a class="nav-link" href="about.php">About</a>
-</li>
-<li class="nav-item">
-  <a class="nav-link" href="contacts.php">Contact</a>
-</li> -->

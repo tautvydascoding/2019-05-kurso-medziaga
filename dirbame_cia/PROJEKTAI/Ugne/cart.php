@@ -1,8 +1,9 @@
+<?php session_start(); ?>
 <html>
     <head>
         <meta charset="utf-8">
         <title>Paint mE shop</title>
-        <link rel="stylesheet" href="./libs/bootstrap/css/bootstrap.css">
+        <link rel="stylesheet" href="libs/bootstrap/css/bootstrap.css">
         <link rel="stylesheet" href="css/main.css">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <script src="https://kit.fontawesome.com/a0b467e28c.js"></script>
@@ -41,20 +42,17 @@
 						</tr>
 					</thead>
           <?php
+          $totalPrice = [];
+          if(!empty($_SESSION['cart'])){  
+              $sessionCart = $_SESSION['cart'];
+              foreach ($sessionCart as $key) {
+                if (!empty($key)){
+                  include('cart/shopping-cart-item.php');
+                  array_push($totalPrice, getItem($key)['price']);
+                }
+              }
+            } else {echo "<h5 class='font-weight-light m-2'>Your cart is empty</h5>";}
 
-$sessionCart = $_SESSION['cart'];
-
-// foreach ($sessionCart as $item) {
-//   if (!empty($item)){
-//   include('shopping-cart-item.php');
-// }
-// }
-
-for($i=1; $i<count($sessionCart); $i++){
-if (!empty($sessionCart[$i])){
-  include('shopping-cart-item.php');
-}
-}
            ?>
 					<tfoot>
 
@@ -62,26 +60,14 @@ if (!empty($sessionCart[$i])){
 							<td class="col-4"><a href="products.php?id=2" class="btn btn-outline-dark"></i>Shop more</a></td>
 
 							<td class="hidden-xs text-center col-4"><strong>Total <?php
-              $totalPrice = [];
-
-              for($i=1; $i<count($sessionCart); $i++){
-              if (!empty($sessionCart[$i])){
-                $id = $sessionCart[$i];
-                array_push($totalPrice, getItem($id)['price']);
-                }
-              }
-
               $totalPriceSum = array_sum($totalPrice);
               echo $totalPriceSum;
 
               $_SESSION['total'][0] = $totalPriceSum;
               $_SESSION['quantity'][0] = count($totalPrice);
-
-
-
               ?>
                 Eur</strong></td>
-							<td class="col-4"><a href="#" class="btn btn-block btn-outline-dark">Checkout</i></a></td>
+							<td class="col-4"><a href="cart/form_checkout.php" class="btn btn-block btn-outline-dark">Checkout</i></a></td>
 						</tr>
 					</tfoot>
 				</table>

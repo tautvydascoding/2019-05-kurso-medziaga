@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <html>
     <head>
         <meta charset="utf-8">
@@ -70,7 +71,7 @@
                       </div>
 
                       <div class= "col-12 justify-content-center">
-                        <a class="btn btn-outline-dark my-2 my-sm-0 w-100" href="add_to_cart.php?id=<?php
+                        <a class="btn btn-outline-dark my-2 my-sm-0 w-100" href="cart/add_to_cart.php?id=<?php
                           $id = $_GET['id'];
                           echo getItem($id)['id'];    ?>">Add to cart</a>
                       </div>

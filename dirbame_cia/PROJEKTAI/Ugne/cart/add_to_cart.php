@@ -3,21 +3,22 @@
     <head>
         <meta charset="utf-8">
         <title></title>
-        <link rel="stylesheet" href="./libs/bootstrap/css/bootstrap.css">
-        <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="..\libs/bootstrap/css/bootstrap.css">
+        <link rel="stylesheet" href="..\css/main.css">
     </head>
     <body>
 
       <?php
-
       session_start();
+      $id = $_GET['id'];
+      $sessionCart = $_SESSION['cart'];
 
       if(empty($_SESSION['cart'])){   // ar tuscias? Kad neistrintu senu pasirinkimu
           $_SESSION['cart'] = array();
-        }
-
-        array_push($_SESSION['cart'], $_GET['id']);
-
+          array_push($_SESSION['cart'], $id);
+        } else if (!in_array($id, $sessionCart)){
+          array_push($_SESSION['cart'], $id);
+        } else {echo "Item already in cart!";}
 
        ?>
 
@@ -33,7 +34,7 @@
         </div>
       </header>
 <div class="row justify-content-center">
-       <a  href="index.php" class="btn btn-outline-dark w-50 mb-5">Back to home page</a>
+       <a  href="..\index.php" class="btn btn-outline-dark w-50 mb-5">Back to home page</a>
 </div>
 
 
@@ -49,6 +50,6 @@
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
         <!-- !!! mano js failas - VISADA pats zemiausias -->
         <!-- <script type="text/javascript" src="js/main.min.js">     </script> -->
-        <script type="text/javascript" src="js/main.js">     </script>
+        <script type="text/javascript" src="..\js/main.js">     </script>
     </body>
 </html>
