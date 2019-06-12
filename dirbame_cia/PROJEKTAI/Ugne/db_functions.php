@@ -177,12 +177,13 @@
 
         //--------------updateAbout funkcija aprasymui pakeisti pakeisti--------------
 
-        function updateAbout($id, $text) {
+        function updateAbout($id, $text, $title) {
             $idCrypted = mysqli_real_escape_string (getLoginDB(), $id );
             $textCrypted = mysqli_real_escape_string (getLoginDB(), $text );
+            $titleCrypted = mysqli_real_escape_string (getLoginDB(), $title );
 
             $query = "UPDATE about
-                            SET atext = '$textCrypted'
+                            SET atext = '$textCrypted', title = '$titleCrypted'
                             WHERE id = '$idCrypted'; ";
 
             $result = mysqli_query(getLoginDB(), $query);

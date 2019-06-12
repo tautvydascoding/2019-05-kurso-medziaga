@@ -74,7 +74,11 @@
                     <div class="col-12 form-group">
                       <form class="form-group row justify-content-center bg-light" action="forms/action_form_updateabout.php" method="post">
                         <input type="hidden" class="form-control" name="id" value="1" />
-                        <textarea rows="7" cols="100" class="form-control" type="text" name="text" required><?php
+                        <input type="text" class="form-control m-2" name="title" value="<?php
+                          $nr = 1;
+                          echo getAbout()['title'];
+                          ?>" required />
+                        <textarea rows="7" cols="100" class="form-control m-2" type="text" name="text" required><?php
                           $nr = 1;
                           echo getAbout()['atext'];
                           ?></textarea>

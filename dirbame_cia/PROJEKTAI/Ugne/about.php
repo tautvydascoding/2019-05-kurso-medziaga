@@ -21,10 +21,12 @@
         <section class="py-5 ">
           <div class="container justify-content-cente">
               <div class="col-12">
-                <h5 class="font-weight-light text-center "><strong>Hello there!</strong></h5>
-                <p class="font-weight-light text-center mt-3">
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                </p>
+                <h5 class="font-weight-light text-center "><strong><?php
+                  echo getAbout()['title'];
+                 ?></strong></h5>
+                <p class="font-weight-light text-center mt-3"><?php
+                  echo getAbout()['atext'];
+                 ?></p>
               </div>
           </div>
 

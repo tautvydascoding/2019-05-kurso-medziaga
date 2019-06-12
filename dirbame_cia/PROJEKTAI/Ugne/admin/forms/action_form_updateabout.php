@@ -17,7 +17,8 @@
 
       $id = $_POST['id'];
       $text = $_POST['text'];
-      updateAbout($id, $text);
+      $title = $_POST['title'];
+      updateAbout($id, $text, $title);
 
          ?>
 

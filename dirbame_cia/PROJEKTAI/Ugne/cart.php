@@ -13,7 +13,7 @@
                           <!-- Header -->
 
         <?php
-        session_start();
+
         include('nav.php'); ?>
 
 
@@ -73,6 +73,9 @@ if (!empty($sessionCart[$i])){
 
               $totalPriceSum = array_sum($totalPrice);
               echo $totalPriceSum;
+
+              $_SESSION['total'][0] = $totalPriceSum;
+              $_SESSION['quantity'][0] = count($totalPrice);
 
 
 

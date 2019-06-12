@@ -7,7 +7,7 @@
     <div class="collapse navbar-collapse" id="navbarResponsive">
       <ul class="navbar-nav ml-auto">
         <?php
-
+        session_start();
         require_once('db_functions.php');
 
 
@@ -28,7 +28,8 @@
 
       </ul>
       <a class="btn btn-outline-dark my-2 my-sm-0 ml-3" href="cart.php?id=5">
-        <i class="fas fa-shopping-cart"></i> 0 / 0,00 Eur</a>
+        <i class="fas fa-shopping-cart"></i> <?php  echo $_SESSION['quantity'][0]; ?> / <?php
+          echo $_SESSION['total'][0]; ?> Eur</a>
 
 
           <input class="form-control mr-sm-0 my-2 m-1 search" type="text" placeholder="Search">
