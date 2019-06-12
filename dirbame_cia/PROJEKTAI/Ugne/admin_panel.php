@@ -94,11 +94,13 @@
                             <button type="submit"  class="btn btn-outline-dark w-50 m-3">Add new item</button>
                           </form>
                             <!--_____________Upload button ______________-->
+                            <h5 class="">Upload image</h5><br />
                           <form class="w-75 row justify-content-center" action="upload.php" method="post" enctype="multipart/form-data">
                               Select image to upload:
                               <input class="form-control" type="file" name="fileToUpload" id="fileToUpload">
                               <input class="form-control" type="submit" value="Upload Image" name="submit">
                           </form>
+
 
                     </div>
                     <div class="col-6">
@@ -152,17 +154,80 @@
                 </div>
           </div>
 
-          <!--_____________Upload button ______________-->
-
-
-
         </section>
 
-        <section class="container-fluid mt-5" id="carousel>
-          <div class="row" ">
 
+          <!--_____________CAROUSEL ______________-->
+
+        <section class="container-fluid mt-5 bg-info" id="carousel">
+          <div class="row justify-content-center text-center m-5">
+            <div class="col-12"><h4 class="font-weight-light m-3">Carousel</h4></div>
           </div>
+
+          <!--_____________CREATE ITEM ______________-->
+
+          <div class="row">
+                <div class="row">
+                    <div class="col-6 form-group">
+                      <h5 class="m-3">Create item</h5>
+
+                            <form class="form-group row justify-content-center m-2" action="form_createcarousel.php" method="post">
+                              <div class="col-sm-10 m-3">
+                                <input class="form-control" type="text" name="imgname" placeholder="Image name" required/>
+                              </div>
+                            <button type="submit"  class="btn btn-outline-dark w-50 m-3">Add new image</button>
+                          </form>
+
+
+                            <!--_____________Upload button ______________-->
+                            <h5 class="m-3">Upload image</h5><br />
+                          <form class="ml-5 w-75 row justify-content-center" action="upload.php" method="post" enctype="multipart/form-data">
+                              Select image to upload:
+                              <input class="form-control" type="file" name="fileToUpload" id="fileToUpload">
+                              <input class="form-control" type="submit" value="Upload Image" name="submit">
+                          </form>
+
+
+                    </div>
+
+                    <div class="col-6">
+
+                        <div class="row">
+                          <h5 class="">Delete item</h5>
+                          <form class="form-group row justify-content-center " action="form_deletecarousel.php" method="post">
+
+                            <div class="col-sm-10 m-3">
+                              <input class="form-control" type="text" name="imgname" placeholder="Image name" required/>
+                            </div>
+
+                          <button type="submit"  class="btn btn-outline-dark w-50 m-3">Delete item</button>
+                        </form>
+                        </div>
+
+                        <div class="row">
+                          <h5 class="m-3">Update item</h5>
+                            <form class="form-group row justify-content-center " action="form_updatecarousel.php" method="post">
+
+
+                                <div class="col-sm-10 m-3">
+                                      <input class="form-control" type="text" name="currentvalue" placeholder="Current image name" required></textarea>
+                                </div>
+
+                                <div class="col-sm-10 m-3">
+                                      <input class="form-control" type="text" name="newvalue" placeholder="New new image name" required></textarea>
+                                </div>
+                                <button type="submit"  class="btn btn-outline-dark w-50 m-3">Update item</button>
+
+                          </form>
+                      </div>
+
+                    </div>
+                </div>
+          </div>
+
         </section>
+
+
 
         <section class="container-fluid mt-5" id="menu">
           <div class="row" >

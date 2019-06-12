@@ -4,6 +4,7 @@
         <title>Paint mE shop</title>
         <link rel="stylesheet" href="./libs/bootstrap/css/bootstrap.css">
         <link rel="stylesheet" href="css/main.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <script src="https://kit.fontawesome.com/a0b467e28c.js"></script>
 
     </head>
@@ -31,7 +32,7 @@ $item = mysqli_fetch_assoc($allItems);
 
 
 while (  $item == true ) {
-  echo "<div class='col-lg-5 m-4 col-md-12'><a href='template_product.php?id=$i'>";
+  echo "<div class='col-lg-5 m-4 col-md-12'><a href='template_product.php?id=" . $item['id'] . "'>";
   echo "<img class='item-img img-responsive img-thumbnail' src='img/" . $item['thumbnail'] . "'>";
   echo "<div class= 'col-12 text-center m-2 text-dark'><h4 class='font-weight-light card-title'>\"" . $item['name'] . "\"</h4>";
   echo "<h5 class='font-weight-light'>" . $item['price'] . " Eur</h5></div>";

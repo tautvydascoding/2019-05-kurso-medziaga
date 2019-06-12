@@ -7,7 +7,7 @@
       <div class="col-12 text-center">
         <h1 class="font-weight-light p-5"><span class="header-page-name "><?php
         $menuID = $_GET['id'];
-        echo getMenu($menuID)['item'];
+        echo getHeader($menuID)['item'];
          ?></span></h1>
       </div>
     </div>

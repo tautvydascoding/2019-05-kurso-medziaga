@@ -134,3 +134,6 @@ CREATE TABLE contactform (
   email varchar(50),
   message varchar(2000)
 );
+
+
+DELETE FROM navigation WHERE item = "Cart";
