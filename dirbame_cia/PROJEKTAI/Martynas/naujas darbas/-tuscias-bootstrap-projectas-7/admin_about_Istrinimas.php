@@ -29,7 +29,7 @@ deleteAbout($aboutId);
 ?>
 
 
-<a  href="admin_About_isvedimas.php" class="btn btn--dark w-50 mb-5">Back To About panel</a>
+<a  href="admin_About_isvedimas.php" class="btn btn-dark w-50 mb-5">Back To About panel</a>
 
 
    </body>

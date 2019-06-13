@@ -29,7 +29,7 @@ deleteOrder($orderId);
 ?>
 
 
-<a  href="admin_order_isvedimas.php" class="btn btn-outline-dark w-50 mb-5">Back To Order panel</a>
+<a  href="admin_order_isvedimas.php" class="btn btn-dark w-50 mb-5">Back To Order panel</a>
 
 
    </body>

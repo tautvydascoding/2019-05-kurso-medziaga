@@ -20,4 +20,4 @@ require_once('db_functions.php');
            ?>
 
 
-           <a  href="admin_carousel_isvedimas.php" class="btn btn-outline-dark w-50 mb-5">Back To Carousel panel</a>
+           <a  href="admin_carousel_isvedimas.php" class="btn btn-dark w-50 mb-5">Back To Carousel panel</a>

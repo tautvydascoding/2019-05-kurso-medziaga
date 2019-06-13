@@ -19,7 +19,7 @@ createOrder( $itemName,$price,$fullName,$fullAddress,$email,$orderNr,$content);
 
 
 
-<main class="container ">
+<main class="container mt-5">
     <div class="row ">
 
         <h1 class="col-12 d-flex justify-content-center"> Thank you For Buying Please Come Again !!!</h1>
@@ -28,7 +28,7 @@ createOrder( $itemName,$price,$fullName,$fullAddress,$email,$orderNr,$content);
 
 <div class="row d-flex justify-content-center">
 
-    <a  href="index.php" class=" col-12 btn btn-outline-dark w-50 mb-5">Back to Home Page</a>
+    <a  href="index.php" class=" col-12 btn btn-dark w-50 mb-5 mt-5">Back to Home Page</a>
 
 </div>
 

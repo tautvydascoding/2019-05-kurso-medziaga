@@ -36,7 +36,7 @@
 require_once('db_functions.php');
 
 
-$allAbout = getAbout( 5 );
+$allAbout = getAbout( 10 );
 $oneAbout = mysqli_fetch_assoc($allAbout);
 
 while ($oneAbout==true) {
