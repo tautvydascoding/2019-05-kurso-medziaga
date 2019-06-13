@@ -230,14 +230,20 @@
         function loginToAdmin($email, $password) {
             $cryptedEmail = mysqli_real_escape_string(getLoginDB(), $email );
             $cryptedPassword = mysqli_real_escape_string(getLoginDB(), $password );
+            $md5Password = md5($cryptedPassword);
             $query = "SELECT * FROM users
-                            WHERE password = '$cryptedPassword' AND email = '$cryptedEmail'; ";
+                            WHERE password = '$md5Password' AND email = '$email'; ";
 
             $result = mysqli_query(getLoginDB(),  $query);
-            if ($result->num_rows == 0) {
-                echo "Wrong password or e-mail" . mysqli_error(getLoginDB());
-            } else {
+
+            $resultArray = mysqli_fetch_assoc($result);
+            print_r($resultArray);
+
+            if (mysqli_num_rows($result)>0) {
               header("Location: admin_panel.php");
+
+            } else {
+              echo "Wrong password or e-mail" . mysqli_error(getLoginDB());
             }
         }
 
@@ -278,4 +284,50 @@
                   echo "Something went wrong!" . mysqli_error(getLoginDB());
               }
           }
+
+          //--------------GET orders FUNKCIJA-----------------------
+          function getOrders($itemLimit = 50) {
+              $query = "SELECT * FROM orders LIMIT $itemLimit ";
+              $result = mysqli_query(getLoginDB(),  $query);
+
+              return $result;
+          }
+
+          //--------------GET order FUNKCIJA-----------------------
+          function getOrder($id) {
+              $query = "SELECT * FROM orders WHERE id = '$id' ";
+              $result = mysqli_query(getLoginDB(),  $query);
+              $orderById = mysqli_fetch_assoc($result);
+              return $orderById;
+          }
+          //--------------SEARCH-----------------------
+                  function search($search) {
+                      $min_length = 3;
+                      if(strlen($search) >= $min_length){
+
+                      $searchCrypted = mysqli_real_escape_string(getLoginDB(), $search);
+                      $query = "SELECT * FROM items
+                                WHERE name LIKE '%".$searchCrypted."%' OR description LIKE '%".$searchCrypted."%';";
+
+                      $results = mysqli_query(getLoginDB(),  $query);
+
+                      if($results){ // if one or more rows are returned do following
+                                  while($result = mysqli_fetch_assoc($results)){
+                                      // echo "<p ><a href='template_product.php?id=" . $result['id'] . "'><h4>Canva \"".$result['name']."\"</h4></a>". $result['description'] . "</p>";
+                                      // posts results gotten from database(title and text) you can also show id ($results['id'])
+                                      echo "<div class='m-4 col-md-5'><a href='template_product.php?id=" . $result['id'] . "'>";
+                                      echo "<img class='item-img img-responsive img-thumbnail' src='img/" . $result['thumbnail'] . "'>";
+                                      echo "<div class= 'col-12 text-center m-2 text-dark'><h4 class='font-weight-light card-title'>\"" . $result['name'] . "\"</h4>";
+                                      echo "<h5 class='font-weight-light'>" . $result['price'] . " Eur</h5></div>";
+                                      echo "</div></a>";
+
+                                  }
+                                }
+                              }
+                              else{ // if there is no matching rows do following
+                                  echo "No results";
+                              }
+                      }
+
+
  ?>

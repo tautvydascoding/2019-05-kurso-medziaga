@@ -60,36 +60,38 @@
 
 
       <main class="container mt-5">
+        <div class="row justify-content-center text-center m-5">
+          <div class="col-12"><h4 class="font-weight-light">Orders</h4></div>
+        </div>
 
-          <div class="row">
-                <div class="row justify-content-center">
-                  <!--_____________Products______________-->
-                    <div class="col-6 ">
-                      <button  class="btn btn-outline-dark w-50 m-3"><a href="admin_panel_products.php">Products</a></button>
-                    </div>
+        <section class="py-5">
+                <div class="container">
+                  <table class="table table-hover table-condensed font-weight-light">
+                        <thead>
+                              <tr>
+                                <th  class=" col-md-5 font-weight-light">Product name</th>
+                                <th  class=" col-md-4 font-weight-light">Total price</th>
+                                <th  class=" col-md-3"></th>
+                              </tr>
+                        </thead>
 
-                    <!--____________About______________-->
+                    <?php
 
-                    <div class="col-6 ">
-                      <button  class="btn btn-outline-dark w-50 m-3"><a href="admin_panel_about.php">About</a></button>
-                    </div>
-
-                    <!--____________Navigation______________-->
-
-                    <div class="col-6">
-                      <button  class="btn btn-outline-dark w-50 m-3"><a href="admin_panel_navigation.php">Navigation</a></button>
-                    </div>
-
-                    <!--____________users______________-->
-
-                    <div class="col-6">
-                      <button  class="btn btn-outline-dark w-50 m-3"><a href="admin_panel_users.php">Users</a></button>
-                    </div>
-                </div>
-              </div>
+                    $orders = getOrders(40);
+                    $order = mysqli_fetch_assoc($orders);
+                        while ($order == true) {
+                          if (!empty($order)){
+                            include('order-item.php');
+                            $order = mysqli_fetch_assoc($orders);
+                          }
+                        }
 
 
+                     ?>
 
+               </table>
+               </div>
+        </section>
       </main>
 
 

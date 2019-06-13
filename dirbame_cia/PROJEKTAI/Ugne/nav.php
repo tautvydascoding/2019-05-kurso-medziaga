@@ -41,8 +41,16 @@
           echo number_format((float)$_SESSION['total'][0], 2, '.', ''); ?> Eur</a>
 
 
-          <input class="form-control mr-sm-0 my-2 m-1 search" type="text" placeholder="Search">
-          <button class="btn btn-outline-dark my-2 my-sm-0 m-1" type="submit">Search</button>
+
+      <form class="m-2" method="get" action="search.php">
+        <div class="input-group">
+          <input type="text" name="search" class="form-control" placeholder="Search" aria-label="" aria-describedby="basic-addon1" required>
+          <div class="input-group-append">
+            <button class="btn btn-outline-dark" type="submit">Search</button>
+          </div>
+        </div>
+      </form>
+
 
 
     </div>

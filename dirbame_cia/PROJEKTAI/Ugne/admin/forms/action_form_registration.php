@@ -29,7 +29,7 @@
 
             if ($user) { // jeigu egzistuoja toks email
                   if ($user['email'] === $email) {
-                    array_push($errors, "Username already exists");
+                    array_push($errors, "E-mail already exists");
                   }
                 }
 
@@ -39,6 +39,7 @@
                 	$query = "INSERT INTO users
                 			       VALUES(null, '$name', '$email', '$password');";
                 	mysqli_query($loginDB, $query);
+
 
 
                   // Kuriam e-mail su duomenimis
@@ -85,10 +86,16 @@
 
                   $mail->send();
 
-                  echo "<div class='alert text-center alert-success w-50 m-5' role='alert'><strong>Well done!</strong> Your message was sent successfully! We will get in touch with you soon.</div>";
+                  echo "<div class='alert text-center alert-success w-50 m-5' role='alert'><strong>Well done!</strong> User registered successfully. Your login details had been sent to your e-mail. </div>";
               } catch (Exception $e) {
                   echo "<div class='alert text-center alert-danger w-50 m-5' role='alert'><strong>Something went wrong!</strong> Message could not be sent. Mailer Error:  {$mail->ErrorInfo}</div>";
               }
+            } else {
+
+            $printErrors = implode("<br />", $errors);
+            header("Location: ..\admin_panel_users.php?errors=$printErrors");
+
+
             }
           }
           ?>
