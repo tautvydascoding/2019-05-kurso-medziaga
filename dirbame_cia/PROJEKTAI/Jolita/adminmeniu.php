@@ -25,7 +25,7 @@ include ('db_functions.php');
 <div class="row">
   <div class="column" style="background-color:#aaa;">
       <?php // IDEA: SUKURTI NAUJĄ KLAUSIMĄ ?>
-      <h2>Sukurti naują klausimą</h2>
+      <h2 class="text-warning">Sukurti naują klausimą</h2>
       <p>Norint sukurti naują klausimą spauskite mygtuką ir būsite nukreipti į įvedimo formą</p>
       <form class="" action="question_create_forma.php" method="get">
       <button type="submit" name="button">Sukurti naują klausimą</button>
@@ -49,7 +49,7 @@ include ('db_functions.php');
   </div>
     <div class="column" style="background-color:#ccc;">
         <?php // IDEA: KLAUSIMŲ TRYNIMAS ?>
-        <h2>Klausimų ištrynimas</h2>
+        <h2 class="text-danger">Klausimų ištrynimas</h2>
         <p>Norint ištrinti, pasirinkti norimą klausimą ir spausti  ant jo</p>
         <?php
 
@@ -66,7 +66,7 @@ include ('db_functions.php');
   <?php // IDEA: prasideda atsakymu skiltis ?>
   <?php // IDEA: SUKURTI NAUJĄ ATSAKYMĄ ?>
    <div class="column" style="background-color:#aaa;">
-       <h3>Atsakymo sukūrimas</h3>
+       <h3 class="text-warning">Atsakymo sukūrimas</h3>
        <p>Norėdami sukurti naują atsakymą, spauskite ant mygtuko ir būsite nukreipti į pildymo formą</p>
        <form class="" action="atsakymu_kurimo_formos.php" method="get">
        <button type="submit" name="button">Sukurti naują atsakymą</button>
@@ -90,7 +90,7 @@ include ('db_functions.php');
 
   </div>
   <div class="column" style="background-color:#ccc;">
-      <h2>Atsakymų ištrynimas</h2>
+      <h2 class="text-danger">Atsakymų ištrynimas</h2>
       <p>Norint ištrinti, pasirinkti norimą atsakymą ir spausti  ant jo</p>
       <?php
 
