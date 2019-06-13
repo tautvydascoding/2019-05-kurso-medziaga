@@ -232,13 +232,14 @@
             $cryptedPassword = mysqli_real_escape_string(getLoginDB(), $password );
             $md5Password = md5($cryptedPassword);
             $query = "SELECT * FROM users
-                            WHERE password = '$md5Password' AND email = '$cryptedEmail'; ";
+                            WHERE password = '$md5Password' AND email = '$email'; ";
 
             $result = mysqli_query(getLoginDB(),  $query);
+
             $resultArray = mysqli_fetch_assoc($result);
             print_r($resultArray);
 
-            if ($result) {
+            if (mysqli_num_rows($result)>0) {
               header("Location: admin_panel.php");
 
             } else {
