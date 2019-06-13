@@ -63,7 +63,12 @@
         <section class="container-fluid mt-5 bg-light">
           <div class="row justify-content-center text-center m-5">
             <form action="forms/action_form_registration.php" class="form-group row justify-content-center m-2" method="post">
-              <!-- <?php include('errors.php'); ?> -->
+              <div class="col-sm-10 m-3 text-center" >
+                <p id="regerrors"><?php if(!empty($_GET['errors'])){
+                echo $_GET['errors'];} ?>
+                </p>
+              </div>
+
                 <div class="col-sm-10 m-3">
                     <label class="font-weight-light" for="email"><b>Name</b></label>
                     <input class="form-control" type="text" placeholder="Enter your name" name="name" required>
@@ -88,6 +93,9 @@
                 <button type="submit" class="btn btn-outline-dark w-50 m-3" name='reg_user'>Register new user</button>
               </div>
             </form>
+
+
+            </div>
           </div>
         </section>
 
