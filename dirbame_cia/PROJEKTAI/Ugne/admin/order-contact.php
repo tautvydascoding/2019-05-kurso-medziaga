@@ -15,7 +15,6 @@
       require_once('..\db_functions.php');
 
        ?>
-
                      <!--_____________ NAVIGATION ______________-->
        <nav class="navbar navbar-expand-lg navbar-light bg-light shadow fixed-top">
          <div class="container">
@@ -57,43 +56,69 @@
 
 
 
-
+       <?php
+       $id = $_POST['id'];
+       $order = getOrder($id);
+        ?>
 
       <main class="container mt-5">
-        <div class="row justify-content-center text-center m-5">
-          <div class="col-12"><h4 class="font-weight-light">Orders</h4></div>
-        </div>
 
-        <section class="py-5">
-                <div class="container">
-                  <table class="table table-hover table-condensed font-weight-light">
-                        <thead>
-                              <tr>
-                                <th  class=" col-md-5 font-weight-light">Product name</th>
-                                <th  class=" col-md-4 font-weight-light">Total price</th>
-                                <th  class=" col-md-3"></th>
-                              </tr>
-                        </thead>
+              <!--_____________title______________-->
 
-                    <?php
+        <section class="container-fluid mt-5" id="products">
+          <div class="row justify-content-center text-center m-5">
+            <div class="col-12"><h4 class="font-weight-light">Shipping info for order id: <?php echo $order['id'];?></h4></div>
+          </div>
 
-                    $orders = getOrders(40);
-                    $order = mysqli_fetch_assoc($orders);
-                        while ($order == true) {
-                          if (!empty($order)){
-                            include('order-item.php');
-                            $order = mysqli_fetch_assoc($orders);
-                          }
-                        }
+          <!--_____________Contact info for order ______________-->
 
 
-                     ?>
+              <div class="row justify-content-center">
+                    <div class="col-10">
+                            <h5 class="nomargin font-weight-light"><strong>Name:</strong> <?php
+                              echo $order['name'];?></h5>
+                    </div>
 
-               </table>
-               </div>
-        </section>
-      </main>
+                    <div class="col-10">
+                              <h5 class="nomargin font-weight-light"><strong>Last name:</strong> <?php
+                              echo $order['lname'];?></h5>
+                    </div>
 
+                    <div class="col-10">
+                              <h5 class="nomargin font-weight-light"><strong>Email:</strong> <?php
+                              echo $order['email'];?></h5>
+                    </div>
+
+                    <div class="col-10">
+                              <h5 class="nomargin font-weight-light"><strong>Phone:</strong> <?php
+                              echo $order['phone'];?></h5>
+                    </div>
+
+                    <div class="col-10">
+                              <h5 class="nomargin font-weight-light"><strong>Address:</strong> <?php
+                              echo $order['address'];?></h5>
+                    </div>
+
+
+                    <div class="col-10">
+                              <h5 class="nomargin font-weight-light"><strong>City:</strong> <?php
+                              echo $order['city'];?></h5>
+                    </div>
+
+                    <div class="col-10">
+                              <h5 class="nomargin font-weight-light"><strong>Country:</strong> <?php
+                              echo $order['country'];?></h5>
+                    </div>
+
+                    <div class="col-10">
+                              <h5 class="nomargin font-weight-light"><strong>Message:</strong> <?php
+                              echo $order['message'];?></h5>
+                    </div>
+
+              <a  href="admin_panel.php" class="btn btn-outline-dark w-50 mb-5">Back to orders</a>
+    </section>
+
+</main>
 
 
 

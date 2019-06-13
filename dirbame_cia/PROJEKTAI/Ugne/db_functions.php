@@ -284,6 +284,21 @@
               }
           }
 
+          //--------------GET orders FUNKCIJA-----------------------
+          function getOrders($itemLimit = 50) {
+              $query = "SELECT * FROM orders LIMIT $itemLimit ";
+              $result = mysqli_query(getLoginDB(),  $query);
+
+              return $result;
+          }
+
+          //--------------GET order FUNKCIJA-----------------------
+          function getOrder($id) {
+              $query = "SELECT * FROM orders WHERE id = '$id' ";
+              $result = mysqli_query(getLoginDB(),  $query);
+              $orderById = mysqli_fetch_assoc($result);
+              return $orderById;
+          }
           //--------------SEARCH-----------------------
                   function search($search) {
                       $min_length = 3;

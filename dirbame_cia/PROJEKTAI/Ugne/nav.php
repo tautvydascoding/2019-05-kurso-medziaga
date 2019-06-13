@@ -44,7 +44,7 @@
 
       <form class="m-2" method="get" action="search.php">
         <div class="input-group">
-          <input type="text" name="search" class="form-control" placeholder="Search" aria-label="" aria-describedby="basic-addon1">
+          <input type="text" name="search" class="form-control" placeholder="Search" aria-label="" aria-describedby="basic-addon1" required>
           <div class="input-group-append">
             <button class="btn btn-outline-dark" type="submit">Search</button>
           </div>

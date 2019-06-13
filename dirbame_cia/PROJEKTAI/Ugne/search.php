@@ -33,8 +33,10 @@
          <section class="py-5">
            <div class="row font-weight-light justify-content-center">
 
-             <?php  $search = $_GET['search'];
-                    search($search); ?>
+             <?php  
+               $search = $_GET['search'];
+               search($search);
+                 ?>
 
          </div>
          </section>
