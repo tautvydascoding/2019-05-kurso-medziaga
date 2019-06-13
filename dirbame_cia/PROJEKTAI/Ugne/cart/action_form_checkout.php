@@ -37,6 +37,7 @@
       $city = $_POST['city'];
       $country = $_POST['country'];
       $message = $_POST['message'];
+      $totalprice = $_POST['totalprice'];
 
       $orderItems = $_SESSION['cart'];
       $orderItemNames = [];
@@ -46,7 +47,7 @@
 
       $orderIitemsIdList = implode(', ', $orderItemNames);
 
-      createOrderInfo($name, $lname, $email, $phone, $address, $city, $country, $message, $orderIitemsIdList);
+      createOrderInfo($name, $lname, $email, $phone, $address, $city, $country, $message, $orderIitemsIdList, $totalprice);
 
       $message1 = 'Hello there!<br />
       We have received your order from Paint me Shop.<br />

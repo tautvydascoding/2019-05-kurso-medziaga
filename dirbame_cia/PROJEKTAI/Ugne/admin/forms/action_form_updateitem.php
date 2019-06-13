@@ -22,7 +22,7 @@
       $imgname = $_POST['imgname'];
       $thumbname = $_POST['thumbname'];
       updateItem( $id, $name, $description, $price, $imgname, $thumbname);
-
+      header("Location: ..\admin_panel_products.php");
          ?>
 
        <a  href="..\admin_panel_products.php" class="btn btn-outline-dark w-50 m-5">Back to admin panel</a>

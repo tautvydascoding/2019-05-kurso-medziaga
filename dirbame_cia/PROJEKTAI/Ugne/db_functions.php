@@ -258,7 +258,7 @@
           }
 
   //--------------CREATE order FUNKCIJA-----------------------
-          function createOrderInfo($name, $lname, $email, $phone, $address, $city, $country, $message, $orderItemNames) {
+          function createOrderInfo($name, $lname, $email, $phone, $address, $city, $country, $message, $orderItemNames, $totalprice) {
               $nameCrypted = mysqli_real_escape_string (getLoginDB(), $name );
               $lnameCrypted = mysqli_real_escape_string (getLoginDB(), $lname );
               $emailCrypted = mysqli_real_escape_string (getLoginDB(), $email );
@@ -268,9 +268,10 @@
               $countryCrypted = mysqli_real_escape_string (getLoginDB(), $country );
               $messageCrypted = mysqli_real_escape_string (getLoginDB(), $message );
               $orderItemNamesCrypted = mysqli_real_escape_string (getLoginDB(), $orderItemNames );
+              $totalPriceCrypted = mysqli_real_escape_string (getLoginDB(), $totalprice );
 
               $query = "INSERT INTO  orders
-                              VALUES( null, '$nameCrypted', '$lnameCrypted', '$emailCrypted', '$phoneCrypted', '$addressCrypted', '$cityCrypted', '$countryCrypted', '$messageCrypted', '$orderItemNamesCrypted') ";
+                              VALUES( null, '$nameCrypted', '$lnameCrypted', '$emailCrypted', '$phoneCrypted', '$addressCrypted', '$cityCrypted', '$countryCrypted', '$messageCrypted', '$orderItemNamesCrypted', '$totalPriceCrypted') ";
 
               $result = mysqli_query(getLoginDB(),  $query);
               if ( !$result) {

@@ -18,8 +18,9 @@
           array_push($_SESSION['cart'], $id);
         } else if (!in_array($id, $sessionCart)){
           array_push($_SESSION['cart'], $id);
-        } else {echo "Item already in cart!";}
+        }
 
+        header("Location: ..\cart.php?id=5");
        ?>
 
 

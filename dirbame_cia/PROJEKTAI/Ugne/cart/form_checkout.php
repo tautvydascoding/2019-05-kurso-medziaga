@@ -105,6 +105,11 @@
                     <div class="col-12">
                       <h5 class="font-weight-light text-center">Your details</h5>
                         <form class="form-group row justify-content-center" action="action_form_checkout.php" method="post">
+
+                          <div class="col-sm-10 m-3">
+                            <input type="hidden" name="totalprice" value="<?php echo $totalPriceSum; ?>" required/>
+                          </div>
+
                           <div class="col-sm-10 m-3">
                             <input class="form-control" type="text" name="name" placeholder="Name" required/>
                           </div>

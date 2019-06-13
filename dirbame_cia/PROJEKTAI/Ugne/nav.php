@@ -33,7 +33,7 @@
                 }
               }
             }
-$totalPriceSum = array_sum($totalPrice);
+            $totalPriceSum = array_sum($totalPrice);
          ?>
       </ul>
       <a class="btn btn-outline-dark my-2 my-sm-0 ml-3" href="cart.php?id=5">

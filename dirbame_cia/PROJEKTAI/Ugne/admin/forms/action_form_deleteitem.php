@@ -17,7 +17,7 @@
 
       $id = $_POST['id'];
       deleteItem($id);
-
+      header("Location: ..\admin_panel_products.php");
          ?>
 
        <a  href="..\admin_panel.php" class="btn btn-outline-dark w-50 mb-5">Back to admin panel</a>

@@ -19,7 +19,7 @@
       $link = $_POST['link'];
 
       createNavigationItem($name, $link);
-
+      header("Location: ..\admin_panel_navigation.php");
          ?>
 
        <a  href="..\admin_panel_navigation.php" class="btn btn-outline-dark w-50 mb-5">Back to admin panel</a>

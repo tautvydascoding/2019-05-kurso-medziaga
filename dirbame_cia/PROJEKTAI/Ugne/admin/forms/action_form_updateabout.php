@@ -19,7 +19,7 @@
       $text = $_POST['text'];
       $title = $_POST['title'];
       updateAbout($id, $text, $title);
-
+      header("Location: ..\admin_panel_about.php");
          ?>
 
        <a  href="..\admin_panel_about.php" class="btn btn-outline-dark w-50 m-5">Back to admin panel</a>

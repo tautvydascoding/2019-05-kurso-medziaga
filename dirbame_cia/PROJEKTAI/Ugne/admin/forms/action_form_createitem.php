@@ -22,6 +22,7 @@
       $thumbnail = $_POST['thumbnail'];
       createItem( $name, $description, $price, $imgname, $thumbnail);
 
+      header("Location: ..\admin_panel_products.php");
          ?>
 
        <a  href="..\admin_panel_products.php" class="btn btn-outline-dark w-50 mb-5">Back to admin panel</a>

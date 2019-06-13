@@ -173,3 +173,9 @@ CREATE TABLE orders (
   message varchar(500),
   canvaname varchar(500)
 );
+
+ALTER TABLE orders
+ADD totalprice decimal(19,4);
+
+DELETE FROM orders
+WHERE id = '3' LIMIT 1;
