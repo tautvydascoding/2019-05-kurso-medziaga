@@ -35,6 +35,8 @@
             <label for="klausimas"> Jusu klausimas </label>
             <textarea name="klausimas" rows="4" cols="60">  </textarea><br>
 
+            <input type="hidden" name="" value="555666"> 
+
             <button type="submit" name="button">  Klausti </button>
         </form>
 

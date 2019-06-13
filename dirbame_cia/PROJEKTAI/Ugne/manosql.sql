@@ -137,3 +137,45 @@ CREATE TABLE contactform (
 
 
 DELETE FROM navigation WHERE item = "Cart";
+
+-- -----------------Login komandos---------------------------
+CREATE TABLE users (
+  id INT(6) AUTO_INCREMENT PRIMARY KEY,
+  name varchar(50),
+  email varchar(50),
+  password varchar(30)
+);
+
+INSERT INTO users VALUES (null, 'Ugne', 'u.gajauskaite@gmail.com', 'katukavakare');
+INSERT INTO users VALUES (null, 'Test', 'u.gaja.com', 'katukavakare');
+
+-- -----------------About aprasas komandos---------------------------
+CREATE TABLE about (
+  id INT(6) AUTO_INCREMENT PRIMARY KEY,
+  atext varchar(2000)
+);
+
+ALTER TABLE about
+ADD title varchar(100);
+
+INSERT INTO about VALUES (null, 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.');
+
+-- -----------------About aprasas komandos---------------------------
+CREATE TABLE orders (
+  id INT(6) AUTO_INCREMENT PRIMARY KEY,
+  name varchar(50),
+  lname varchar(50),
+  email varchar(100),
+  phone varchar(60),
+  address varchar(50),
+  city varchar(50),
+  country varchar(50),
+  message varchar(500),
+  canvaname varchar(500)
+);
+
+ALTER TABLE orders
+ADD totalprice decimal(19,4);
+
+DELETE FROM orders
+WHERE id = '3' LIMIT 1;
