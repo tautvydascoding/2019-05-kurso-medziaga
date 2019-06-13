@@ -53,7 +53,19 @@ include ('db_functions.php');
 </div>
 </div>
 <div class="row">
-<input type="submit" value="Submit">
+    <button class="btn btn-secondary" type="submit" value="Submit" onclick="myFunction()">Išsaugoti</button>
+<script>
+function myFunction() {
+  var txt;
+  if (confirm("Naujo klausimo kūrimas!")) {
+    txt = "Tu sukūrei naują klausimą!";
+  } else {
+    txt = "You pressed Cancel!";
+  }
+
+}
+</script>
+
 </div>
 </form>
 </div>
