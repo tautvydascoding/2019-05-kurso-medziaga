@@ -1,0 +1,48 @@
+h1 {
+    color: #532781;
+}
+footer h5, footer h6{
+    color: #fff;
+}
+footer{
+    background-color: #212529;
+    color:#fff;
+    padding: 200px 0;
+    text-align: left;
+}
+header {
+    background-color: #532781;
+    color:#fff;
+}
+a:link {
+  text-decoration: none;
+}
+a:hover {
+  color: hotpink;
+}
+
+.btn-siusti {
+    border: 0;
+    background-color: #81649D;
+}
+.aukstis-100 {
+    height: 100px;
+}
+.aukstis-200 {
+    height: 200px;
+}
+.aukstis-300 {
+    height: 300px;
+}
+.aukstis-500 {
+    height: 500px;
+}
+.centruoti {
+    text-align: center;
+}
+.balta {
+    text-decoration-color: white:
+}
+.paddingtop {
+    padding-top: auto;
+}
