@@ -54,9 +54,15 @@ a:hover{
     min-height: 400px;
     background: transparent;
 }
+
+.search{
+  width: 20%;
+}
  /* --------------------------------MEDIA QUERY------------------------------------- */
 @media only screen and (max-width: 600px) {
 
-
+.search{
+  width: 100%;
+}
 
 }

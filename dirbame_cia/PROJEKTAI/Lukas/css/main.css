@@ -1,0 +1,332 @@
+/* FONTS */
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:600&display=swap');
+.roboto {
+    font-family: 'Open Sans', sans-serif;
+
+}
+/* FONTS */
+/* Header.php pradzia */
+ul {
+    list-style-type: none;
+    margin: 0 auto;
+    padding: 0;
+}
+li {
+    display: inline;
+}
+.aukstis-50 {
+    height: 50px;
+}
+.aukstis-250 {
+    height: 250px;
+}
+.aukstis-400 {
+    height: 500px;
+}
+.aukstis-600 {
+    height: 600px;
+}
+.aukstis-300 {
+    height: 300px;
+}
+.aukstis-200 {
+    height: 200px;
+}
+.aukstis-100 {
+    height: 100px;
+}
+.height-header-up {
+    height: 32px;
+}
+.height-search-upper-panel {
+    height: 90px;
+}
+.white {
+    color: white;
+}
+.black {
+    background-color: black;
+}
+.theme-color {
+    color: rgba(47, 218, 184);
+}
+.theme-color-background {
+    background-color: rgba(47, 218, 184);
+}
+.link-unstyled, .link-unstyled:visited, .link-unstyled:hover, .link-unstyled:active, .link-unstyled:focus, .link-unstyled:active:hover { /* https://www.codeseek.co/scottloway/bootstrap-quot-link-unstyled-quot-helper-class-grgJgB */
+  font-style: inherit;
+  color: inherit;
+  background-color: transparent;
+  font-size: inherit;
+  text-decoration: none;
+  font-variant: inherit;
+  font-weight: inherit;
+  line-height: inherit;
+  font-family: inherit;
+  border-radius: inherit;
+  border: inherit;
+  outline: inherit;
+  box-shadow: inherit;
+  padding: inherit;
+  vertical-align: inherit;
+}
+.searchBox {
+    width: 40px;
+    height: 40px;
+}
+.border0 {
+    border: 0 !important;
+}
+.share {
+    vertical-align: super;
+    font-size: 1em;
+    font-weight: 600;
+    letter-spacing: 2px;
+    font-size: 27px;
+    font-style: italic;
+}
+.searchForm {
+  width: auto;
+  height: auto;
+  display: inline-block;
+}
+
+.nav_height {
+    height: 73px;
+}
+/* Header.php pabaiga */
+/* REGISTRACIJOS pradzia */
+.regButton {
+font-size: 1.2em;
+font-weight: 700;
+text-transform: uppercase;
+letter-spacing: 1px;
+margin-bottom: 2em;
+border-radius:
+}
+.rounded {
+    border-radius: .5rem !important ;
+    border: 1px solid white;
+    /* -webkit-box-shadow: 1px 1px 13px 2px #fff;
+    -moz-box-shadow: 1px 1px 13px 2px #fff;
+    box-shadow: 1px 1px 13px 2px #fff; */            /* IDEA: registracijos paneles shadow */
+}
+/* .border-left-0 {
+    border-left: 0;
+}                        /* IDEA: Skirta jeigu reikes nuotraukos prie registracijos is sono  */
+/*.border-right-0 {
+    border-right: 0;
+} */
+
+.btn-loginReg {
+  background-color: black;
+  border: solid 2px rgba(47, 218, 184);
+  color: white;
+  padding: 12px 24px;
+  text-align: center;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition: 0.6s;
+  -webkit-box-shadow: 1px 1px 13px 2px rgba(47,218,184,1);
+  -moz-box-shadow: 1px 1px 13px 2px rgba(47,218,184,1);
+  box-shadow: 1px 1px 13px 2px rgba(47,218,184,1);
+}
+.btn-slider {
+  background-color: rgba(47,218,184,1);
+  border: solid 2px rgba(47, 218, 184);
+  color: white;
+  padding: 12px 24px;
+  text-align: center;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition: 0.6s;
+}
+.btn-card {
+  background-color: black;
+  border: solid 2px white;
+  color: white;
+  padding: 12px 24px;
+  text-align: center;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition: 0.6s;
+  border-radius: 10px;
+}
+.btn-card:hover {
+    -webkit-box-shadow: 1px 1px 13px 2px white;
+    -moz-box-shadow: 1px 1px 13px 2px white;
+    box-shadow: 1px 1px 13px 2px white;
+}
+.btn-loginReg:hover {
+  background-color: rgba(47, 218, 184);
+  color: white;
+}
+.btn-slider:hover {
+    -webkit-box-shadow: 1px 1px 13px 2px rgba(47,218,184,1);
+    -moz-box-shadow: 1px 1px 13px 2px rgba(47,218,184,1);
+    box-shadow: 1px 1px 13px 2px rgba(47,218,184,1);
+    color: black;
+}
+.strong {
+    font-weight: bold;
+}
+
+.smallText {
+    font-size: 9px;
+}
+
+p:hover {
+    color: rgba(47,218,184,1);
+}
+a:hover {
+    color: rgba(47,218,184,1);
+}
+
+.reg-background {
+    background-image: url("../img/background-emerald.png");
+ background-position: center;
+ background-repeat: no-repeat;
+ background-size: cover;
+}
+.suc-reg-background {
+ background-image: url("../img/background-emerald.png");
+ background-position: center;
+ background-repeat: no-repeat;
+ background-size: auto;
+}
+
+.hidden {
+    display: none;
+}
+.bg-red {
+    color: red;
+}
+
+.pReg {
+    color: red;
+}
+.pReg:hover {
+    color: white;
+}
+
+.couponBox {
+    width: 60px;
+    height: 60px;
+    background-color: black;
+}
+.couponBox:hover {
+    background-color: rgba(47,218,184,1);
+    transition: 0.6s;
+    border-radius: 12px;
+}
+.grey {
+    background-color: grey;
+}
+.atsiliepimaiBorder {
+    border: 1px solid black;
+    -webkit-box-shadow: 1px 1px 13px 2px black;
+    -moz-box-shadow: 1px 1px 13px 2px black;
+    box-shadow: 1px 1px 13px 2px black;
+    border-radius: 13px;
+}
+.borderAtsiliepimai {
+    border: 1px solid red;
+}
+.bg-Juosta {
+    background-image: url("../img/background-emerald.png");
+}
+
+.btn-menu {
+  background-color: white;
+  border: solid 2px black;
+  color: black;
+  padding: 12px 24px;
+  text-align: center;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition: 0.6s;
+  -webkit-box-shadow: 1px 1px 13px 2px grey;
+  -moz-box-shadow: 1px 1px 13px 2px grey;
+  box-shadow: 1px 1px 13px 2px grey;
+}
+.btn-menu-akcija {
+  background-color: white;
+  border: solid 2px black;
+  color: red;
+  padding: 12px 24px;
+  text-align: center;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition: 0.6s;
+  -webkit-box-shadow: 1px 1px 13px 2px red;
+  -moz-box-shadow: 1px 1px 13px 2px red;
+  box-shadow: 1px 1px 13px 2px red;
+}
+.btn-menu:hover {
+  background-color: grey;
+  color: white;
+}
+.btn-menu-akcija:hover {
+  background-color: grey;
+  color: white;
+}
+.bg-black {
+    background-color: black;
+}
+
+.btn-pirkti {
+  padding: 12px 24px;
+  text-align: center;
+  font-size: 16px;
+  margin: 4px 2px;
+}
+.btn-pirkti:hover {
+    text-decoration: none;
+    color: white;
+}
+.trumpas-prekes-aprasymas:hover {
+    color: black;
+}
+.card-img-top {
+width: 100%;
+height: 25vh;
+object-fit: cover;
+}
+.bg-img {
+    background-image: url('../img/meskinas.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.preke_sandelyje {
+    color: green;
+}
+.preke_sandelyje:hover {
+    color: green;
+}
+.prekesNuotrauka {
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+}
+.apieNuotrauka {
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+}
+table, th, td {
+  border: 1px solid black;
+}
+.mapNight {
+    -webkit-filter: grayscale(100%);
+       -moz-filter: grayscale(100%);
+        -ms-filter: grayscale(100%);
+         -o-filter: grayscale(100%);
+            filter: grayscale(100%);
+}
+.mapDay {
+    -webkit-filter: grayscale(0%);
+       -moz-filter: grayscale(0%);
+        -ms-filter: grayscale(0%);
+         -o-filter: grayscale(0%);
+            filter: grayscale(0%);
+}

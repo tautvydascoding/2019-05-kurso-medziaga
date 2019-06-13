@@ -39,7 +39,7 @@ include ('db_functions.php');
       <?php // IDEA: amžiais nepamiršk, Jolita po href ?nr= išsineši reikalingus duomeis ?>
       <?php
 
-          for ($i=1; $i < 21; $i++) {
+          for ($i=1; $i < 30; $i++) {
 
           $laikinas = getKlausima( $i );
                   echo "<li> <a href= 'klausimu_formos.php?nr=$i'>". $laikinas['id']."    ".$laikinas['name']."    ".$laikinas['question']."</a></li>";
@@ -53,7 +53,7 @@ include ('db_functions.php');
         <p>Norint ištrinti, pasirinkti norimą klausimą ir spausti  ant jo</p>
         <?php
 
-            for ($i=1; $i < 21; $i++) {
+            for ($i=1; $i < 30; $i++) {
 
             $laikinas = getKlausima( $i );
                     echo "<li> <a href= 'questdelete.php?nr=$i'>". $laikinas['id']."    ".$laikinas['name']."    ".$laikinas['question']."</a></li>";
